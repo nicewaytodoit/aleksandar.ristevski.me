@@ -77,6 +77,7 @@
     "build": "rm -rf public && rm -rf .cache && gatsby build",
     "deploy:1": "yarn build && cd public && now alias $(now) aleksandar.ristevski.me",
     "deploy:2": "gatsby build --prefix-paths && gh-pages -d public",
+    "deploy:only": "gh-pages -d public",
     "clean:public": "rm -rf public",
     "clean": "npm run clean:public",
     "test": "echo \"Error: no test specified\" && exit 1",

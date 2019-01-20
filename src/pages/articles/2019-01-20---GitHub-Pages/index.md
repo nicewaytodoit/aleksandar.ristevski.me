@@ -3,7 +3,7 @@ title: GitHub Pages Tutorial
 date: "2019-01-20T01:59:33.333Z"
 layout: post
 draft: false
-path: "/posts/2019-01-20---GitHub-Pages"
+path: "/posts/2019-01-20---gitHub-pages/"
 category: "Tutorials"
 tags:
   - "Learning"

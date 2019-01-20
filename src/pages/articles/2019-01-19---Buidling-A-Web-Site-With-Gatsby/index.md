@@ -3,7 +3,7 @@ title: Building A Web Site with Gatsby
 date: "2019-01-19T23:26:33.333Z"
 layout: post
 draft: false
-path: "/posts/2019-01-19---Buidling-A-Web-Site-With-Gatsby/"
+path: "/posts/2019-01-19---buidling-a-web-site-with-gatsby/"
 category: "Learning New"
 tags:
   - "Learning"
