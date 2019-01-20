@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Blog & Profile by Aleksandar Ristevski]]></title><description><![CDATA[Any sufficiently advanced technology is indistinguishable from magic.]]></description><link>http://github.com/dylang/node-rss</link><generator>RSS for Node</generator><lastBuildDate>Sun, 20 Jan 2019 11:04:15 GMT</lastBuildDate><item><title><![CDATA[GitHub Pages Tutorial]]></title><description><![CDATA[Giving simple instructions how to start with GitHub pages and host your web site for free]]></description><link>https://aleksandar.ristevski.me/posts/2019-01-20---gitHub-pages/</link><guid isPermaLink="false">https://aleksandar.ristevski.me/posts/2019-01-20---gitHub-pages/</guid><pubDate>Sun, 20 Jan 2019 01:59:33 GMT</pubDate><content:encoded>&lt;p&gt;So, what do you need to do first?&lt;/p&gt;
+&lt;p&gt;Go to your repositories:
+&lt;a href=&quot;https://github.com/nicewaytodoit?tab=repositories&quot;&gt;https://github.com/nicewaytodoit?tab=repositories&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Choose project:&lt;/p&gt;
+&lt;p&gt;Settings tab of project:&lt;/p&gt;
+&lt;p&gt;When you choose branch master it give you link:
+probably need separate branch ???&lt;/p&gt;
+&lt;p&gt;Your site is ready to be published at &lt;a href=&quot;https://nicewaytodoit.github.io/pgs-test/&quot;&gt;https://nicewaytodoit.github.io/pgs-test/&lt;/a&gt;. &lt;/p&gt;
+&lt;p&gt;And after adding index.html file it works.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://nicewaytodoit.github.io/pgs-test/&quot;&gt;https://nicewaytodoit.github.io/pgs-test/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://pages.github.com/&quot;&gt;https://pages.github.com/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;error Plugin gatsby-plugin-sitemap returned an error&lt;/p&gt;
+&lt;p&gt;  Error: Protocol is required&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Building A Web Site with Gatsby]]></title><description><![CDATA[For now it is nothing]]></description><link>https://aleksandar.ristevski.me/posts/2019-01-19---buidling-a-web-site-with-gatsby/</link><guid isPermaLink="false">https://aleksandar.ristevski.me/posts/2019-01-19---buidling-a-web-site-with-gatsby/</guid><pubDate>Sat, 19 Jan 2019 23:26:33 GMT</pubDate><content:encoded>&lt;h1&gt;Building A Web Site with Gatsby Ineed&lt;/h1&gt;
+&lt;p&gt;How many words? Many!
+Maybe todo list of what I want to achieve&lt;/p&gt;</content:encoded></item></channel></rss>
