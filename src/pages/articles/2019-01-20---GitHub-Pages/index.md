@@ -23,5 +23,11 @@ Choose project:
 Settings tab of project:
 
 
+When you choose branch master it give you link:
+probably need separate branch ???
 
+Your site is ready to be published at https://nicewaytodoit.github.io/pgs-test/. 
 
+And after adding index.html file it works.
+
+https://nicewaytodoit.github.io/pgs-test/
