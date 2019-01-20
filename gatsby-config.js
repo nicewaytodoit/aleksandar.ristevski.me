@@ -1,7 +1,10 @@
 const lost = require('lost');
 const pxtorem = require('postcss-pxtorem');
 
+const prefix = '/aleksandar.ristevski.me';
+
 module.exports = {
+  pathPrefix: prefix,
   siteMetadata: {
     title: 'Blog & Profile by Aleksandar Ristevski',
     author: {
@@ -12,7 +15,7 @@ module.exports = {
       github: 'nicewaytodoit',
       rss: '#',
     },
-    siteUrl: 'https://aleksandar.ristevski.me',
+    siteUrl: 'https://nicewaytodoit.github.io/aleksandar.ristevski.me/',
     social: {
       twitter: '@nicewaytodoit',
     },
@@ -163,6 +166,7 @@ module.exports = {
                 }
               }
           }`,
+        start_url: prefix,
         output: '/sitemap.xml',
         serialize: ({ site, allSitePage }) => allSitePage.edges.map(edge => {
           return {
