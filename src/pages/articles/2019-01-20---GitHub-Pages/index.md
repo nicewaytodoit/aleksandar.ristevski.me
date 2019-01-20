@@ -31,3 +31,11 @@ Your site is ready to be published at https://nicewaytodoit.github.io/pgs-test/.
 And after adding index.html file it works.
 
 https://nicewaytodoit.github.io/pgs-test/
+
+
+https://pages.github.com/
+
+error Plugin gatsby-plugin-sitemap returned an error
+
+
+  Error: Protocol is required
