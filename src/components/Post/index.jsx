@@ -1,17 +1,18 @@
-import React from 'react'
-import { Link } from 'gatsby'
-import moment from 'moment'
-import './style.scss'
+import React from 'react';
+import { Link } from 'gatsby';
+import moment from 'moment';
+import './style.scss';
 
 class Post extends React.Component {
   render() {
+    const { data } = this.props;
     const {
       title,
       date,
       category,
       description,
-    } = this.props.data.node.frontmatter
-    const { slug, categorySlug } = this.props.data.node.fields
+    } = data.node.frontmatter;
+    const { slug, categorySlug } = data.node.fields;
 
     return (
       <div className="post">
@@ -39,8 +40,8 @@ class Post extends React.Component {
           Read
         </Link>
       </div>
-    )
+    );
   }
 }
 
-export default Post
+export default Post;

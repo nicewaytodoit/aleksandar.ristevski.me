@@ -8,13 +8,13 @@ import './style.scss';
 
 class Sidebar extends React.Component {
   render() {
-    const { location } = this.props
+    const { location, data } = this.props;
     const {
       author,
       subtitle,
       copyright,
       menu,
-    } = this.props.data.site.siteMetadata;
+    } = data.site.siteMetadata;
     const isHomePage = get(location, 'pathname', '/') === '/';
 
     /* eslint-disable jsx-a11y/img-redundant-alt */
@@ -44,7 +44,7 @@ class Sidebar extends React.Component {
         )}
         <p className="sidebar__author-subtitle">{subtitle}</p>
       </div>
-    )
+    );
     /* eslint-enable jsx-a11y/img-redundant-alt */
 
     return (
@@ -58,8 +58,8 @@ class Sidebar extends React.Component {
           </div>
         </div>
       </div>
-    )
+    );
   }
 }
 
-export default Sidebar
+export default Sidebar;

@@ -1,14 +1,15 @@
-import React from 'react'
-import Helmet from 'react-helmet'
-import { graphql } from 'gatsby'
-import Layout from '../components/Layout'
-import Sidebar from '../components/Sidebar'
-import TagTemplateDetails from '../components/TagTemplateDetails'
+import React from 'react';
+import Helmet from 'react-helmet';
+import { graphql } from 'gatsby';
+import Layout from '../components/Layout';
+import Sidebar from '../components/Sidebar';
+import TagTemplateDetails from '../components/TagTemplateDetails';
 
 class TagTemplate extends React.Component {
   render() {
-    const { title } = this.props.data.site.siteMetadata
-    const { tag } = this.props.pageContext
+    const { data, pageContext } = this.props;
+    const { title } = data.site.siteMetadata;
+    const { tag } = pageContext;
 
     return (
       <Layout>
@@ -18,11 +19,11 @@ class TagTemplate extends React.Component {
           <TagTemplateDetails {...this.props} />
         </div>
       </Layout>
-    )
+    );
   }
 }
 
-export default TagTemplate
+export default TagTemplate;
 
 export const pageQuery = graphql`
   query TagPage($tag: String) {
@@ -72,4 +73,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`
+`;

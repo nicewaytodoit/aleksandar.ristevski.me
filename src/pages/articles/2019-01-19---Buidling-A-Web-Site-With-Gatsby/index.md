@@ -1,6 +1,6 @@
 ---
 title: Building A Web Site with Gatsby
-date: "2016-09-01T23:46:37.121Z"
+date: "2019-01-19T23:26:33.333Z"
 layout: post
 draft: false
 path: "/posts/2019-01-19---Buidling-A-Web-Site-With-Gatsby/"
