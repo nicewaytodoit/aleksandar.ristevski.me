@@ -10,7 +10,7 @@ tags:
   - "Coding"
   - "Static Framework"
 
-description: "For now it is notghing"
+description: "For now it is nothing"
 ---
 
 # Building A Web Site with Gatsby Ineed
