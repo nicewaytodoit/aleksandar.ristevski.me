@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Blog & Profile by Aleksandar Ristevski]]></title><description><![CDATA[Any sufficiently advanced technology is indistinguishable from magic.]]></description><link>http://github.com/dylang/node-rss</link><generator>RSS for Node</generator><lastBuildDate>Mon, 21 Jan 2019 06:54:45 GMT</lastBuildDate><item><title><![CDATA[How to host your web site with 'GitHub Pages'?]]></title><description><![CDATA[Giving simple instructions how to deploy your blog or website to GitHub pages and host your web site for free]]></description><link>https://nicewaytodoit.github.io/aleksandar.ristevski.me//posts/2019-01-20---github-pages/</link><guid isPermaLink="false">https://nicewaytodoit.github.io/aleksandar.ristevski.me//posts/2019-01-20---github-pages/</guid><pubDate>Sun, 20 Jan 2019 01:59:33 GMT</pubDate><content:encoded>&lt;p&gt;So, what do you need to do first?&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Blog & Profile by Aleksandar Ristevski]]></title><description><![CDATA[Any sufficiently advanced technology is indistinguishable from magic.]]></description><link>http://github.com/dylang/node-rss</link><generator>RSS for Node</generator><lastBuildDate>Mon, 21 Jan 2019 07:30:01 GMT</lastBuildDate><item><title><![CDATA[How to host your web site with 'GitHub Pages'?]]></title><description><![CDATA[Giving simple instructions how to deploy your blog or website to GitHub pages and host your web site for free]]></description><link>https://nicewaytodoit.github.io/aleksandar.ristevski.me//posts/2019-01-20---github-pages/</link><guid isPermaLink="false">https://nicewaytodoit.github.io/aleksandar.ristevski.me//posts/2019-01-20---github-pages/</guid><pubDate>Sun, 20 Jan 2019 01:59:33 GMT</pubDate><content:encoded>&lt;p&gt;So, what do you need to do first?&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;Go to your repositories:
@@ -44,12 +44,11 @@
 &lt;p&gt;In Settings you will find block &lt;code class=&quot;language-text&quot;&gt;GitHub Pages&lt;/code&gt; there you can choose what branch is the branch you will use to deploy to you hosting site.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;minimum requirement in order to host is to have &lt;code class=&quot;language-text&quot;&gt;index.hml&lt;/code&gt; file.&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;when you choose your deployment branch GitHub will give you a link to your hosted project&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;For example:
-After adding &amp;quot;index.html&amp;quot; file and choosing &amp;quot;master&amp;quot; branch we got message:
-Your site is ready to be published at https://nicewaytodoit.github.io/pgs-test/&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;/li&gt;
+&lt;li&gt;when you choose your deployment branch GitHub will give you a link to your hosted project. For example:&lt;br/&gt;
+After adding “index.html” file and choosing “master” branch we get message:&lt;br/&gt;&lt;br/&gt;
+&lt;span style=&quot;background:#dcffe4;padding:7px;border: 1px solid #d1d5da;&quot;&gt;
+Your site is ready to be published at &lt;a href=&quot;https://nicewaytodoit.github.io/pgs-test/&quot;&gt;https://nicewaytodoit.github.io/pgs-test/&lt;/a&gt;
+&lt;/span&gt;&lt;br/&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;
