@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Blog & Profile by Aleksandar Ristevski]]></title><description><![CDATA[Any sufficiently advanced technology is indistinguishable from magic.]]></description><link>http://github.com/dylang/node-rss</link><generator>RSS for Node</generator><lastBuildDate>Mon, 21 Jan 2019 06:51:12 GMT</lastBuildDate><item><title><![CDATA[How to host your web site with 'GitHub Pages'?]]></title><description><![CDATA[Giving simple instructions how to deploy your blog or website to GitHub pages and host your web site for free]]></description><link>https://nicewaytodoit.github.io/aleksandar.ristevski.me//posts/2019-01-20---github-pages/</link><guid isPermaLink="false">https://nicewaytodoit.github.io/aleksandar.ristevski.me//posts/2019-01-20---github-pages/</guid><pubDate>Sun, 20 Jan 2019 01:59:33 GMT</pubDate><content:encoded>&lt;p&gt;So, what do you need to do first?&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Blog & Profile by Aleksandar Ristevski]]></title><description><![CDATA[Any sufficiently advanced technology is indistinguishable from magic.]]></description><link>http://github.com/dylang/node-rss</link><generator>RSS for Node</generator><lastBuildDate>Mon, 21 Jan 2019 06:54:45 GMT</lastBuildDate><item><title><![CDATA[How to host your web site with 'GitHub Pages'?]]></title><description><![CDATA[Giving simple instructions how to deploy your blog or website to GitHub pages and host your web site for free]]></description><link>https://nicewaytodoit.github.io/aleksandar.ristevski.me//posts/2019-01-20---github-pages/</link><guid isPermaLink="false">https://nicewaytodoit.github.io/aleksandar.ristevski.me//posts/2019-01-20---github-pages/</guid><pubDate>Sun, 20 Jan 2019 01:59:33 GMT</pubDate><content:encoded>&lt;p&gt;So, what do you need to do first?&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;Go to your repositories:
@@ -57,18 +57,18 @@ Your site is ready to be published at https://nicewaytodoit.github.io/pgs-test/&
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;How to create &lt;code class=&quot;language-text&quot;&gt;gh-pages&lt;/code&gt; orphan branch?&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;λ &lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; checkout master
-λ &lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; ls-files
-λ &lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; checkout --orphan gh-pages
-λ &lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;rm&lt;/span&gt; -rf &lt;span class=&quot;token keyword&quot;&gt;.&lt;/span&gt;
-λ &lt;span class=&quot;token keyword&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;# My orphan ReadMe&quot;&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt; ReadMe.md
-λ &lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; add ReadMe.md
-λ &lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; commit -a -m &lt;span class=&quot;token string&quot;&gt;&quot;Initial commit&quot;&lt;/span&gt;
-λ &lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; status
-λ &lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; log --oneline --graph
-λ &lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; checkout master
-λ &lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; log --oneline --graph
-λ &lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; push&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;λ git checkout master
+λ git ls-files
+λ git checkout --orphan gh-pages
+λ git rm -rf .
+λ echo &amp;quot;# My orphan ReadMe&amp;quot; &amp;gt; ReadMe.md
+λ git add ReadMe.md
+λ git commit -a -m &amp;quot;Initial commit&amp;quot;
+λ git status
+λ git log --oneline --graph
+λ git checkout master
+λ git log --oneline --graph
+λ git push&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
