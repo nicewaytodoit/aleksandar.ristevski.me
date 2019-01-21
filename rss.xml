@@ -1,15 +1,81 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Blog & Profile by Aleksandar Ristevski]]></title><description><![CDATA[Any sufficiently advanced technology is indistinguishable from magic.]]></description><link>http://github.com/dylang/node-rss</link><generator>RSS for Node</generator><lastBuildDate>Sun, 20 Jan 2019 11:51:25 GMT</lastBuildDate><item><title><![CDATA[GitHub Pages Tutorial]]></title><description><![CDATA[Giving simple instructions how to start with GitHub pages and host your web site for free]]></description><link>https://aleksandar.ristevski.me/posts/2019-01-20---gitHub-pages/</link><guid isPermaLink="false">https://aleksandar.ristevski.me/posts/2019-01-20---gitHub-pages/</guid><pubDate>Sun, 20 Jan 2019 01:59:33 GMT</pubDate><content:encoded>&lt;p&gt;So, what do you need to do first?&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Blog & Profile by Aleksandar Ristevski]]></title><description><![CDATA[Any sufficiently advanced technology is indistinguishable from magic.]]></description><link>http://github.com/dylang/node-rss</link><generator>RSS for Node</generator><lastBuildDate>Mon, 21 Jan 2019 06:44:29 GMT</lastBuildDate><item><title><![CDATA[How to host your web site with 'GitHub Pages'?]]></title><description><![CDATA[Giving simple instructions how to deploy your blog or website to GitHub pages and host your web site for free]]></description><link>https://nicewaytodoit.github.io/aleksandar.ristevski.me//posts/2019-01-20---github-pages/</link><guid isPermaLink="false">https://nicewaytodoit.github.io/aleksandar.ristevski.me//posts/2019-01-20---github-pages/</guid><pubDate>Sun, 20 Jan 2019 01:59:33 GMT</pubDate><content:encoded>&lt;p&gt;So, what do you need to do first?&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
 &lt;p&gt;Go to your repositories:
-&lt;a href=&quot;https://github.com/nicewaytodoit?tab=repositories&quot;&gt;https://github.com/nicewaytodoit?tab=repositories&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Choose project:&lt;/p&gt;
-&lt;p&gt;Settings tab of project:&lt;/p&gt;
-&lt;p&gt;When you choose branch master it give you link:
-probably need separate branch ???&lt;/p&gt;
-&lt;p&gt;Your site is ready to be published at &lt;a href=&quot;https://nicewaytodoit.github.io/pgs-test/&quot;&gt;https://nicewaytodoit.github.io/pgs-test/&lt;/a&gt;. &lt;/p&gt;
-&lt;p&gt;And after adding index.html file it works.&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://nicewaytodoit.github.io/pgs-test/&quot;&gt;https://nicewaytodoit.github.io/pgs-test/&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://pages.github.com/&quot;&gt;https://pages.github.com/&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;error Plugin gatsby-plugin-sitemap returned an error&lt;/p&gt;
-&lt;p&gt;  Error: Protocol is required&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Building A Web Site with Gatsby]]></title><description><![CDATA[For now it is nothing]]></description><link>https://aleksandar.ristevski.me/posts/2019-01-19---buidling-a-web-site-with-gatsby/</link><guid isPermaLink="false">https://aleksandar.ristevski.me/posts/2019-01-19---buidling-a-web-site-with-gatsby/</guid><pubDate>Sat, 19 Jan 2019 23:26:33 GMT</pubDate><content:encoded>&lt;h1&gt;Building A Web Site with Gatsby Ineed&lt;/h1&gt;
+&lt;a href=&quot;https://github.com/nicewaytodoit?tab=repositories&quot;&gt;https://github.com/&lt;code class=&quot;language-text&quot;&gt;&amp;lt;your-username&amp;gt;&lt;/code&gt;?tab=repositories&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Choose the repository you want deploy (in my case): aleksandar.ristevski.me &lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Go to &lt;code class=&quot;language-text&quot;&gt;Settings&lt;/code&gt; tab of the project:
+&lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/aleksandar.ristevski.me/static/916f952b70c790307ad63bc50c73afe3/b247a/1.jpg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block;  max-width: 960px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 12.892880051314945%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAADABQDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAIF/8QAFgEBAQEAAAAAAAAAAAAAAAAAAAEC/9oADAMBAAIQAxAAAAHdBAmv/8QAFhAAAwAAAAAAAAAAAAAAAAAAAAEQ/9oACAEBAAEFAoz/xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAEDAQE/AT//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAECAQE/AT//xAAUEAEAAAAAAAAAAAAAAAAAAAAQ/9oACAEBAAY/An//xAAXEAADAQAAAAAAAAAAAAAAAAAAEBEx/9oACAEBAAE/IYtH/9oADAMBAAIAAwAAABBwL//EABURAQEAAAAAAAAAAAAAAAAAAAAB/9oACAEDAQE/EEj/xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAECAQE/ED//xAAYEAADAQEAAAAAAAAAAAAAAAAAAREhUf/aAAgBAQABPxBpwr009P/Z&apos;); background-size: cover; display: block;&quot;
+    &gt;&lt;/span&gt;
+    &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;box-shadow:inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;Settings Tab&quot;
+        title=&quot;&quot;
+        src=&quot;/aleksandar.ristevski.me/static/916f952b70c790307ad63bc50c73afe3/d564d/1.jpg&quot;
+        srcset=&quot;/aleksandar.ristevski.me/static/916f952b70c790307ad63bc50c73afe3/865fd/1.jpg 240w,
+/aleksandar.ristevski.me/static/916f952b70c790307ad63bc50c73afe3/d40a0/1.jpg 480w,
+/aleksandar.ristevski.me/static/916f952b70c790307ad63bc50c73afe3/d564d/1.jpg 960w,
+/aleksandar.ristevski.me/static/916f952b70c790307ad63bc50c73afe3/c67c1/1.jpg 1440w,
+/aleksandar.ristevski.me/static/916f952b70c790307ad63bc50c73afe3/b247a/1.jpg 1559w&quot;
+        sizes=&quot;(max-width: 960px) 100vw, 960px&quot;
+      /&gt;
+  &lt;/span&gt;
+  &lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;In Settings you will find block &lt;code class=&quot;language-text&quot;&gt;GitHub Pages&lt;/code&gt; there you can choose what branch is the branch you will use to deploy to you hosting site.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;minimum requirement in order to host is to have &lt;code class=&quot;language-text&quot;&gt;index.hml&lt;/code&gt; file.&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;when you choose your deployment branch GitHub will give you a link to your hosted project&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;For example:
+After adding &amp;quot;index.html&amp;quot; file and choosing &amp;quot;master&amp;quot; branch we got message:
+Your site is ready to be published at https://nicewaytodoit.github.io/pgs-test/. &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;You can use any branch as deployment branch, but widely addopted way is to use orphan branch called &lt;code class=&quot;language-text&quot;&gt;gh-pages&lt;/code&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;How to create &lt;code class=&quot;language-text&quot;&gt;gh-pages&lt;/code&gt; orphan branch?&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;λ &lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; checkout master
+λ &lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; ls-files
+λ &lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; checkout --orphan gh-pages
+λ &lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;rm&lt;/span&gt; -rf &lt;span class=&quot;token keyword&quot;&gt;.&lt;/span&gt;
+λ &lt;span class=&quot;token keyword&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;# My orphan ReadMe&quot;&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt; ReadMe.md
+λ &lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; add ReadMe.md
+λ &lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; commit -a -m &lt;span class=&quot;token string&quot;&gt;&quot;Initial commit&quot;&lt;/span&gt;
+λ &lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; status
+λ &lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; log --oneline --graph
+λ &lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; checkout master
+λ &lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; log --oneline --graph
+λ &lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; push&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;For additional tutorials and documentation go to: &lt;a href=&quot;https://pages.github.com/&quot;&gt;https://pages.github.com/&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[Building A Web Site with Gatsby]]></title><description><![CDATA[For now it is nothing]]></description><link>https://nicewaytodoit.github.io/aleksandar.ristevski.me//posts/2019-01-19---buidling-a-web-site-with-gatsby/</link><guid isPermaLink="false">https://nicewaytodoit.github.io/aleksandar.ristevski.me//posts/2019-01-19---buidling-a-web-site-with-gatsby/</guid><pubDate>Sat, 19 Jan 2019 23:26:33 GMT</pubDate><content:encoded>&lt;h1&gt;Building A Web Site with Gatsby Ineed&lt;/h1&gt;
 &lt;p&gt;How many words? Many!
 Maybe todo list of what I want to achieve&lt;/p&gt;</content:encoded></item></channel></rss>
