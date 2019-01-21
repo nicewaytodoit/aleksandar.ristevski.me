@@ -6,9 +6,9 @@
 
 code[class*="language-"],
 pre[class*="language-"] {
-    color: black;
+    color: rgb(182, 197, 245);
     background: none;
-    text-shadow: 0 1px white;
+    /*text-shadow: 0 1px white;*/
     font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
     text-align: left;
     white-space: pre;
@@ -30,13 +30,13 @@ pre[class*="language-"] {
 pre[class*="language-"]::-moz-selection, pre[class*="language-"] ::-moz-selection,
 code[class*="language-"]::-moz-selection, code[class*="language-"] ::-moz-selection {
     text-shadow: none;
-    background: #b3d4fc;
+    /* background: #b3d4fc; */
 }
 
 pre[class*="language-"]::selection, pre[class*="language-"] ::selection,
 code[class*="language-"]::selection, code[class*="language-"] ::selection {
     text-shadow: none;
-    background: #b3d4fc;
+    /* background: #b3d4fc; */
 }
 
 @media print {
@@ -53,10 +53,12 @@ pre[class*="language-"] {
     overflow: auto;
 }
 
+/*
 :not(pre) > code[class*="language-"],
 pre[class*="language-"] {
     background: #f5f2f0;
 }
+*/
 
 /* Inline code */
 :not(pre) > code[class*="language-"] {

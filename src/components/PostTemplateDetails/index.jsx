@@ -55,7 +55,8 @@ class PostTemplateDetails extends React.Component {
             />
             <div className="post-single__date">
               <em>
-                Published
+                Published:
+                {' '}
                 {moment(post.frontmatter.date).format('D MMM YYYY')}
               </em>
             </div>
@@ -72,6 +73,7 @@ class PostTemplateDetails extends React.Component {
               >
                 <br />
                 <strong>{author.name}</strong>
+                {' '}
                 on Twitter
               </a>
             </p>
