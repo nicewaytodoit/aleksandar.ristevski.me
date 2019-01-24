@@ -18,3 +18,16 @@ description: "For now it is nothing"
 How many words? Many!
 Maybe todo list of what I want to achieve
 
+
+Taking Starters
+Assembling bits 
+Installation 
+Running 
+issues 
+  protocol
+  long paths 
+  prefix 
+
+
+
+
