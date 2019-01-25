@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'gatsby';
 import moment from 'moment';
 import './style.scss';
+import { formatReadingTime } from '../../utils/helpers';
 
 class Post extends React.Component {
   render() {
@@ -12,6 +13,8 @@ class Post extends React.Component {
       category,
       description,
     } = data.node.frontmatter;
+    const page = data.node;
+    console.log('@@@', data);
     const { slug, categorySlug } = data.node.fields;
 
     return (
@@ -35,6 +38,17 @@ class Post extends React.Component {
             {title}
           </Link>
         </h2>
+        <p
+          style={{
+            // ...scale(-1 / 5),
+            display: 'block',
+            // marginBottom: rhythm(1),
+            // marginTop: rhythm(-1),
+          }}
+        >
+          {date}
+          {` • ${formatReadingTime(page.timeToRead)}`}
+        </p>
         <p className="post__description">{description}</p>
         <Link className="post__readmore" to={slug}>
           Read

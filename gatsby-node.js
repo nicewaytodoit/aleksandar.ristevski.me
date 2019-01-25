@@ -23,6 +23,7 @@ exports.createPages = ({ graphql, actions }) => {
               fields {
                 slug
               }
+              timeToRead
               frontmatter {
                 tags
                 layout

@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'gatsby';
 import moment from 'moment';
 import Disqus from '../Disqus/Disqus';
+import { formatReadingTime } from '../../utils/helpers';
 import './style.scss';
 
 class PostTemplateDetails extends React.Component {
@@ -48,6 +49,19 @@ class PostTemplateDetails extends React.Component {
         <div className="post-single">
           <div className="post-single__inner">
             <h1 className="post-single__title">{post.frontmatter.title}</h1>
+            <div className="post-single__date">
+              <p
+                style={{
+                  // ...scale(-1 / 5),
+                  display: 'block',
+                  // marginBottom: rhythm(1),
+                  // marginTop: rhythm(-1),
+                }}
+              >
+                {post.frontmatter.date}
+                {` • ${formatReadingTime(post.timeToRead)}`}
+              </p>
+            </div>
             <div
               className="post-single__body"
               /* eslint-disable-next-line react/no-danger */
