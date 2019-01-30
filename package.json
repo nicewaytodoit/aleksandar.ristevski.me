@@ -20,6 +20,7 @@
   ],
   "dependencies": {
     "bluebird": "^3.5.3",
+    "gatsby": "^2.0.91",
     "gatsby-plugin-catch-links": "^2.0.9",
     "gatsby-plugin-feed": "^2.0.11",
     "gatsby-plugin-google-analytics": "^2.0.9",
@@ -40,19 +41,19 @@
     "gatsby-source-filesystem": "^2.0.16",
     "gatsby-transformer-remark": "^2.2.0",
     "gatsby-transformer-sharp": "^2.1.10",
-    "gatsby": "^2.0.91",
     "lodash": "^4.17.11",
     "node-sass": "^4.11.0",
     "prismjs": "^1.15.0",
+    "react": "^16.7.0",
+    "react-awesome-styled-grid": "^2.2.2",
     "react-disqus-comments": "^1.4.0",
     "react-dom": "^16.7.0",
     "react-helmet": "^5.2.0",
     "react-typography": "^0.16.18",
-    "react": "^16.7.0",
     "typeface-merriweather": "0.0.54",
     "typeface-montserrat": "0.0.54",
-    "typography-theme-wordpress-2016": "^0.16.18",
-    "typography": "^0.16.18"
+    "typography": "^0.16.18",
+    "typography-theme-wordpress-2016": "^0.16.18"
   },
   "devDependencies": {
     "babel-eslint": "^10.0.1",
