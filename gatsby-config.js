@@ -36,6 +36,10 @@ module.exports = {
         path: '/about/',
       },
       {
+        label: 'CV',
+        path: '/profile/',
+      },
+      {
         label: 'Blog',
         path: '/',
       },

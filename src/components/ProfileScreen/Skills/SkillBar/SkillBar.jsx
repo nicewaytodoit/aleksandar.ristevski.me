@@ -1,5 +1,5 @@
 import React from 'react';
-import './SkillBar.scss';
+import styled from 'styled-components';
 
 const SkillBar = ({ className, name, level }) => (
   <div className={className}>
@@ -12,4 +12,16 @@ const SkillBar = ({ className, name, level }) => (
 
 SkillBar.displaName = 'SkillBar';
 
-export default SkillBar;
+export default styled(SkillBar)`
+  
+  .skill__bar {
+    height: 10px;
+    background-color: lightgrey;
+    padding: 1px;
+  }
+  .skill__level {
+    background-color: #25303B;
+       width: ${p => p.level || 0}%;
+       height: 8px;
+  }
+`;
