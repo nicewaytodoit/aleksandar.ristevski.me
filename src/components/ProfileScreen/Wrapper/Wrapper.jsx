@@ -3,6 +3,7 @@ import styled from 'styled-components';
 const Wrapper = styled.main.attrs({
   role: 'main',
 })`
+  /*
   position: relative;
   border-radius: 3px;
   width: 80%;
@@ -20,6 +21,7 @@ const Wrapper = styled.main.attrs({
     width: 90%;
     padding: 25px;
   }
+  */
 `;
 
 export default Wrapper;

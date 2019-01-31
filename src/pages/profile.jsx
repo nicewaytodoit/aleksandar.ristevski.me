@@ -1,22 +1,19 @@
 import React from 'react';
 import styled from 'styled-components';
+import Helmet from 'react-helmet';
 import { Container, Row, Col } from 'react-awesome-styled-grid';
-import {
-  FaGithub,
-  FaLinkedin,
-  FaEnvelope,
-  FaTwitter,
-} from 'react-icons/fa';
+import { graphql } from 'gatsby';
 import siteConfig from '../Data/siteData.json';
 
-import Layout from '../components/ProfileScreen/Layout/Layout';
-// import Hero from '../components/ProfileScreen/Hero/Hero';
+import Layout from '../components/Layout';
+import Sidebar from '../components/Sidebar';
 import SEO from '../components/ProfileScreen/SEO/Seo';
 import Wrapper from '../components/ProfileScreen/Wrapper/Wrapper';
 import About from '../components/ProfileScreen/About/About';
 import Skills from '../components/ProfileScreen/Skills/Skills';
 import Timeline from '../components/ProfileScreen/Timeline/Timeline';
 import Repositories from '../components/ProfileScreen/Repositories/Repositories';
+import '../components/ProfileScreen/Layout/Layout.css';
 
 const Separator = styled.hr`
   margin-top: 24px;
@@ -26,58 +23,31 @@ const Separator = styled.hr`
 class Home extends React.Component {
   render() {
     const { props } = this;
-    const title = 'Hi! I\'m Aleksandar!';
     return (
-      <Layout location={props.location}>
-        <SEO title={title} keywords={['gatsbyjs', 'react', 'curriculum']} />
-        {/* <Hero heroImg={siteConfig.siteCover} title={title} /> */}
-        <Wrapper className={props.className}>
-          <Container className="page-content" fluid>
-            <Row>
-              <Col xs={4} className="avatar">
-                <img
-                  className="avatar__image"
-                  src="/images/avatar.jpeg"
-                  alt="user avatar"
-                />
-                <div className="social">
-                  {siteConfig.social.github && (
-                  <a className="social-link github" href={siteConfig.social.github}>
-                    <FaGithub className="social-icon" size="32" />
-                  </a>
-                  )}
-                  {siteConfig.social.linkedin && (
-                  <a className="social-link linkedin" href={siteConfig.social.linkedin}>
-                    <FaLinkedin className="social-icon" size="32" />
-                  </a>
-                  )}
-                  {siteConfig.social.twitter && (
-                  <a className="social-link twitter" href={siteConfig.social.twitter}>
-                    <FaTwitter className="social-icon" size="32" />
-                  </a>
-                  )}
-                  {siteConfig.social.email && (
-                  <a className="social-link email" href={`mailto:${siteConfig.social.email}`}>
-                    <FaEnvelope className="social-icon" size="32" />
-                  </a>
-                  )}
-                </div>
-              </Col>
-            </Row>
-            <Row>
-              <Col xs={4} sm={4}>
-                <About title="About" text={siteConfig.authorDescription} />
-              </Col>
-              <Col xs={4} sm={4}>
-                <Skills title="Skills" skills={siteConfig.skills} />
-              </Col>
-            </Row>
-            <Separator />
-            <Timeline />
-            <Separator />
-            <Repositories />
-          </Container>
-        </Wrapper>
+      <Layout>
+        <div>
+          <Helmet title="Profile" />
+          <Sidebar {...this.props} />
+          <div className="content">
+            <SEO title="Profile" keywords={['gatsbyjs', 'react', 'curriculum']} />
+            <Wrapper className={props.className}>
+              <Container className="page-content" fluid>
+                <Row>
+                  <Col xs={4} sm={4}>
+                    <About title="About" text={siteConfig.authorDescription} />
+                  </Col>
+                  <Col xs={4} sm={4}>
+                    <Skills title="Skills" skills={siteConfig.skills} />
+                  </Col>
+                </Row>
+                <Separator />
+                <Timeline />
+                <Separator />
+                <Repositories />
+              </Container>
+            </Wrapper>
+          </div>
+        </div>
       </Layout>
     );
   }
@@ -125,5 +95,39 @@ export default styled(Home)`
 
   a.social-link.email:hover {
     color: #c23a2b;
+  }
+`;
+
+export const pageQuery = graphql`
+  query ProfileQuery {
+    site {
+      siteMetadata {
+        title
+        subtitle
+        copyright
+        menu {
+          label
+          path
+          title
+        }
+        author {
+          name
+          email
+          telegram
+          twitter
+          github
+          rss
+        }
+      }
+    }
+    allMarkdownRemark(
+      limit: 2000
+      filter: { frontmatter: { layout: { eq: "post" }, draft: { ne: true } } }
+    ) {
+      group(field: frontmatter___category) {
+        fieldValue
+        totalCount
+      }
+    }
   }
 `;
