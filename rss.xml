@@ -1,4 +1,11 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Blog & Profile by Aleksandar Ristevski]]></title><description><![CDATA[Any sufficiently advanced technology is indistinguishable from magic.]]></description><link>http://github.com/dylang/node-rss</link><generator>RSS for Node</generator><lastBuildDate>Mon, 21 Jan 2019 07:45:51 GMT</lastBuildDate><item><title><![CDATA[How to host your web site with 'GitHub Pages'?]]></title><description><![CDATA[Giving simple instructions how to deploy your blog or website to GitHub pages and host your web site for free]]></description><link>https://nicewaytodoit.github.io/aleksandar.ristevski.me//posts/2019-01-20---github-pages/</link><guid isPermaLink="false">https://nicewaytodoit.github.io/aleksandar.ristevski.me//posts/2019-01-20---github-pages/</guid><pubDate>Sun, 20 Jan 2019 01:59:33 GMT</pubDate><content:encoded>&lt;p&gt;So, what do you need to do first?&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Blog & Profile by Aleksandar Ristevski]]></title><description><![CDATA[Any sufficiently advanced technology is indistinguishable from magic.]]></description><link>http://github.com/dylang/node-rss</link><generator>RSS for Node</generator><lastBuildDate>Thu, 31 Jan 2019 21:55:17 GMT</lastBuildDate><item><title><![CDATA[Non distraction days]]></title><description><![CDATA[If feel you have too many meeting preventing you to do the actual work you should proably read this.]]></description><link>https://nicewaytodoit.github.io/aleksandar.ristevski.me//posts/2019-01-20---non-distraction-days/</link><guid isPermaLink="false">https://nicewaytodoit.github.io/aleksandar.ristevski.me//posts/2019-01-20---non-distraction-days/</guid><pubDate>Thu, 24 Jan 2019 01:59:33 GMT</pubDate><content:encoded>&lt;p&gt;Introduction&lt;/p&gt;
+&lt;p&gt;At some point my calendar look like this:&lt;/p&gt;
+&lt;p&gt;Time estimation …&lt;/p&gt;
+&lt;p&gt;Idea:&lt;/p&gt;
+&lt;p&gt;Solution:&lt;/p&gt;
+&lt;p&gt;Identify overhead and &lt;/p&gt;
+&lt;p&gt;Using tools …&lt;/p&gt;
+&lt;p&gt;What does the Scrum says?&lt;/p&gt;</content:encoded></item><item><title><![CDATA[How to host your web site with 'GitHub Pages'?]]></title><description><![CDATA[Giving simple instructions how to deploy your blog or website to GitHub pages and host your web site for free]]></description><link>https://nicewaytodoit.github.io/aleksandar.ristevski.me//posts/2019-01-20---github-pages/</link><guid isPermaLink="false">https://nicewaytodoit.github.io/aleksandar.ristevski.me//posts/2019-01-20---github-pages/</guid><pubDate>Sun, 20 Jan 2019 01:59:33 GMT</pubDate><content:encoded>&lt;p&gt;So, what do you need to do first?&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;Go to your repositories:
@@ -76,4 +83,12 @@ Your site is ready to be published at &lt;a href=&quot;https://nicewaytodoit.git
 &lt;/li&gt;
 &lt;/ul&gt;</content:encoded></item><item><title><![CDATA[Building A Web Site with Gatsby]]></title><description><![CDATA[For now it is nothing]]></description><link>https://nicewaytodoit.github.io/aleksandar.ristevski.me//posts/2019-01-19---buidling-a-web-site-with-gatsby/</link><guid isPermaLink="false">https://nicewaytodoit.github.io/aleksandar.ristevski.me//posts/2019-01-19---buidling-a-web-site-with-gatsby/</guid><pubDate>Sat, 19 Jan 2019 23:26:33 GMT</pubDate><content:encoded>&lt;h1&gt;Building A Web Site with Gatsby Ineed&lt;/h1&gt;
 &lt;p&gt;How many words? Many!
-Maybe todo list of what I want to achieve&lt;/p&gt;</content:encoded></item></channel></rss>
+Maybe todo list of what I want to achieve&lt;/p&gt;
+&lt;p&gt;Taking Starters
+Assembling bits
+Installation
+Running
+issues
+protocol
+long paths
+prefix &lt;/p&gt;</content:encoded></item></channel></rss>
