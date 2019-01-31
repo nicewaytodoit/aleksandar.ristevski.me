@@ -14,7 +14,7 @@ class Post extends React.Component {
       description,
     } = data.node.frontmatter;
     const page = data.node;
-    console.log('@@@', data);
+    // console.log('@@@', data);
     const { slug, categorySlug } = data.node.fields;
 
     return (

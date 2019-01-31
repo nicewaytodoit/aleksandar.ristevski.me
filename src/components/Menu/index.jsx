@@ -5,11 +5,11 @@ import './style.scss';
 class Menu extends React.Component {
   render() {
     const { data: menu } = this.props;
-
+    console.log(menu);
     const menuBlock = (
       <ul className="menu__list">
-        {menu.map(item => (
-          <li className="menu__list-item" key={item.path}>
+        {menu.map((item, index) => (
+          <li className="menu__list-item adc" key={`${item.path}-${index}`} custom="aaa" title={item.title}>
             <Link
               to={item.path}
               className="menu__list-item-link"

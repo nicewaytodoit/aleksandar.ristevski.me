@@ -10,7 +10,7 @@ import {
 import siteConfig from '../Data/siteData.json';
 
 import Layout from '../components/ProfileScreen/Layout/Layout';
-import Hero from '../components/ProfileScreen/Hero/Hero';
+// import Hero from '../components/ProfileScreen/Hero/Hero';
 import SEO from '../components/ProfileScreen/SEO/Seo';
 import Wrapper from '../components/ProfileScreen/Wrapper/Wrapper';
 import About from '../components/ProfileScreen/About/About';

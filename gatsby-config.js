@@ -25,6 +25,7 @@ module.exports = {
     menu: [
       {
         label: 'Home',
+        title: 'BLog page ...',
         path: '/',
       },
       {
@@ -38,10 +39,6 @@ module.exports = {
       {
         label: 'CV',
         path: '/profile/',
-      },
-      {
-        label: 'Blog',
-        path: '/',
       },
       {
         label: 'Contact me',
