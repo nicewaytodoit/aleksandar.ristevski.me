@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'gatsby';
 import moment from 'moment';
 import Disqus from '../Disqus/Disqus';
-import { formatReadingTime } from '../../utils/helpers';
+import { formatReadingTime, formatDate } from '../../utils/helpers';
 import './style.scss';
 
 class PostTemplateDetails extends React.Component {
@@ -58,7 +58,7 @@ class PostTemplateDetails extends React.Component {
                   // marginTop: rhythm(-1),
                 }}
               >
-                {post.frontmatter.date}
+                {`${formatDate(post.frontmatter.date)}`}
                 {` • ${formatReadingTime(post.timeToRead)}`}
               </p>
             </div>

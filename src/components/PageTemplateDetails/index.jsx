@@ -1,7 +1,7 @@
 import React from 'react';
 import Sidebar from '../Sidebar';
 import './style.scss';
-import { formatReadingTime } from '../../utils/helpers';
+import { formatReadingTime, formatDate } from '../../utils/helpers';
 
 class PageTemplateDetails extends React.Component {
   render() {
@@ -23,7 +23,7 @@ class PageTemplateDetails extends React.Component {
                   // marginTop: rhythm(-1),
                 }}
               >
-                {page.frontmatter.date}
+                {`${formatDate(page.frontmatter.date)}`}
                 {` • ${formatReadingTime(page.timeToRead)}`}
               </p>
               <div

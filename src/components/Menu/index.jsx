@@ -5,7 +5,7 @@ import './style.scss';
 class Menu extends React.Component {
   render() {
     const { data: menu } = this.props;
-    console.log(menu);
+    // console.log(menu);
     const menuBlock = (
       <ul className="menu__list">
         {menu.map((item, index) => (

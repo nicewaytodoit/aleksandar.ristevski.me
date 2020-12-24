@@ -12,7 +12,7 @@ tags:
   - "Learning"
   - "Tutorial"
   - "AWS"
-  - ""
+  - "PM2"
 
 description: "How to use and install PM2 advanced process manager that can keeps alive your application in case of crash."
 ---

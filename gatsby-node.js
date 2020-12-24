@@ -105,7 +105,7 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
     if (typeof node.frontmatter.path !== 'undefined') {
       slug = node.frontmatter.path;
     }
-    console.log(slug, '=========================================<<<<');
+    // console.log(slug, '=========================================<<<<');
     createNodeField({
       node,
       name: 'slug',
