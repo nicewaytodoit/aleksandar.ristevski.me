@@ -15,9 +15,7 @@ const Timeline = ({ className }) => (
           </span>
           <h2 className="timeline__title">
             {job.occupation}
-            {' '}
-            at
-            {' '}
+            {job.occupation ? ' at ' : null}
             {job.company}
             {' '}
             <br />

@@ -34,7 +34,7 @@
     ],
     "jobs": [
         {
-            "company": "ltd",
+            "company": "RBS",
             "begin": {
                 "month": "sep",
                 "year": "2018"
@@ -44,25 +44,99 @@
             "description": "developing and maintaining the online lending platform."
         },
         {
-            "company": "Ltd",
+            "company": "Why5",
             "begin": {
-                "month": "dec",
-                "year": "2016"
+                "month": "aug",
+                "year": "2018"
             },
-            "duration": "1 yr e 5 mos",
+            "duration": null,
             "occupation": "Fullstack developer",
-            "description": "the real estate market."
+            "description": ""
         },
         {
-            "company": "ltd",
+            "company": "Sabbatical",
             "begin": {
-                "month": "set",
-                "year": "2012"
+                "month": "jan",
+                "year": "2018"
             },
             "duration": "4 yrs e 3 mos",
+            "occupation": null,
+            "description": "multiple projects"
+        },
+        {
+            "company": "Tiny Diff",
+            "begin": {
+                "month": "aug",
+                "year": "2015"
+            },
+            "duration": "2 yrs & 4 mos",
             "occupation": "Developer",
-            "description": "the tool."
+            "description": "multiple projects"
+        },
+        {
+            "company": "King's College Hospital NHS Foundation Trust",
+            "begin": {
+                "month": "aug",
+                "year": "2012"
+            },
+            "duration": "4 yrs & 4 mos",
+            "occupation": "Developer",
+            "description": "multiple projects"
+        },
+        {
+            "company": "The Youth Media",
+            "begin": {
+                "month": "oct",
+                "year": "2010"
+            },
+            "duration": "5 mos",
+            "occupation": "Developer",
+            "description": "multiple projects"
+        },
+        {
+            "company": "SIEMENS",
+            "begin": {
+                "month": "jul",
+                "year": "2008"
+            },
+            "duration": "2 yrs & 2 mos",
+            "occupation": "Developer",
+            "description": "multiple projects"
+        },
+        {
+            "company": "TSG Group",
+            "begin": {
+                "month": "sep",
+                "year": "2007"
+            },
+            "duration": "5 mos",
+            "occupation": "Developer",
+            "description": "multiple projects"
+        },
+        {
+            "company": "CEON/CEES",
+            "begin": {
+                "month": "dec",
+                "year": "2006"
+            },
+            "duration": "8 mos",
+            "occupation": "Developer",
+            "description": "multiple projects",
+            "detailsUrl": "/work/#gowi"
+        },
+        {
+            "company": "Gowi Group - 'Bozic & Sinovi'",
+            "begin": {
+                "month": "sep",
+                "year": "2002"
+            },
+            "duration": "4 yrs",
+            "occupation": "Full stack developer, Team Leader, Analyst",
+            "description": "multiple projects in .net asp.net and sql sderver",
+            "detailsUrl": "/work/#gowi"
         }
+        
+
     ],
     "social": {
         "twitter": "https://twitter.com/nicewaytodoit",

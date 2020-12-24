@@ -37,19 +37,19 @@ So, what do you need to do first?
   </span><br/>
 * You can use any branch as deployment branch, but widely addopted way is to use orphan branch called `gh-pages`
   - How to create `gh-pages` orphan branch?
-    ```
-    λ git checkout master
-    λ git ls-files
-    λ git checkout --orphan gh-pages
-    λ git rm -rf .
-    λ echo "# My orphan ReadMe" > ReadMe.md
-    λ git add ReadMe.md
-    λ git commit -a -m "Initial commit"
-    λ git status
-    λ git log --oneline --graph
-    λ git checkout master
-    λ git log --oneline --graph
-    λ git push
+    ```bash
+    $ git checkout master
+    $ git ls-files
+    $ git checkout --orphan gh-pages
+    $ git rm -rf .
+    $ echo "# My orphan ReadMe" > ReadMe.md
+    $ git add ReadMe.md
+    $ git commit -a -m "Initial commit"
+    $ git status
+    $ git log --oneline --graph
+    $ git checkout master
+    $ git log --oneline --graph
+    $ git push
     ``` 
 * For additional tutorials and documentation go to: [https://pages.github.com/](https://pages.github.com/)
 

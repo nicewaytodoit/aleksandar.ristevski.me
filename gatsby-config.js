@@ -20,7 +20,7 @@ module.exports = {
       twitter: '@nicewaytodoit',
     },
     subtitle: 'Any sufficiently advanced technology is indistinguishable from magic.',
-    copyright: 'All rights reserved & Copyright © 2019',
+    copyright: 'All rights reserved & Copyright © 2018 - 2021',
     disqusShortname: '',
     menu: [
       {
