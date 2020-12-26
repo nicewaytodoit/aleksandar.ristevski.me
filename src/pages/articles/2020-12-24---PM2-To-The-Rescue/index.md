@@ -19,7 +19,7 @@ description: "How to use and install PM2 advanced process manager that can keeps
 
 First, we need to ask what is PM2? 
 
-In their makers own words: 'PM2 is a daemon process manager that will help you manage and keep your application online' or in other the words it is an app which is used to keep your Node.js application server (web app) alive even in the case when something goes wrong as application crash server is restarted and similar. 
+So, in their makers own words: "PM2 is a daemon process manager that will help you manage and keep your application online" or in other words it is an app which is used to keep your Node.js application server (web app) alive even in the case when something goes wrong as application crash server is restarted and similar. 
 
 PM2 has: load balancer, logs facility, startup script, microservice management and many other easily accessible functionalities necessary for the production environment.
 
@@ -210,45 +210,48 @@ $ pm2 start env.js --watch --ignore-watch="node_modules"
 ```
 
 
-#### Startup
-Type following command without `sudo` and it will spill out exactly what you need to execute next: 
+## Startup
+Now, when we know how to setup multiple applications and how to run pm2, it is only left to see how to handle unexpected server reboot.
 
-$ pm2 startup
+Type the `pm2 startup` command without `sudo` and it will spill out exactly what you need to execute next: 
+
+```bash
 $ sudo env PATH=$PATH:/home/<user>/.nvm/versions/node/v12.7.1/bin /usr/lib/node_modules/pm2/bin/pm2 startup systemd -u <user> --hp /home/<user>
+```
+
+`<user>` will be the user you are using to run the applications. Copy and paste that entire line as you have it in your SSH press enter. After this you need to save current pm2 process list with:
+
+```bash
 $ pm2 save
-
-Will create `.dump` file 
-files are in ~/.pm2 folder but we will go back to that log files ...
-
-Then upgrading to newer Node.js version, update the PM2 startup script! Use `pm2 unstartup` and then repeat
-$ pm2 unstartup systemd
-
+```
+You will get a following message saying that `dump.pm2` file is created.
+```bash
 [PM2] Saving current process list...
 [PM2] Successfully saved in /home/<user>/.pm2/dump.pm2
+```
 
+The dump file and all the log files will be in `~/.pm2` folder.
+
+If there is a need to update Node.js to newer version or update the PM2 startup script use `$ pm2 unstartup systemd` and then repeat the above process.
+
+Only left is to test that your application will run after reboot, for that one you can use:
+
+```bash
 $ shutdown -r now
+```
 
-
-
-
-
-## Restart Important 
-
-and then as usual 
+! Important: 
+When you rebooting, pm2 will not restart from your `ecosystem.config.js` file but from the dump.pm2 file, replicating processes as they were. That being said it is important to remember when you make changes to ecosystem file you will need to delete all processes start pm2 with ecosystem file.
+```bash
 $ pm2 delete all 
 $ pm2 start ecosystem.config.js.
-
-Important to do if you want to apply new changes in ecosystem file.
-Remember that pm2 save does not start from ecosystem.config.js but from the dump file. so each time you make change you will need to save `pm2 save` current state of processes to update .dump file.
-
+```
+In the end, you will need to `pm2 save` again to capture the current state of processes crating a new dump file. 
 
 
+Next time I will try to cover **deployment** and **logging** with pm2 until then there are few resources you can check:
 
+- [PM2 Documentation](https://pm2.keymetrics.io/docs/usage/pm2-doc-single-page/)
+- [PM2 Deployment](https://pm2.keymetrics.io/docs/usage/deployment/)
+- [PM2 Log Management](https://pm2.keymetrics.io/docs/usage/log-management/)
 
-#### deployment 
-
-
-
-#### log rotation
-? pm2 advanced ... (log rotation and files)
-> https://pm2.keymetrics.io/docs/usage/log-management/
