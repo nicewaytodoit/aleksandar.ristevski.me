@@ -14,41 +14,31 @@ class Post extends React.Component {
       description,
     } = data.node.frontmatter;
     const page = data.node;
-    // console.log('@@@', data);
     const { slug, categorySlug } = data.node.fields;
 
     return (
       <div className="post">
-        <div className="post__meta">
+        <h2 className="post__title mgbt-0">
+          <Link className="post__title-link" to={slug}>
+            {title}
+          </Link>
+        </h2>
+        <div className="post__meta mgbt-0-5">
           <time
             className="post__meta-time"
             dateTime={moment(date).format('MMMM D, YYYY')}
           >
-            {moment(date).format('MMMM YYYY')}
+            {`${formatDate(page.frontmatter.date, 'DD MMM YYYY').toUpperCase()}`}
           </time>
-          <span className="post__meta-divider" />
+          <span className="post__meta-divider"> • </span>
+          {`${formatReadingTime(page.timeToRead)}`}
+          <span className="post__meta-divider"> • </span>
           <span className="post__meta-category" key={categorySlug}>
             <Link to={categorySlug} className="post__meta-category-link">
               {category}
             </Link>
           </span>
         </div>
-        <h2 className="post__title">
-          <Link className="post__title-link" to={slug}>
-            {title}
-          </Link>
-        </h2>
-        <p
-          style={{
-            // ...scale(-1 / 5),
-            display: 'block',
-            // marginBottom: rhythm(1),
-            // marginTop: rhythm(-1),
-          }}
-        >
-          {`${formatDate(page.frontmatter.date, 'DD MMM YYYY').toUpperCase()}`}
-          {` • ${formatReadingTime(page.timeToRead)}`}
-        </p>
         <p className="post__description">{description}</p>
         <Link className="post__readmore" to={slug}>
           Read

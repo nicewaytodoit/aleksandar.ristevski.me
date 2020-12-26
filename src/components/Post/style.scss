@@ -58,3 +58,11 @@
         }
     }
 }
+
+.mgbt-0 {
+    @include margin-bottom(0, true);
+}
+
+.mgbt-0-5 {
+    @include margin-bottom(0.5, true);
+}
