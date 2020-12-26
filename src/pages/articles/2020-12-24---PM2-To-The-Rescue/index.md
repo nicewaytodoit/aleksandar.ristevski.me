@@ -14,7 +14,7 @@ tags:
   - "AWS"
   - "PM2"
 
-description: "How to use and install PM2 advanced process manager that can keeps alive your application in case of crash."
+description: "How to use and install PM2 advanced process manager that can keeps alive your application in case of a crash."
 ---
 
 First, we need to ask what is PM2? 
@@ -37,7 +37,7 @@ $ npm install -g pm2@latest
 
 After PM2 is installed, a new folder `.pm2` will appear in our `/home/<user>` folder. In it there will be logs, and other PM2 files. Remember this we will need it later. 
 
-Being globally available (`-g` flag), at your exposal there are following commands:
+Being globally available (`-g` flag), at your exposal there are the following commands:
 
 From within the folder of your application you can simply start your application by typing: 
 ```bash
@@ -68,7 +68,7 @@ To stop all applications:
 $ pm2 stop all
 ```
 
-To delete all currently running processes, which is useful if you running your apps from `ecosystem` file:
+To delete all currently running processes, which is useful if you running your apps from the `ecosystem` file:
 ```bash
 $ pm2 delete all
 ```
@@ -102,7 +102,7 @@ It is important to emphasize that location from where you are running pm2 and wh
 
 
 ```js
-module.exports={
+module.exports = {
     apps: [
         {
             name: 'letit.buzz',
@@ -178,7 +178,7 @@ $ pm2 restart app.js -- 11 22 33
 
 good idea ...
 So you have a configuration file config.json:
-
+```json
 {
    "dev": {
         "db": {
@@ -199,6 +199,7 @@ So you have a configuration file config.json:
         }
    }
 }
+```
 
 ```js
 var config=require('./config.json')[process.env.NODE_ENV || 'dev'];

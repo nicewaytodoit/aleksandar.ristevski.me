@@ -33,23 +33,22 @@ module.exports = {
         path: '/work/',
       },
       {
-        label: 'Profile',
-        path: '/about/',
-      },
-      {
         label: 'CV',
         path: '/profile/',
-      },
-      {
-        label: 'Contact me',
-        path: '/contact/',
       },
       {
         label: 'Social',
         path: '/social/',
       },
+      {
+        label: 'Contact',
+        path: '/contact/',
+      },
+      {
+        label: 'About me',
+        path: '/about/',
+      },
     ],
-
   },
   plugins: [
     {

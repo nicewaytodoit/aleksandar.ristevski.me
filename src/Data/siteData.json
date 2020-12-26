@@ -13,15 +13,15 @@
         },
         {
             "name": "CSS",
-            "level": 60
+            "level": 65
         },
         {
             "name": "Javascript",
-            "level": 75
+            "level": 78
         },
         {
             "name": "NodeJs",
-            "level": 45
+            "level": 55
         },
         {
             "name": "React",
@@ -29,20 +29,10 @@
         },
         {
             "name": "Git",
-            "level": 72
+            "level": 68
         }
     ],
     "jobs": [
-        {
-            "company": "RBS",
-            "begin": {
-                "month": "sep",
-                "year": "2018"
-            },
-            "duration": null,
-            "occupation": "Frontend developer",
-            "description": "developing and maintaining the online lending platform."
-        },
         {
             "company": "Why5",
             "begin": {
@@ -54,12 +44,22 @@
             "description": ""
         },
         {
+            "company": "RBS",
+            "begin": {
+                "month": "sep",
+                "year": "2018"
+            },
+            "duration": "1 year 4 months",
+            "occupation": "Frontend developer",
+            "description": "developing and maintaining the online lending platform."
+        },
+        {
             "company": "Sabbatical",
             "begin": {
                 "month": "jan",
                 "year": "2018"
             },
-            "duration": "4 yrs e 3 mos",
+            "duration": "4 years 3 months",
             "occupation": null,
             "description": "multiple projects"
         },
@@ -69,7 +69,7 @@
                 "month": "aug",
                 "year": "2015"
             },
-            "duration": "2 yrs & 4 mos",
+            "duration": "2 years 4 months",
             "occupation": "Developer",
             "description": "multiple projects"
         },
@@ -79,7 +79,7 @@
                 "month": "aug",
                 "year": "2012"
             },
-            "duration": "4 yrs & 4 mos",
+            "duration": "4 years 4 months",
             "occupation": "Developer",
             "description": "multiple projects"
         },
@@ -89,7 +89,7 @@
                 "month": "oct",
                 "year": "2010"
             },
-            "duration": "5 mos",
+            "duration": "5 months",
             "occupation": "Developer",
             "description": "multiple projects"
         },
@@ -99,7 +99,7 @@
                 "month": "jul",
                 "year": "2008"
             },
-            "duration": "2 yrs & 2 mos",
+            "duration": "2 years 2 months",
             "occupation": "Developer",
             "description": "multiple projects"
         },
@@ -109,7 +109,7 @@
                 "month": "sep",
                 "year": "2007"
             },
-            "duration": "5 mos",
+            "duration": "5 months",
             "occupation": "Developer",
             "description": "multiple projects"
         },
@@ -119,7 +119,7 @@
                 "month": "dec",
                 "year": "2006"
             },
-            "duration": "8 mos",
+            "duration": "8 months",
             "occupation": "Developer",
             "description": "multiple projects",
             "detailsUrl": "/work/#gowi"
@@ -130,7 +130,7 @@
                 "month": "sep",
                 "year": "2002"
             },
-            "duration": "4 yrs",
+            "duration": "4 years",
             "occupation": "Full stack developer, Team Leader, Analyst",
             "description": "multiple projects in .net asp.net and sql sderver",
             "detailsUrl": "/work/#gowi"

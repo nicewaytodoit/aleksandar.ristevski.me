@@ -6,6 +6,6 @@ export const formatReadingTime = (minutes) => {
   return `${new Array(cups || 1).fill('☕️').join('')} ${minutes} min read`;
 };
 
-export const formatDate = (date) => {
-  return moment(date || new Date()).format('DD/MM/YYYY HH:mm');
+export const formatDate = (date, format) => {
+  return moment(date || new Date()).format(!format?'DD/MM/YYYY HH:mm':format);
 };

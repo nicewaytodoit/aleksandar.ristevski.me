@@ -43,6 +43,8 @@ class Home extends React.Component {
                 <Separator />
                 <Timeline />
                 <Separator />
+                <br/>
+                <br/>
                 <Repositories />
               </Container>
             </Wrapper>

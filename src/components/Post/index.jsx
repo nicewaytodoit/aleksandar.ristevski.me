@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'gatsby';
 import moment from 'moment';
 import './style.scss';
-import { formatReadingTime } from '../../utils/helpers';
+import { formatReadingTime, formatDate } from '../../utils/helpers';
 
 class Post extends React.Component {
   render() {
@@ -46,7 +46,7 @@ class Post extends React.Component {
             // marginTop: rhythm(-1),
           }}
         >
-          {date}
+          {`${formatDate(page.frontmatter.date, 'DD MMM YYYY').toUpperCase()}`}
           {` • ${formatReadingTime(page.timeToRead)}`}
         </p>
         <p className="post__description">{description}</p>
