@@ -23,17 +23,26 @@ const Social = (props) => {
                 <Row>
                   <Col>
                     <h1>Social</h1>
-                  <div style={{width:"500px", maxHeight: '600px', overflow: 'scroll', overflowX: 'hidden' }}>
-                  { loaded ? (  
-                    <a
-                      className="twitter-timeline" 
-                      href="https://twitter.com/NiceWayToDoIT?ref_src=twsrc%5Etfw"
-                      data-tweet-limit="5"
-                      >
-                        Tweets by NiceWayToDoIT
-                    </a>) : ''
-                    }
-                  </div>
+                    <div
+                      className="scroll-frame"
+                      style={{
+                        width:"500px",
+                        maxHeight: '600px',
+                        overflow: 'scroll',
+                        overflowX: 'hidden',
+                        paddingRight: '10px',
+                      }}
+                    >
+                    { loaded ? (  
+                      <a
+                        className="twitter-timeline" 
+                        href="https://twitter.com/NiceWayToDoIT?ref_src=twsrc%5Etfw"
+                        data-tweet-limit="5"
+                        >
+                          Tweets by NiceWayToDoIT
+                      </a>) : ''
+                      }
+                    </div>
                   </Col>
                 </Row>
               </Container>
@@ -60,7 +69,7 @@ export const pageQuery = graphql`
         author {
           name
           email
-          telegram
+          linkedin
           twitter
           github
           rss

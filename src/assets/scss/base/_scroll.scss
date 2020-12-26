@@ -1,0 +1,17 @@
+
+.scroll-frame {
+    scrollbar-width: thin;          /* "auto" or "thin" */
+    scrollbar-color: #46759b white; 
+    &::-webkit-scrollbar {
+        width: 10px;
+    }
+    /* ::-webkit-scrollbar-track {
+    } */
+    &::-webkit-scrollbar-thumb {
+        background: #46759b; 
+        border-radius: 10px;
+    }
+    &::-webkit-scrollbar-thumb:hover {
+        background: #3753ad; 
+    }
+}

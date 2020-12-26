@@ -36,11 +36,11 @@
         {
             "company": "Why5",
             "begin": {
-                "month": "aug",
-                "year": "2018"
+                "month": "jan",
+                "year": "2020"
             },
             "duration": null,
-            "occupation": "Fullstack developer",
+            "occupation": "Team Leader / Developer",
             "description": ""
         },
         {
@@ -59,7 +59,7 @@
                 "month": "jan",
                 "year": "2018"
             },
-            "duration": "4 years 3 months",
+            "duration": "8 months",
             "occupation": null,
             "description": "multiple projects"
         },
@@ -140,7 +140,7 @@
     ],
     "social": {
         "twitter": "https://twitter.com/nicewaytodoit",
-        "linkedin": "https://www.linkedin.com/in/aleksanda-ristevski",
+        "linkedin": "https://www.linkedin.com/in/ristevskialeksandar/",
         "github": "https://github.com/nicewaytodoit",
         "email": "nice@ristevski.me"
     },

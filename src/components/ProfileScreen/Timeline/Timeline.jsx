@@ -32,6 +32,9 @@ const Timeline = ({ className }) => (
   </div>
 );
 
+const bcg = `#396c9f`;
+const bcg_border = `#27313a`;
+
 export default styled(Timeline)`
 
   position: relative;
@@ -44,7 +47,7 @@ export default styled(Timeline)`
     margin: 70px 0 0 -1px;
     width: 1px;
     height: calc(100% - 70px);
-    background: #25303B;
+    background: ${bcg};
   }
   .timeline__item {
     width: 100%;
@@ -61,12 +64,12 @@ export default styled(Timeline)`
     float: left;
     margin: 85px 0 0 0;
     border-radius: 6px;
-    border: 1px solid #25303B;
+    border: 1px solid ${bcg_border};
   }
   .timeline__date {
     display: block;
     width: 60px;
-    padding: 3px 5px;
+    padding: 5px 5px;
     position: absolute;
     top: 0;
     left: 50%;
@@ -75,7 +78,7 @@ export default styled(Timeline)`
     font-size: 12px;
     font-weight: 900;
     text-transform: uppercase;
-    background: #25303B;
+    background: ${bcg};
     color: #fff;
     box-shadow: 0 0 0 7px #fff;
   }
@@ -120,10 +123,10 @@ export default styled(Timeline)`
     float: right;
   }
   .timeline__title {
-    background: #25303B;
+    background: ${bcg};
   }
   .timeline__title:after {
-    background: #25303B;
+    background: ${bcg};
   }
 
   .timeline__title--small {

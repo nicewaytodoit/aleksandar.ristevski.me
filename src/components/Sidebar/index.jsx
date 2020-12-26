@@ -54,6 +54,7 @@ class Sidebar extends React.Component {
           <div>
             <Links data={author} />
             <Menu data={menu} />
+            <br />
             <p className="sidebar__copyright" dangerouslySetInnerHTML={{ __html: copyright }}  />
           </div>
         </div>

@@ -98,8 +98,7 @@ $ pm2 ecosystem
 ```
 it will generate an example `ecosystem.config.js` in our case we do not need *deploy* config block for now - we will cover it some other time. 
 
-It is important to emphasize that location from where you are running pm2 and where the ecosystem file is placed is also important. The general advice is to keep an ecosystem file in the web content root `/var/www`.
-
+I would like to emphasize that location from where you are running pm2 and where the ecosystem file is placed is important. The general advice is to keep an ecosystem file in the root of the web content `/var/www`.
 
 ```js
 module.exports = {
@@ -137,22 +136,85 @@ module.exports = {
 }
 ```
 
+Let's se what is what.
 
-args works for arguments in ecosystem!
+- **name** - is the process name it will help you to locate the application in the `pm2 list` or to manipulate it if needed by `pm2 start/delete...`.
+- **script** - is the location of your application, when you navigate it is from the location of your ecosystem file.
+- **args** - can be useful if you want to pass arguments to your node.js application that you can handle with line like `const [,,firstArgument] = process.argv;`
+Except passing arguments using ecosystem file it is possible to do it directly using the following:
+```bash
+$ pm2 start app.js -- aa bb cc
+$ pm2 restart app.js -- 11 22 33
+```
+as described [here](https://github.com/Unitech/pm2/issues/13).
 
-pm2 start env.js --watch --ignore-watch="node_modules"
+- **exec_mode** - by default application runs in 'fork' mode but if you want to utilize processing power of your server you will use 'cluster' if you use cluster mode then the next parameter is important.
 
+- **instances** - if you choose 'max' or '0', PM2 will create maximum threads/cores available, any other number will create equal number of instances of your application.
 
+- **env** - another way to pass arguments on the start to the application is with environment variables, except using Linux command `export NAME=VALUE` is to adjust them in ecosystem  file. Whatever we set in `env:` block will be directly accessible from JavaScript code by using a following pattern `process.env.PORT`, `process.env.NODE_ENV`. 
+It is possible to create an option block as `env_production`, `env_something` but those will not be directly accessible from our node.js app. The only way to use them is to pass desired environment on the start as `pm2 start ecosystem.config.js --env production`. 
 
+If there is a requirement to pass multiple values, maybe the good option would be to use `.json` file
+
+For instance, we could create a `config.json` file with:
+```json
+{
+   "dev": {
+        "psql": {
+            "connection": "host=localhost port=5432 dbname=buzz user=john"
+        },
+        "redis": {
+            "hosts": ["localhost"]
+        }
+   },
+   "production": {
+        "psql": {
+            "connection": "host=192.168.7.11 port=5432 dbname=buzz user=admin"
+        },
+        "redis": {
+            "hosts": ["8.8.8.8"]
+        }
+   }
+}
+```
+Next inside of JavaScript file we can consume json by loading specific values:
+
+```js
+var config = require('./config.json')[process.env.NODE_ENV || 'dev'];
+db.connect(config.psql.connection, config.redis.hosts);
+```
+
+for the given `NODE_ENV` value we would set via shell:
+
+export NODE_ENV=staging
+pm2 start app.js
+
+or changing values in `ecosystem` within `env` config block as:
+```js
+module.exports = {
+    apps: [
+        {
+            ...
+            env: {
+                NODE_ENV: 'dev',
+            },
+```
+
+- **watch** - this is very similar to watch options with `nodemon` where overall idea is to track code changes, so after the new deployment process will automatically restart newly updated application. Along with `watch: true` we need to set `ignore_watch: ['.git', 'node_modules']` parameter which will ignore unnecessary files in our application folder. Lastly, there is `watch_delay` which is I guess (in lack of documentation) a number in milliseconds that will delay restart after a change. This can be useful if we copying multiple files.
+
+Except defining these in the `ecosystem` file it is possible to pass them inline as:
+
+```bash
+$ pm2 start env.js --watch --ignore-watch="node_modules"
+```
 
 
 #### Startup
 Type following command without `sudo` and it will spill out exactly what you need to execute next: 
+
 $ pm2 startup
-
 $ sudo env PATH=$PATH:/home/<user>/.nvm/versions/node/v12.7.1/bin /usr/lib/node_modules/pm2/bin/pm2 startup systemd -u <user> --hp /home/<user>
-
-
 $ pm2 save
 
 Will create `.dump` file 
@@ -170,52 +232,7 @@ $ shutdown -r now
 
 
 
-#### passing parameters 
-https://github.com/Unitech/pm2/issues/13
-
-$ pm2 start app.js -- aa bb cc
-$ pm2 restart app.js -- 11 22 33
-
-good idea ...
-So you have a configuration file config.json:
-```json
-{
-   "dev": {
-        "db": {
-            "hosts":["localhost"],
-            "database": "api"
-        },
-        "redis": {
-            "hosts": ["localhost"]
-        }
-   },
-   "production": {
-        "db": {
-            "hosts":["1.1.1.1", "1.1.1.2", "1.1.1.3"],
-            "database": "api"
-        },
-        "redis": {
-            "hosts": ["2.2.2.2", "2.2.2.3"]
-        }
-   }
-}
-```
-
-```js
-var config=require('./config.json')[process.env.NODE_ENV || 'dev'];
-db.connect(config.db.hosts, config.db.database);
-```
-
-Then you'd set the variable in your environment via shell:
-
-export NODE_ENV=staging
-pm2 start app.js
-
-or in the case of our ecosystem file your would define `NODE_ENV` in `env` config block:
-
-            env: {
-                NODE_ENV: 'development',
-            },
+## Restart Important 
 
 and then as usual 
 $ pm2 delete all 
@@ -223,6 +240,10 @@ $ pm2 start ecosystem.config.js.
 
 Important to do if you want to apply new changes in ecosystem file.
 Remember that pm2 save does not start from ecosystem.config.js but from the dump file. so each time you make change you will need to save `pm2 save` current state of processes to update .dump file.
+
+
+
+
 
 #### deployment 
 

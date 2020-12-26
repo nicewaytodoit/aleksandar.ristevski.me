@@ -13,6 +13,7 @@ module.exports = {
       telegram: 'nicewaytodoit',
       twitter: '@nicewaytodoit',
       github: 'nicewaytodoit',
+      linkedin: 'https://www.linkedin.com/in/ristevskialeksandar/',
       rss: '#',
     },
     siteUrl: 'https://nicewaytodoit.github.io/aleksandar.ristevski.me/',
@@ -29,12 +30,12 @@ module.exports = {
         path: '/',
       },
       {
-        label: 'Work',
-        path: '/work/',
-      },
-      {
         label: 'CV',
         path: '/profile/',
+      },
+      {
+        label: 'Work',
+        path: '/work/',
       },
       {
         label: 'Social',
