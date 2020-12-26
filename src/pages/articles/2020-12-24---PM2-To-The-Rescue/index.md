@@ -136,7 +136,7 @@ module.exports = {
 }
 ```
 
-Let's se what is what.
+Let's see what is what.
 
 - **name** - is the process name it will help you to locate the application in the `pm2 list` or to manipulate it if needed by `pm2 start/delete...`.
 - **script** - is the location of your application, when you navigate it is from the location of your ecosystem file.
@@ -148,14 +148,14 @@ $ pm2 restart app.js -- 11 22 33
 ```
 as described [here](https://github.com/Unitech/pm2/issues/13).
 
-- **exec_mode** - by default application runs in 'fork' mode but if you want to utilize processing power of your server you will use 'cluster' if you use cluster mode then the next parameter is important.
+- **exec_mode** - by default application runs in 'fork' mode but if you want to utilize the processing power of your server use 'cluster' mode then adjust next parameter.
 
-- **instances** - if you choose 'max' or '0', PM2 will create maximum threads/cores available, any other number will create equal number of instances of your application.
+- **instances** - if you choose 'max' or '0', PM2 will create maximum threads/cores available, any other number will create an equal number of instances of your application.
 
-- **env** - another way to pass arguments on the start to the application is with environment variables, except using Linux command `export NAME=VALUE` is to adjust them in ecosystem  file. Whatever we set in `env:` block will be directly accessible from JavaScript code by using a following pattern `process.env.PORT`, `process.env.NODE_ENV`. 
-It is possible to create an option block as `env_production`, `env_something` but those will not be directly accessible from our node.js app. The only way to use them is to pass desired environment on the start as `pm2 start ecosystem.config.js --env production`. 
+- **env** - another way to pass arguments on the start to the application is with environment variables, except using Linux command `export NAME=VALUE` is to adjust them in the ecosystem  file. Whatever we set in the `env:` block will be directly accessible from JavaScript code by using the following pattern `process.env.PORT`, `process.env.NODE_ENV`. 
+It is possible to create an option block as `env_production`, `env_something` but those will not be directly accessible from our node.js app. The only way to use them is to pass the desired environment on the start as `pm2 start ecosystem.config.js --env production`. 
 
-If there is a requirement to pass multiple values, maybe the good option would be to use `.json` file
+If there is a requirement to pass multiple values, maybe the good option would be to use the `.json` file
 
 For instance, we could create a `config.json` file with:
 ```json
@@ -201,7 +201,7 @@ module.exports = {
             },
 ```
 
-- **watch** - this is very similar to watch options with `nodemon` where overall idea is to track code changes, so after the new deployment process will automatically restart newly updated application. Along with `watch: true` we need to set `ignore_watch: ['.git', 'node_modules']` parameter which will ignore unnecessary files in our application folder. Lastly, there is `watch_delay` which is I guess (in lack of documentation) a number in milliseconds that will delay restart after a change. This can be useful if we copying multiple files.
+- **watch** - this is very similar to watch options with `nodemon` where overall idea is to track code changes, so after the new deployment process will automatically restart the newly updated application. Along with `watch: true` we need to set `ignore_watch: ['.git', 'node_modules']` parameter which will ignore unnecessary files in our application folder. Lastly, there is `watch_delay` which is I guess (in lack of documentation) a number in milliseconds that will delay restart after a change. This can be useful if we copying multiple files.
 
 Except defining these in the `ecosystem` file it is possible to pass them inline as:
 
@@ -211,7 +211,7 @@ $ pm2 start env.js --watch --ignore-watch="node_modules"
 
 
 ## Startup
-Now, when we know how to setup multiple applications and how to run pm2, it is only left to see how to handle unexpected server reboot.
+Now, when we know how to setup multiple applications and how to run pm2, it is only left to see how to handle an unexpected server reboot.
 
 Type the `pm2 startup` command without `sudo` and it will spill out exactly what you need to execute next: 
 
@@ -219,29 +219,29 @@ Type the `pm2 startup` command without `sudo` and it will spill out exactly what
 $ sudo env PATH=$PATH:/home/<user>/.nvm/versions/node/v12.7.1/bin /usr/lib/node_modules/pm2/bin/pm2 startup systemd -u <user> --hp /home/<user>
 ```
 
-`<user>` will be the user you are using to run the applications. Copy and paste that entire line as you have it in your SSH press enter. After this you need to save current pm2 process list with:
+`<user>` will be the user you are using to run the applications. Copy and paste that entire line as you have it in your SSH press enter. After this you need to save the current pm2 process list with:
 
 ```bash
 $ pm2 save
 ```
-You will get a following message saying that `dump.pm2` file is created.
+You will get the following message saying that the `dump.pm2` file is created.
 ```bash
 [PM2] Saving current process list...
 [PM2] Successfully saved in /home/<user>/.pm2/dump.pm2
 ```
 
-The dump file and all the log files will be in `~/.pm2` folder.
+The dump file and all the log files will be in the `~/.pm2` folder.
 
-If there is a need to update Node.js to newer version or update the PM2 startup script use `$ pm2 unstartup systemd` and then repeat the above process.
+If there is a need to update Node.js to a newer version or update the PM2 startup script use `$ pm2 unstartup systemd` and then repeat the above process.
 
-Only left is to test that your application will run after reboot, for that one you can use:
+Only left is to test that your application will run after a reboot, for that one you can use:
 
 ```bash
 $ shutdown -r now
 ```
 
 ! Important: 
-When you rebooting, pm2 will not restart from your `ecosystem.config.js` file but from the dump.pm2 file, replicating processes as they were. That being said it is important to remember when you make changes to ecosystem file you will need to delete all processes start pm2 with ecosystem file.
+When you rebooting, pm2 will not restart from your `ecosystem.config.js` file but from the dump.pm2 file, replicating processes as they were. That being said it is important to remember when you make changes to the ecosystem file you will need to delete all processes start pm2 with the ecosystem file.
 ```bash
 $ pm2 delete all 
 $ pm2 start ecosystem.config.js.
