@@ -15,7 +15,7 @@ class PostTemplateDetails extends React.Component {
     const homeBlock = (
       <div>
         <Link className="post-single__home-button" to="/">
-          All Articles
+          Articles
         </Link>
       </div>
     );

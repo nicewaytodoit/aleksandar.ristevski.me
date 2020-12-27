@@ -3,7 +3,8 @@ title: PM2 to the rescue
 date: "2020-12-24T10:23:00.000Z"
 layout: post
 draft: false
-path: "/posts/2020-12-24---pm2-to-the-rescue/"
+path: "/pm2-to-the-rescue/"
+slug: "/pm2-to-the-rescue/"
 category: "Tutorials"
 tags:
   - "NodeJS"
@@ -250,8 +251,7 @@ In the end, you will need to `pm2 save` again to capture the current state of pr
 
 
 Next time I will try to cover **deployment** and **logging** with pm2 until then there are few resources you can check:
-
-- [PM2 Documentation](https://pm2.keymetrics.io/docs/usage/pm2-doc-single-page/)
-- [PM2 Deployment](https://pm2.keymetrics.io/docs/usage/deployment/)
-- [PM2 Log Management](https://pm2.keymetrics.io/docs/usage/log-management/)
+  * [PM2 Documentation](https://pm2.keymetrics.io/docs/usage/pm2-doc-single-page/)
+  * [PM2 Deployment](https://pm2.keymetrics.io/docs/usage/deployment/)
+  * [PM2 Log Management](https://pm2.keymetrics.io/docs/usage/log-management/)
 

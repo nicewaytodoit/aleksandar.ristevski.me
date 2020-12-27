@@ -1,0 +1,32 @@
+$email-color: #46759b;
+
+.email {
+    &__title {
+        font-size: 1.2em;
+    }
+    &__group {
+        display: block;
+        padding: 5px 5px;
+        line-height: 1.4em;
+        &-title {
+            display: inline;
+        }
+        &> * {
+            width: 50%;
+        }
+    }
+    &__controls > * {
+        border: 1px solid $email-color;
+        padding: 5px;
+    }
+    &__button {
+        border: 1px solid #777;
+        cursor: pointer;
+        border-radius: 5px;
+        background: $email-color;
+        color: white;
+        padding: 5px;
+        width: 120px;
+    }
+
+}

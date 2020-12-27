@@ -15,7 +15,7 @@ class PageTemplateDetails extends React.Component {
           <div className="content__inner">
             <div className="page">
               <h1 className="page__title">{page.frontmatter.title}</h1>
-              <p
+              {/* <p
                 style={{
                   // ...scale(-1 / 5),
                   display: 'block',
@@ -25,7 +25,7 @@ class PageTemplateDetails extends React.Component {
               >
                 {`${formatDate(page.frontmatter.date)}`}
                 {` • ${formatReadingTime(page.timeToRead)}`}
-              </p>
+              </p> */}
               <div
                 className="page__body"
                 /* eslint-disable-next-line react/no-danger */
