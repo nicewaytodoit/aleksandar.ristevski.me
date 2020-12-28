@@ -51,19 +51,13 @@ module.exports = {
       },
     ],
   },
+  // flags: { PRESERVE_WEBPACK_CACHE: true },
   plugins: [
     {
       resolve: 'gatsby-source-filesystem',
       options: {
         path: `${__dirname}/src/pages`,
         name: 'pages',
-      },
-    },
-    {
-      resolve: `gatsby-plugin-routes`,
-      options: {
-        // this is the path to your routes configuration file
-        path: `${__dirname}/src/Data/routes.js`,
       },
     },
     {
@@ -121,6 +115,14 @@ module.exports = {
         ],
       },
     },
+    // If I use this one then Markdown does not work ... 
+    // {
+    //   resolve: `gatsby-plugin-routes`,
+    //   options: {
+    //     // this is the path to your routes configuration file
+    //     path: `${__dirname}/src/Data/routes.js`,
+    //   },
+    // },
     {
       resolve: 'gatsby-transformer-remark',
       options: {

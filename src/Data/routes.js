@@ -2,7 +2,9 @@
 const path = require('path');
 module.exports = [
   {
-    path: '/work/',
-    component: path.resolve(`src/pages/pages/work/index.jsx`)
+    componentChunkName: 'component---src-pages-pages-work-index-jsx',
+    overridePath: '/work/',
+    // path: '/work/',
+    // component: path.resolve(`src/pages/pages/work/index.jsx`)
   }
 ];
