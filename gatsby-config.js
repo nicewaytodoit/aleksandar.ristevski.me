@@ -146,10 +146,6 @@ module.exports = {
     'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',
     {
-      resolve: 'gatsby-plugin-google-analytics',
-      options: { trackingId: 'UA-16430012-4' },
-    },
-    {
       resolve: 'gatsby-plugin-google-fonts',
       options: {
         fonts: ['roboto:400,400i,500,700'],
@@ -227,5 +223,21 @@ module.exports = {
         precision: 8,
       },
     },
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: "UA-16430012-4", // this option places the tracking script into the head of the DOM
+        head: true, // other options
+      },
+    },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: 'Aleksandar Ristevski Profile',
+        short_name: 'AR.ME',
+        start_url: '/',
+        icon: 'src/assets/favicon.ico',
+      },
+    }
   ],
 };

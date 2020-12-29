@@ -50,7 +50,8 @@
                 "year": "2018"
             },
             "duration": "1 year 4 months",
-            "occupation": "Frontend developer",
+            "occupation": "Frontend developer team lead",
+            "tools": ["React", "JavaScript", "TypeScript", "Node.js", "", ""],
             "description": "developing and maintaining the online lending platform."
         },
         {
