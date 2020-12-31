@@ -1,5 +1,5 @@
 ---
-title: Git - most frequent commands
+title: Minimum Html5 Template
 date: "2019-02-13T13:27:33.158"
 layout: post
 draft: false
@@ -49,8 +49,4 @@ This one is with script and link can have deffer attribute in script:
   <script src="js/scripts.js"> </script>
 </body>
 </html>
-```
-
-
-
 ```
