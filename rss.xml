@@ -1,7 +1,7 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Blog & Profile by Aleksandar Ristevski]]></title><description><![CDATA[Any sufficiently advanced technology is indistinguishable from magic.]]></description><link>http://github.com/dylang/node-rss</link><generator>GatsbyJS</generator><lastBuildDate>Thu, 31 Dec 2020 19:26:44 GMT</lastBuildDate><item><title><![CDATA[PM2 to the rescue]]></title><description><![CDATA[How to use and install PM2 advanced process manager that can keeps alive your application in case of a crash.]]></description><link>https://nicewaytodoit.github.io/aleksandar.ristevski.me/pm2-to-the-rescue/</link><guid isPermaLink="false">https://nicewaytodoit.github.io/aleksandar.ristevski.me/pm2-to-the-rescue/</guid><pubDate>Thu, 24 Dec 2020 10:23:00 GMT</pubDate><content:encoded>&lt;p&gt;First, we need to ask what is PM2? &lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Blog & Profile by Aleksandar Ristevski]]></title><description><![CDATA[Any sufficiently advanced technology is indistinguishable from magic.]]></description><link>http://github.com/dylang/node-rss</link><generator>GatsbyJS</generator><lastBuildDate>Thu, 31 Dec 2020 20:19:50 GMT</lastBuildDate><item><title><![CDATA[PM2 to the rescue]]></title><description><![CDATA[How to use and install PM2 advanced process manager that can keeps alive your application in case of a crash.]]></description><link>https://nicewaytodoit.github.io/aleksandar.ristevski.me/pm2-to-the-rescue/</link><guid isPermaLink="false">https://nicewaytodoit.github.io/aleksandar.ristevski.me/pm2-to-the-rescue/</guid><pubDate>Thu, 24 Dec 2020 10:23:00 GMT</pubDate><content:encoded>&lt;p&gt;First, we need to ask what is PM2? &lt;/p&gt;
 &lt;p&gt;So, in their makers own words: “PM2 is a daemon process manager that will help you manage and keep your application online” or in other words it is an app which is used to keep your Node.js application server (web app) alive even in the case when something goes wrong as application crash server is restarted and similar. &lt;/p&gt;
 &lt;p&gt;PM2 has: load balancer, logs facility, startup script, microservice management and many other easily accessible functionalities necessary for the production environment.&lt;/p&gt;
-&lt;p&gt;Considering that you already have a web application up and running let’s switch to PM2, if not there is a tutorial on how to create an &lt;a href=&quot;/posts/2020-11-19---expressjs-web-app-running-on-nginx/&quot;&gt;Express.js web app running on Nginx&lt;/a&gt; you can quickly go through.&lt;/p&gt;
+&lt;p&gt;Considering that you already have a web application up and running let’s switch to PM2, if not there is a tutorial on how to create an &lt;a href=&quot;/aleksandar.ristevski.me/posts/2020-11-19---expressjs-web-app-running-on-nginx/&quot;&gt;Express.js web app running on Nginx&lt;/a&gt; you can quickly go through.&lt;/p&gt;
 &lt;h2&gt;Basic Setup&lt;/h2&gt;
 &lt;p&gt;So, to install PM2 run the following:&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;$ &lt;span class=&quot;token function&quot;&gt;npm&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;install&lt;/span&gt; -g pm2@latest&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
@@ -18,7 +18,7 @@
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/03bc2e246664179e3459a3d42270c01e/f4d02/1.jpg&quot;
+    href=&quot;/aleksandar.ristevski.me/static/03bc2e246664179e3459a3d42270c01e/f4d02/1.jpg&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -31,13 +31,13 @@
         class=&quot;gatsby-resp-image-image&quot;
         alt=&quot;Process list&quot;
         title=&quot;Process list&quot;
-        src=&quot;/static/03bc2e246664179e3459a3d42270c01e/6a068/1.jpg&quot;
-        srcset=&quot;/static/03bc2e246664179e3459a3d42270c01e/09b79/1.jpg 240w,
-/static/03bc2e246664179e3459a3d42270c01e/7cc5e/1.jpg 480w,
-/static/03bc2e246664179e3459a3d42270c01e/6a068/1.jpg 960w,
-/static/03bc2e246664179e3459a3d42270c01e/644c5/1.jpg 1440w,
-/static/03bc2e246664179e3459a3d42270c01e/0f98f/1.jpg 1920w,
-/static/03bc2e246664179e3459a3d42270c01e/f4d02/1.jpg 2387w&quot;
+        src=&quot;/aleksandar.ristevski.me/static/03bc2e246664179e3459a3d42270c01e/6a068/1.jpg&quot;
+        srcset=&quot;/aleksandar.ristevski.me/static/03bc2e246664179e3459a3d42270c01e/09b79/1.jpg 240w,
+/aleksandar.ristevski.me/static/03bc2e246664179e3459a3d42270c01e/7cc5e/1.jpg 480w,
+/aleksandar.ristevski.me/static/03bc2e246664179e3459a3d42270c01e/6a068/1.jpg 960w,
+/aleksandar.ristevski.me/static/03bc2e246664179e3459a3d42270c01e/644c5/1.jpg 1440w,
+/aleksandar.ristevski.me/static/03bc2e246664179e3459a3d42270c01e/0f98f/1.jpg 1920w,
+/aleksandar.ristevski.me/static/03bc2e246664179e3459a3d42270c01e/f4d02/1.jpg 2387w&quot;
         sizes=&quot;(max-width: 960px) 100vw, 960px&quot;
         style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         loading=&quot;lazy&quot;
@@ -331,7 +331,7 @@ Please have in mind that this is not an ideal solution for a production environm
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/916f952b70c790307ad63bc50c73afe3/2655e/1.jpg&quot;
+    href=&quot;/aleksandar.ristevski.me/static/916f952b70c790307ad63bc50c73afe3/2655e/1.jpg&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -344,12 +344,12 @@ Please have in mind that this is not an ideal solution for a production environm
         class=&quot;gatsby-resp-image-image&quot;
         alt=&quot;Settings Tab&quot;
         title=&quot;Settings Tab&quot;
-        src=&quot;/static/916f952b70c790307ad63bc50c73afe3/6a068/1.jpg&quot;
-        srcset=&quot;/static/916f952b70c790307ad63bc50c73afe3/09b79/1.jpg 240w,
-/static/916f952b70c790307ad63bc50c73afe3/7cc5e/1.jpg 480w,
-/static/916f952b70c790307ad63bc50c73afe3/6a068/1.jpg 960w,
-/static/916f952b70c790307ad63bc50c73afe3/644c5/1.jpg 1440w,
-/static/916f952b70c790307ad63bc50c73afe3/2655e/1.jpg 1559w&quot;
+        src=&quot;/aleksandar.ristevski.me/static/916f952b70c790307ad63bc50c73afe3/6a068/1.jpg&quot;
+        srcset=&quot;/aleksandar.ristevski.me/static/916f952b70c790307ad63bc50c73afe3/09b79/1.jpg 240w,
+/aleksandar.ristevski.me/static/916f952b70c790307ad63bc50c73afe3/7cc5e/1.jpg 480w,
+/aleksandar.ristevski.me/static/916f952b70c790307ad63bc50c73afe3/6a068/1.jpg 960w,
+/aleksandar.ristevski.me/static/916f952b70c790307ad63bc50c73afe3/644c5/1.jpg 1440w,
+/aleksandar.ristevski.me/static/916f952b70c790307ad63bc50c73afe3/2655e/1.jpg 1559w&quot;
         sizes=&quot;(max-width: 960px) 100vw, 960px&quot;
         style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         loading=&quot;lazy&quot;
@@ -396,7 +396,7 @@ $ &lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; push&lt;/code&gt
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/042dd29755cb80419c34f3498118bd0b/bba1f/1.jpg&quot;
+    href=&quot;/aleksandar.ristevski.me/static/042dd29755cb80419c34f3498118bd0b/bba1f/1.jpg&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -409,10 +409,10 @@ $ &lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; push&lt;/code&gt
         class=&quot;gatsby-resp-image-image&quot;
         alt=&quot;GatsbyJS Popularity Growth&quot;
         title=&quot;GatsbyJS Popularity Growth&quot;
-        src=&quot;/static/042dd29755cb80419c34f3498118bd0b/bba1f/1.jpg&quot;
-        srcset=&quot;/static/042dd29755cb80419c34f3498118bd0b/09b79/1.jpg 240w,
-/static/042dd29755cb80419c34f3498118bd0b/7cc5e/1.jpg 480w,
-/static/042dd29755cb80419c34f3498118bd0b/bba1f/1.jpg 840w&quot;
+        src=&quot;/aleksandar.ristevski.me/static/042dd29755cb80419c34f3498118bd0b/bba1f/1.jpg&quot;
+        srcset=&quot;/aleksandar.ristevski.me/static/042dd29755cb80419c34f3498118bd0b/09b79/1.jpg 240w,
+/aleksandar.ristevski.me/static/042dd29755cb80419c34f3498118bd0b/7cc5e/1.jpg 480w,
+/aleksandar.ristevski.me/static/042dd29755cb80419c34f3498118bd0b/bba1f/1.jpg 840w&quot;
         sizes=&quot;(max-width: 840px) 100vw, 840px&quot;
         style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         loading=&quot;lazy&quot;
