@@ -14,18 +14,18 @@ const Timeline = ({ className }) => (
             <span className="timeline__year">{job.begin.year}</span>
           </span>
           <h2 className="timeline__title">
-            {job.occupation}
-            {job.occupation ? ' at ' : null}
             {job.company}
             {' '}
             <br />
             <small className="timeline__title--small">
-              (
-              {job.duration || 'present'}
-              )
+            ({job.duration || 'present'})
             </small>
           </h2>
-          <p>{job.description}</p>
+          <p className="timeline__text">{job.description}</p>
+          <p className="timeline__stack">
+            {(job.stack || []).map((skill) => <span>{skill}</span>) }
+            <a href="work/#{job.hash}"><strong>...</strong></a>
+          </p>
         </div>
       </article>
     ))}
@@ -66,6 +66,31 @@ export default styled(Timeline)`
     border-radius: 6px;
     border: 1px solid ${bcg_border};
   }
+  .timeline__text {
+    padding-top: 5px !important;
+    padding-bottom: 15px !important;
+    line-height: 1.3rem;
+  }
+  .timeline__stack {
+    position: relative;
+    padding-top: 0px !important;
+    padding-bottom: 15px !important;
+    line-height: 1.3rem;
+  }
+  .timeline__stack span {
+    font-size: 0.7em;
+    border: 1px solid #777;
+    background-color: #d4ebf2;
+    margin-right: 4px;
+    padding: 3px;
+    white-space:nowrap;
+  }
+  .timeline__stack a {
+    position: absolute;
+    right: 15px;
+    bottom: 12px;
+  }
+
   .timeline__date {
     display: block;
     width: 60px;

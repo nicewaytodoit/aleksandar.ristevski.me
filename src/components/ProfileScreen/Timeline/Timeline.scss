@@ -81,7 +81,21 @@
     color: #656565;
     border-radius: 0 0 6px 6px;
   }
+  &__text {
+    padding-top: 0px !important;
+    padding-bottom: 0px !important;
+  }
+  &__stack {
+    padding-top: 0px !important;
+    padding-bottom: 0px !important;
+    font-size: 0.7em;
+  }
+  &__stack span {
+    border: 1px solid #777;
+  }
+  
   &__item:nth-child(2n+2) div.inner {
+    /* this is my coMMent */
     float: right;
   }
   &__title {

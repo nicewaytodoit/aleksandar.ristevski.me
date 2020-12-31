@@ -8,64 +8,81 @@
     "authorDescription": "Developer <br />\n    Bit of history.\n    yara yara yara ... C # and .NET. <br />\n    <strong>Javascript, NodeJS e React.</strong>",
     "skills": [
         {
-            "name": "HTML",
-            "level": 70
-        },
-        {
-            "name": "CSS",
-            "level": 65
+            "name": "React",
+            "level": 85
         },
         {
             "name": "Javascript",
             "level": 78
         },
         {
-            "name": "NodeJs",
-            "level": 55
+            "name": "Node.js",
+            "level": 58
         },
         {
-            "name": "React",
-            "level": 85
+            "name": "CSS",
+            "level": 67
+        },
+        {
+            "name": "HTML",
+            "level": 74
         },
         {
             "name": "Git",
-            "level": 53
+            "level": 55
         }
     ],
     "jobs": [
         {
+            "hash": "why5",    
             "company": "Why5",
+            "location": "London, UK",
             "begin": {
                 "month": "jan",
                 "year": "2020"
             },
             "duration": null,
             "occupation": "Team Leader / Developer",
-            "description": ""
+            "description": "Development of multiple web projects.",
+            "stack": ["React", "JavaScript", "TypeScript", "Node.js", "Postgres", "Nginx", "Linux", "Github"],
+            "projects": [
+                {
+                    "name": "komentara.com",
+                    "url": "",
+                    "description": "", 
+                    "skills": "" 
+                }
+            ]
         },
         {
+            "hash": "rbs",    
             "company": "RBS",
+            "location": "London, UK",
             "begin": {
                 "month": "sep",
                 "year": "2018"
             },
             "duration": "1 year 4 months",
             "occupation": "Frontend developer team lead",
-            "tools": ["React", "JavaScript", "TypeScript", "Node.js", "", ""],
-            "description": "developing and maintaining the online lending platform."
+            "description": "Development and maintenance of the digital journey lending platform.",
+            "stack": ["React", "JavaScript", "TypeScript", "Node.js", "Jira", "TeamCity", "Confluence", "BitBucket"]
         },
         {
+            "hash": "sabbatical",    
             "company": "Sabbatical",
+            "location": "Around the World",
             "begin": {
                 "month": "jan",
                 "year": "2018"
             },
             "duration": "8 months",
             "occupation": null,
-            "description": "multiple projects"
+            "description": "Traveling around the world and working on conceptual solutions for global world challenges"
         },
         {
+            "hash": "tinydiff",    
             "company": "Tiny Diff",
+            "location": "London, UK",
             "begin": {
                 "month": "aug",
                 "year": "2015"
@@ -75,7 +92,9 @@
             "description": "multiple projects"
         },
         {
+            "hash": "kingsnhs",    
             "company": "King's College Hospital NHS Foundation Trust",
+            "location": "London, UK",
             "begin": {
                 "month": "aug",
                 "year": "2012"
@@ -85,7 +104,9 @@
             "description": "multiple projects"
         },
         {
+            "hash": "youthmedia",    
             "company": "The Youth Media",
+            "location": "London, UK",
             "begin": {
                 "month": "oct",
                 "year": "2010"
@@ -95,7 +116,10 @@
             "description": "multiple projects"
         },
         {
+            "hash": "siemens",    
             "company": "SIEMENS",
+            "location": "Belgrade, RS",
+            "url": " www.siemens.rs",
             "begin": {
                 "month": "jul",
                 "year": "2008"
@@ -105,7 +129,9 @@
             "description": "multiple projects"
         },
         {
+            "hash": "tsg",  
             "company": "TSG Group",
+            "location": "Belgrade, RS",
             "begin": {
                 "month": "sep",
                 "year": "2007"
@@ -115,7 +141,9 @@
             "description": "multiple projects"
         },
         {
+            "hash": "ceon",    
             "company": "CEON/CEES",
+            "location": "Belgrade, RS",
             "begin": {
                 "month": "dec",
                 "year": "2006"
@@ -126,7 +154,9 @@
             "detailsUrl": "/work/#gowi"
         },
         {
+            "hash": "gowigroup",    
             "company": "Gowi Group - 'Bozic & Sinovi'",
+            "location": "Pančevo, RS",
             "begin": {
                 "month": "sep",
                 "year": "2002"

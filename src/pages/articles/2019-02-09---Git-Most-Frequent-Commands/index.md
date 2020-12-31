@@ -45,9 +45,25 @@ $ git remote add origin https://github.com/user/repo.git
 
 - **`gitk`** - will give a visual representation of the repository 
 
-- **`git checkout <branch/hash>`** - switch to the certain branch, or if you use hash you will go to a certain point in the history, if you use `git checkout HEAD` you will go back to the first point in history 
+- **`git checkout <branch or hash>`** - switch to the certain branch, or if you use hash you will go to a certain point in the history, if you use `git checkout HEAD` you will go back to the first point in history 
 
 - **`git checkout -b "new-branch"`** - will create a branch and checks it out. It is frequently used to create a local branch from a remote branch made by Jira (Atlassian) in that way developer will maintain connection and status between a task s/he is working on and the code repository. 
 
+- **`git checkout --track origin/<branch>`** - this is the command frequently used to create a newly-created remote branch. Additionally this command will set up-stream in the local `.git/config` file.
+
 - **`git reset --soft HEAD^`** - reverse current commit to the staging area (point after `git add .`). 
+
+- **`git branch`** - listing local branches
+
+- **`git branch -r`** - listing remote branches 
+
+- **`git branch -a`** - listing all branches 
+
+- **`git branch -d <branch>`** - delete a local branch
+
+- **``git push origin --delete <branch>``** - delete a remote branch
+
+- **`git pull origin <branch>`** - to pull specific remote branch
+
+
 
