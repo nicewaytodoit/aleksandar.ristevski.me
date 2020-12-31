@@ -24,7 +24,7 @@ const Timeline = ({ className }) => (
           <p className="timeline__text">{job.description}</p>
           <p className="timeline__stack">
             {(job.stack || []).map((skill) => <span>{skill}</span>) }
-            <a href="work/#{job.hash}"><strong>...</strong></a>
+            <a href={`/work/#${job.hash}`}><strong>...</strong></a>
           </p>
         </div>
       </article>
