@@ -236,7 +236,7 @@ module.exports = {
         name: 'Aleksandar Ristevski Profile',
         short_name: 'AR.ME',
         start_url: '/',
-        icon: 'src/assets/favicon.ico',
+        icon: 'src/assets/favicon.png',
       },
     }
   ],
