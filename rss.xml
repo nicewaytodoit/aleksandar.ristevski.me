@@ -1,52 +1,361 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Blog & Profile by Aleksandar Ristevski]]></title><description><![CDATA[Any sufficiently advanced technology is indistinguishable from magic.]]></description><link>http://github.com/dylang/node-rss</link><generator>RSS for Node</generator><lastBuildDate>Thu, 31 Jan 2019 21:55:17 GMT</lastBuildDate><item><title><![CDATA[Non distraction days]]></title><description><![CDATA[If feel you have too many meeting preventing you to do the actual work you should proably read this.]]></description><link>https://nicewaytodoit.github.io/aleksandar.ristevski.me//posts/2019-01-20---non-distraction-days/</link><guid isPermaLink="false">https://nicewaytodoit.github.io/aleksandar.ristevski.me//posts/2019-01-20---non-distraction-days/</guid><pubDate>Thu, 24 Jan 2019 01:59:33 GMT</pubDate><content:encoded>&lt;p&gt;Introduction&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Blog & Profile by Aleksandar Ristevski]]></title><description><![CDATA[Any sufficiently advanced technology is indistinguishable from magic.]]></description><link>http://github.com/dylang/node-rss</link><generator>GatsbyJS</generator><lastBuildDate>Thu, 31 Dec 2020 19:26:44 GMT</lastBuildDate><item><title><![CDATA[PM2 to the rescue]]></title><description><![CDATA[How to use and install PM2 advanced process manager that can keeps alive your application in case of a crash.]]></description><link>https://nicewaytodoit.github.io/aleksandar.ristevski.me/pm2-to-the-rescue/</link><guid isPermaLink="false">https://nicewaytodoit.github.io/aleksandar.ristevski.me/pm2-to-the-rescue/</guid><pubDate>Thu, 24 Dec 2020 10:23:00 GMT</pubDate><content:encoded>&lt;p&gt;First, we need to ask what is PM2? &lt;/p&gt;
+&lt;p&gt;So, in their makers own words: “PM2 is a daemon process manager that will help you manage and keep your application online” or in other words it is an app which is used to keep your Node.js application server (web app) alive even in the case when something goes wrong as application crash server is restarted and similar. &lt;/p&gt;
+&lt;p&gt;PM2 has: load balancer, logs facility, startup script, microservice management and many other easily accessible functionalities necessary for the production environment.&lt;/p&gt;
+&lt;p&gt;Considering that you already have a web application up and running let’s switch to PM2, if not there is a tutorial on how to create an &lt;a href=&quot;/posts/2020-11-19---expressjs-web-app-running-on-nginx/&quot;&gt;Express.js web app running on Nginx&lt;/a&gt; you can quickly go through.&lt;/p&gt;
+&lt;h2&gt;Basic Setup&lt;/h2&gt;
+&lt;p&gt;So, to install PM2 run the following:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;$ &lt;span class=&quot;token function&quot;&gt;npm&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;install&lt;/span&gt; -g pm2@latest&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;After PM2 is installed, a new folder &lt;code class=&quot;language-text&quot;&gt;.pm2&lt;/code&gt; will appear in our &lt;code class=&quot;language-text&quot;&gt;/home/&amp;lt;user&amp;gt;&lt;/code&gt; folder. In it there will be logs, and other PM2 files. Remember this we will need it later. &lt;/p&gt;
+&lt;p&gt;Being globally available (&lt;code class=&quot;language-text&quot;&gt;-g&lt;/code&gt; flag), at your exposal there are the following commands:&lt;/p&gt;
+&lt;p&gt;From within the folder of your application you can simply start your application by typing: &lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;$ pm2 start app.js -i &lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;To check all running processes you can use:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;$ pm2 list&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;which will give you something like:
+&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 960px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/03bc2e246664179e3459a3d42270c01e/f4d02/1.jpg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 5.416666666666667%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAABABQDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAX/xAAVAQEBAAAAAAAAAAAAAAAAAAAAAf/aAAwDAQACEAMQAAABggBP/8QAFBABAAAAAAAAAAAAAAAAAAAAEP/aAAgBAQABBQJ//8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAwEBPwE//8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAgEBPwE//8QAFBABAAAAAAAAAAAAAAAAAAAAEP/aAAgBAQAGPwJ//8QAFhAAAwAAAAAAAAAAAAAAAAAAARAx/9oACAEBAAE/IRX/AP/aAAwDAQACAAMAAAAQ89//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAEDAQE/ED//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAECAQE/ED//xAAYEAACAwAAAAAAAAAAAAAAAAABMQAQcf/aAAgBAQABPxBeiFmv/9k=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Process list&quot;
+        title=&quot;Process list&quot;
+        src=&quot;/static/03bc2e246664179e3459a3d42270c01e/6a068/1.jpg&quot;
+        srcset=&quot;/static/03bc2e246664179e3459a3d42270c01e/09b79/1.jpg 240w,
+/static/03bc2e246664179e3459a3d42270c01e/7cc5e/1.jpg 480w,
+/static/03bc2e246664179e3459a3d42270c01e/6a068/1.jpg 960w,
+/static/03bc2e246664179e3459a3d42270c01e/644c5/1.jpg 1440w,
+/static/03bc2e246664179e3459a3d42270c01e/0f98f/1.jpg 1920w,
+/static/03bc2e246664179e3459a3d42270c01e/f4d02/1.jpg 2387w&quot;
+        sizes=&quot;(max-width: 960px) 100vw, 960px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;To get application console logs and errors we can use:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;$ pm2 logs&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;To monitor a process, which will give us more details:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;$ pm2 monit&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;It has a bit more functionality and it is possible to see logs, but those logs are not persistent as soon as we switch to other process logs will be wiped out, generally used to replicate some issue. &lt;/p&gt;
+&lt;p&gt;To stop all applications:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;$ pm2 stop all&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;To delete all currently running processes, which is useful if you running your apps from the &lt;code class=&quot;language-text&quot;&gt;ecosystem&lt;/code&gt; file:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;$ pm2 delete all&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;It is possible to delete a specific process using its name:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;$ pm2 delete letit.buzz&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;And of course if processes are stopped we can use the following command to run them again:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;$ pm2 start all&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;This, apart of &lt;code class=&quot;language-text&quot;&gt;start-up&lt;/code&gt; we will cover later, above is enough for the basic scenario, so now let explore a bit more.  &lt;/p&gt;
+&lt;h2&gt;A Little Bit More Complex Setup&lt;/h2&gt;
+&lt;p&gt;Usually, when we are running in production, we will need to deal with multiple applications running at the same time, and each application will have different requirements, so let’s explore a more complex scenario. &lt;/p&gt;
+&lt;p&gt;First of all, it is out of the question to run all the time a bunch of Linux commands, so we will need to automate a process we need some kind of config. &lt;/p&gt;
+&lt;p&gt;If we run:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;$ pm2 ecosystem &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;it will generate an example &lt;code class=&quot;language-text&quot;&gt;ecosystem.config.js&lt;/code&gt; in our case we do not need &lt;em&gt;deploy&lt;/em&gt; config block for now - we will cover it some other time. &lt;/p&gt;
+&lt;p&gt;I would like to emphasize that location from where you are running pm2 and where the ecosystem file is placed is important. The general advice is to keep an ecosystem file in the root of the web content &lt;code class=&quot;language-text&quot;&gt;/var/www&lt;/code&gt;.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;module&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;exports &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    apps&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;
+        &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+            name&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;letit.buzz&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+            script&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;./letit.buzz/app.js&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+            args&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;LetITbuzz&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+            instances&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+            exec_mode&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;fork&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+            env&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+                &lt;span class=&quot;token constant&quot;&gt;NODE_ENV&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;development&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+                &lt;span class=&quot;token constant&quot;&gt;PORT&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;8007&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+            &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+        &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+        &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+            name&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;abc.com&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+            script&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;./abc.com/app.js&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+            args&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;ABC-1&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+            instances&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+            watch&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token boolean&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+            watch_delay&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;1000&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+            ignore_watch&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;.git&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;node_modules&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+            exec_mode&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;cluster&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+            env_production&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+                &lt;span class=&quot;token constant&quot;&gt;NODE_ENV&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;production&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+                &lt;span class=&quot;token constant&quot;&gt;PORT&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;8005&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+            &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+            env&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+                &lt;span class=&quot;token constant&quot;&gt;NODE_ENV&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;development&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+                &lt;span class=&quot;token constant&quot;&gt;PORT&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;8005&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+            &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+        &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Let’s see what is what.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;name&lt;/strong&gt; - is the process name it will help you to locate the application in the &lt;code class=&quot;language-text&quot;&gt;pm2 list&lt;/code&gt; or to manipulate it if needed by &lt;code class=&quot;language-text&quot;&gt;pm2 start/delete...&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;script&lt;/strong&gt; - is the location of your application, when you navigate it is from the location of your ecosystem file.&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;args&lt;/strong&gt; - can be useful if you want to pass arguments to your node.js application that you can handle with line like &lt;code class=&quot;language-text&quot;&gt;const [,,firstArgument] = process.argv;&lt;/code&gt;
+Except passing arguments using ecosystem file it is possible to do it directly using the following:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;$ pm2 start app.js -- aa bb cc
+$ pm2 restart app.js -- &lt;span class=&quot;token number&quot;&gt;11&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;22&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;33&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;as described &lt;a href=&quot;https://github.com/Unitech/pm2/issues/13&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;exec_mode&lt;/strong&gt; - by default application runs in ‘fork’ mode but if you want to utilize the processing power of your server use ‘cluster’ mode then adjust next parameter.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;instances&lt;/strong&gt; - if you choose ‘max’ or ‘0’, PM2 will create maximum threads/cores available, any other number will create an equal number of instances of your application.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;env&lt;/strong&gt; - another way to pass arguments on the start to the application is with environment variables, except using Linux command &lt;code class=&quot;language-text&quot;&gt;export NAME=VALUE&lt;/code&gt; is to adjust them in the ecosystem  file. Whatever we set in the &lt;code class=&quot;language-text&quot;&gt;env:&lt;/code&gt; block will be directly accessible from JavaScript code by using the following pattern &lt;code class=&quot;language-text&quot;&gt;process.env.PORT&lt;/code&gt;, &lt;code class=&quot;language-text&quot;&gt;process.env.NODE_ENV&lt;/code&gt;.
+It is possible to create an option block as &lt;code class=&quot;language-text&quot;&gt;env_production&lt;/code&gt;, &lt;code class=&quot;language-text&quot;&gt;env_something&lt;/code&gt; but those will not be directly accessible from our node.js app. The only way to use them is to pass the desired environment on the start as &lt;code class=&quot;language-text&quot;&gt;pm2 start ecosystem.config.js --env production&lt;/code&gt;. &lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;If there is a requirement to pass multiple values, maybe the good option would be to use the &lt;code class=&quot;language-text&quot;&gt;.json&lt;/code&gt; file&lt;/p&gt;
+&lt;p&gt;For instance, we could create a &lt;code class=&quot;language-text&quot;&gt;config.json&lt;/code&gt; file with:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;json&quot;&gt;&lt;pre class=&quot;language-json&quot;&gt;&lt;code class=&quot;language-json&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+   &lt;span class=&quot;token property&quot;&gt;&quot;dev&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;token property&quot;&gt;&quot;psql&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;token property&quot;&gt;&quot;connection&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;host=localhost port=5432 dbname=buzz user=john&quot;&lt;/span&gt;
+        &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+        &lt;span class=&quot;token property&quot;&gt;&quot;redis&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;token property&quot;&gt;&quot;hosts&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;localhost&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;
+        &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+   &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+   &lt;span class=&quot;token property&quot;&gt;&quot;production&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;token property&quot;&gt;&quot;psql&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;token property&quot;&gt;&quot;connection&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;host=192.168.7.11 port=5432 dbname=buzz user=admin&quot;&lt;/span&gt;
+        &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+        &lt;span class=&quot;token property&quot;&gt;&quot;redis&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;token property&quot;&gt;&quot;hosts&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;8.8.8.8&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;
+        &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+   &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Next inside of JavaScript file we can consume json by loading specific values:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;var&lt;/span&gt; config &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;./config.json&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;process&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;env&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token constant&quot;&gt;NODE_ENV&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;||&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;dev&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+db&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;connect&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;config&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;psql&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;connection&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; config&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;redis&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;hosts&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;for the given &lt;code class=&quot;language-text&quot;&gt;NODE_ENV&lt;/code&gt; value we would set via shell:&lt;/p&gt;
+&lt;p&gt;export NODE_ENV=staging
+pm2 start app.js&lt;/p&gt;
+&lt;p&gt;or changing values in &lt;code class=&quot;language-text&quot;&gt;ecosystem&lt;/code&gt; within &lt;code class=&quot;language-text&quot;&gt;env&lt;/code&gt; config block as:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;module&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;exports &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    apps&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;
+        &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;token operator&quot;&gt;...&lt;/span&gt;
+            env&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+                &lt;span class=&quot;token constant&quot;&gt;NODE_ENV&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;dev&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+            &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;watch&lt;/strong&gt; - this is very similar to watch options with &lt;code class=&quot;language-text&quot;&gt;nodemon&lt;/code&gt; where overall idea is to track code changes, so after the new deployment process will automatically restart the newly updated application. Along with &lt;code class=&quot;language-text&quot;&gt;watch: true&lt;/code&gt; we need to set &lt;code class=&quot;language-text&quot;&gt;ignore_watch: [&amp;#39;.git&amp;#39;, &amp;#39;node_modules&amp;#39;]&lt;/code&gt; parameter which will ignore unnecessary files in our application folder. Lastly, there is &lt;code class=&quot;language-text&quot;&gt;watch_delay&lt;/code&gt; which is I guess (in lack of documentation) a number in milliseconds that will delay restart after a change. This can be useful if we copying multiple files.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Except defining these in the &lt;code class=&quot;language-text&quot;&gt;ecosystem&lt;/code&gt; file it is possible to pass them inline as:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;$ pm2 start env.js --watch --ignore-watch&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;node_modules&quot;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2&gt;Startup&lt;/h2&gt;
+&lt;p&gt;Now, when we know how to setup multiple applications and how to run pm2, it is only left to see how to handle an unexpected server reboot.&lt;/p&gt;
+&lt;p&gt;Type the &lt;code class=&quot;language-text&quot;&gt;pm2 startup&lt;/code&gt; command without &lt;code class=&quot;language-text&quot;&gt;sudo&lt;/code&gt; and it will spill out exactly what you need to execute next: &lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;$ &lt;span class=&quot;token function&quot;&gt;sudo&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;env&lt;/span&gt; &lt;span class=&quot;token assign-left variable&quot;&gt;&lt;span class=&quot;token environment constant&quot;&gt;PATH&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token environment constant&quot;&gt;$PATH&lt;/span&gt;:/home/&lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;user&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;/.nvm/versions/node/v12.7.1/bin /usr/lib/node_modules/pm2/bin/pm2 startup systemd -u &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;user&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt; --hp /home/&lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;user&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;&amp;lt;user&amp;gt;&lt;/code&gt; will be the user you are using to run the applications. Copy and paste that entire line as you have it in your SSH press enter. After this you need to save the current pm2 process list with:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;$ pm2 save&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;You will get the following message saying that the &lt;code class=&quot;language-text&quot;&gt;dump.pm2&lt;/code&gt; file is created.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;PM2&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; Saving current process list&lt;span class=&quot;token punctuation&quot;&gt;..&lt;/span&gt;.
+&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;PM2&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; Successfully saved &lt;span class=&quot;token keyword&quot;&gt;in&lt;/span&gt; /home/&lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;user&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;/.pm2/dump.pm2&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;The dump file and all the log files will be in the &lt;code class=&quot;language-text&quot;&gt;~/.pm2&lt;/code&gt; folder.&lt;/p&gt;
+&lt;p&gt;If there is a need to update Node.js to a newer version or update the PM2 startup script use &lt;code class=&quot;language-text&quot;&gt;$ pm2 unstartup systemd&lt;/code&gt; and then repeat the above process.&lt;/p&gt;
+&lt;p&gt;Only left is to test that your application will run after a reboot, for that one you can use:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;$ &lt;span class=&quot;token function&quot;&gt;shutdown&lt;/span&gt; -r now&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;! Important:
+When you rebooting, pm2 will not restart from your &lt;code class=&quot;language-text&quot;&gt;ecosystem.config.js&lt;/code&gt; file but from the dump.pm2 file, replicating processes as they were. That being said it is important to remember when you make changes to the ecosystem file you will need to delete all processes start pm2 with the ecosystem file.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;$ pm2 delete all 
+$ pm2 start ecosystem.config.js.&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;In the end, you will need to &lt;code class=&quot;language-text&quot;&gt;pm2 save&lt;/code&gt; again to capture the current state of processes crating a new dump file. &lt;/p&gt;
+&lt;p&gt;Next time I will try to cover &lt;strong&gt;deployment&lt;/strong&gt; and &lt;strong&gt;logging&lt;/strong&gt; with pm2 until then there are few resources you can check:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://pm2.keymetrics.io/docs/usage/pm2-doc-single-page/&quot;&gt;PM2 Documentation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://pm2.keymetrics.io/docs/usage/deployment/&quot;&gt;PM2 Deployment&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://pm2.keymetrics.io/docs/usage/log-management/&quot;&gt;PM2 Log Management&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[Express.js web app running on Nginx]]></title><description><![CDATA[Quick tutorial on how to set up a web application with Node.js and Express.js running on Nginx.]]></description><link>https://nicewaytodoit.github.io/aleksandar.ristevski.me/posts/2020-11-19---expressjs-web-app-running-on-nginx/</link><guid isPermaLink="false">https://nicewaytodoit.github.io/aleksandar.ristevski.me/posts/2020-11-19---expressjs-web-app-running-on-nginx/</guid><pubDate>Thu, 19 Nov 2020 09:47:00 GMT</pubDate><content:encoded>&lt;p&gt;Without too many introductory words, let quickly jump onto necessary steps to make an Express.js web application up and running on Nginx.&lt;/p&gt;
+&lt;p&gt;In the &lt;code class=&quot;language-text&quot;&gt;/var/www&lt;/code&gt; or whatever is your web applications content folder, create a folder with the name of your web application &lt;code class=&quot;language-text&quot;&gt;letit.buzz&lt;/code&gt; and then clone &lt;code class=&quot;language-text&quot;&gt;Starter ExpressJS app&lt;/code&gt; we will use to test. &lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;$ &lt;span class=&quot;token function&quot;&gt;mkdir&lt;/span&gt; letit.buzz/
+$ &lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; clone https://github.com/nicewaytodoit/expressjs-starter-app.git ./
+$ &lt;span class=&quot;token function&quot;&gt;npm&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;install&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;After the application is cloned and built we need to configure our Nginx server. Jump to &lt;code class=&quot;language-text&quot;&gt;/etc/nginx/&lt;/code&gt; and find the &lt;code class=&quot;language-text&quot;&gt;nginx.conf&lt;/code&gt; file.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;$ &lt;span class=&quot;token builtin class-name&quot;&gt;cd&lt;/span&gt; /etc/nginx/
+$ &lt;span class=&quot;token function&quot;&gt;nano&lt;/span&gt; /etc/nginx/nginx.conf&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Use your favorite text editor and add the line &lt;code class=&quot;language-text&quot;&gt;server 127.0.0.1:8001;&lt;/code&gt; to the &lt;code class=&quot;language-text&quot;&gt;upstream nodes&lt;/code&gt; block, which is part of the &lt;code class=&quot;language-text&quot;&gt;http&lt;/code&gt; configuration block.
+Notice the line before last &lt;code class=&quot;language-text&quot;&gt;include sites-available/*;&lt;/code&gt; - it is an instruction to link other config files, this is in case that you are running multiple web sites on your server.  &lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;config&quot;&gt;&lt;pre class=&quot;language-config&quot;&gt;&lt;code class=&quot;language-config&quot;&gt;http {
+  ...
+
+  upstream nodes {
+      # letit.buzz
+      server 127.0.0.1:8001;
+      ...
+  }
+  include sites-available/*;
+}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Now, let’s jump to the &lt;code class=&quot;language-text&quot;&gt;/etc/nginx/sites-available/&lt;/code&gt; folder and create an Nginx config file for the “Let It Buzz” web application, we will name it &lt;code class=&quot;language-text&quot;&gt;letit.buzz.conf&lt;/code&gt;. Keep the Nginx config name similar to the folder name. &lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;$ &lt;span class=&quot;token builtin class-name&quot;&gt;cd&lt;/span&gt; sites-available/
+$ &lt;span class=&quot;token function&quot;&gt;touch&lt;/span&gt; letit.buzz.conf
+$ &lt;span class=&quot;token function&quot;&gt;nano&lt;/span&gt; letit.buzz.conf&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Inside of the Nginx config file &lt;code class=&quot;language-text&quot;&gt;/etc/nginx/sites-available/letit.buzz.conf&lt;/code&gt; enter the following:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;config&quot;&gt;&lt;pre class=&quot;language-config&quot;&gt;&lt;code class=&quot;language-config&quot;&gt;server {
+   listen 80;
+   server_name letit.buzz www.letit.buzz;
+   
+   access_log /var/log/nginx/letit.access.log;
+   error_log /var/log/nginx/letit.error.log error;
+   
+   root /var/www/letit.buzz;
+
+   location / {
+       proxy_set_header Host letit.buzz;
+       proxy_pass http://localhost:8001;
+       proxy_http_version 1.1;
+       proxy_set_header Upgrade $http_upgrade;
+       proxy_set_header Connection &amp;#39;upgrade&amp;#39;;
+       proxy_set_header Host $host;
+       proxy_cache_bypass $http_upgrade;
+   }
+}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Notice that we use port: 8001. Save the changes and do not forget to restart Nginx server &lt;code class=&quot;language-text&quot;&gt;sudo service nginx restart&lt;/code&gt;. &lt;/p&gt;
+&lt;p&gt;All is done, so let’s test the application. Go to the application root folder and run ‘npm start’ additional param can be anything it is just there if we want to test multiple application on different ports, testing with the same example, in that way we can distinguish them.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;$ &lt;span class=&quot;token builtin class-name&quot;&gt;cd&lt;/span&gt; /var/www/letit.buzz/
+$ &lt;span class=&quot;token function&quot;&gt;npm&lt;/span&gt; start -- LetITbuzz&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Now, while the application is running you will get the log message that the application is ‘Listening on the port 8001’ if that is not the case, you will need to change the port to correspond to the one you have set in the Nginx config files.
+So, in your application folder edit the &lt;code class=&quot;language-text&quot;&gt;/var/www/letit.buzz/app.js&lt;/code&gt; file and change the following line &lt;code class=&quot;language-text&quot;&gt;const port = process.env.PORT || 3000;&lt;/code&gt; instead of 3000 enter 8001. Save changes and re-run the application with the &lt;code class=&quot;language-text&quot;&gt;npm start&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Now, hopefully, if the application is running, how to test it?&lt;/p&gt;
+&lt;p&gt;Leave the SSH shell as it is (running the app). If you running GUI in your Linux distribution you can open the browser and type &lt;code class=&quot;language-text&quot;&gt;http://localhost:8001&lt;/code&gt; if not then try &lt;code class=&quot;language-text&quot;&gt;wget http://localhost:8001&lt;/code&gt; which will download the index.html file. Both in the browser or after opening the downloaded file with &lt;code class=&quot;language-text&quot;&gt;cat index.html&lt;/code&gt; you will find the message similar to:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Hello World ExpressJS: App  &lt;b&gt;“LetITbuzz”&lt;/b&gt; : 25/12/2020 18:53&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Leave the &lt;code class=&quot;language-text&quot;&gt;npm start&lt;/code&gt;-ed application running.&lt;/p&gt;
+&lt;p&gt;If DNS settings for the A record (* and @) of your domain provider are set correctly to the public IP address *(&lt;code class=&quot;language-text&quot;&gt;101.102.103.105&lt;/code&gt;) of your server as: &lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;A * 101.102.103.105 15 Minutes
+A @ 101.102.103.105 15 Minutes&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;You are all good to go if everything is correctly done after typing &lt;a href=&quot;http://www.letit.buzz&quot;&gt;http://www.letit.buzz&lt;/a&gt; in any browser in the world you should get the same message.&lt;/p&gt;
+&lt;p&gt;Now, this is a temporary setup just to quickly check that the entire structure is running. For the more permanent solution you will need some kind of tool to ensuring that a given web application running continuously - check &lt;a href=&quot;https://www.npmjs.com/package/forever&quot;&gt;Forever&lt;/a&gt;.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Multiple apps with Forever using bash]]></title><description><![CDATA[This small article explains how to start multiple apps with Forever continuous process runner using Bash.]]></description><link>https://nicewaytodoit.github.io/aleksandar.ristevski.me/posts/2020-11-04---multiple-apps-with-forever-bash/</link><guid isPermaLink="false">https://nicewaytodoit.github.io/aleksandar.ristevski.me/posts/2020-11-04---multiple-apps-with-forever-bash/</guid><pubDate>Wed, 04 Nov 2020 07:11:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;a href=&quot;https://www.npmjs.com/package/forever&quot;&gt;Forever&lt;/a&gt; is a simple CLI (command-line interface) tool made to ensure that a given Node.js app is running continuously. As this article is long overdue, and in the author’s own words “For new installations we encourage you to use &lt;code class=&quot;language-text&quot;&gt;pm2&lt;/code&gt; or &lt;code class=&quot;language-text&quot;&gt;nodemon&lt;/code&gt; ”, obviously there are a much better tool out there, anyway I decided to share a simple automation bash script used to start multiple forever processes.  &lt;/p&gt;
+&lt;p&gt;First, you need to have globally installed Forever, which, if you reading these lines I assume, you already have.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;$ &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;sudo&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;npm&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;install&lt;/span&gt; forever -g&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;So, create a bash &lt;code class=&quot;language-text&quot;&gt;.sh&lt;/code&gt; file and name it for instance &lt;code class=&quot;language-text&quot;&gt;run-it-forever.sh&lt;/code&gt; and as a content paste the following script:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token shebang important&quot;&gt;#!/bin/bash&lt;/span&gt;
+
+forever stopall
+
+&lt;span class=&quot;token assign-left variable&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;over-priced.io&quot;&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;letit.buzz&quot;&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;fun-with-bars.org&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;token for-or-select variable&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;&lt;span class=&quot;token variable&quot;&gt;${arr&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;@&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;}&lt;/span&gt;&quot;&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;do&lt;/span&gt;
+   &lt;span class=&quot;token builtin class-name&quot;&gt;eval&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;forever -o out.log -e err.log start -c node &lt;span class=&quot;token variable&quot;&gt;$i&lt;/span&gt;/bin/www &quot;&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;done&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;To have an executable script you will need to have &lt;code class=&quot;language-text&quot;&gt;#!/bin/bash&lt;/code&gt; at the top. And you will need to run command &lt;code class=&quot;language-text&quot;&gt;chmod u+x run-it-forever.sh&lt;/code&gt; to make a &lt;code class=&quot;language-text&quot;&gt;.sh&lt;/code&gt; file executable.&lt;/p&gt;
+&lt;p&gt;In order to run this successfully each application will need to have its own folder (as normally it should be) and the usual &lt;code class=&quot;language-text&quot;&gt;server.js&lt;/code&gt; or &lt;code class=&quot;language-text&quot;&gt;app.js&lt;/code&gt; main file needs to be placed in &lt;code class=&quot;language-text&quot;&gt;bin/www&lt;/code&gt;. Notice that the last &lt;code class=&quot;language-text&quot;&gt;www&lt;/code&gt; is not a folder but JavaScript &lt;code class=&quot;language-text&quot;&gt;.js&lt;/code&gt; file without extension. Why did I name it like that? To be honest, I do not know, it was a long time ago and at the time I think I had some “good” reason to do it. &lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;$ cd /var/www/over-priced.io/bin/www
+$ cd /var/www/123you-n-me.com/bin/www
+...&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Run bash script with &lt;code class=&quot;language-text&quot;&gt;./run-it-forever.sh&lt;/code&gt; or &lt;code class=&quot;language-text&quot;&gt;sudo ./run-it-forever.sh&lt;/code&gt;. &lt;/p&gt;
+&lt;p&gt;The script will stop all existing applications first with the &lt;code class=&quot;language-text&quot;&gt;forever stopall&lt;/code&gt; command and then restart all apps listed in the array.
+Please have in mind that this is not an ideal solution for a production environment, especially when you have a high number of users that depend on server memory sessions (as they may lose their work if you do not have implemented some persistent session solution using Redis or similar). &lt;/p&gt;
+&lt;p&gt;In the end, it is worth mentioning that there is a global log for forever, but each application will have its own log in Apache or Nginx config files for fine-grain logs.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Minimum Html5 Template]]></title><description><![CDATA[Just a useful snippet Html5 when you trying you setup Linux repo or adjust Nginx or apache.]]></description><link>https://nicewaytodoit.github.io/aleksandar.ristevski.me/posts/2019-02-13---minimum-html5-template/</link><guid isPermaLink="false">https://nicewaytodoit.github.io/aleksandar.ristevski.me/posts/2019-02-13---minimum-html5-template/</guid><pubDate>Wed, 13 Feb 2019 12:27:33 GMT</pubDate><content:encoded>&lt;p&gt;This is just a snippet useful for quick copying:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;html&quot;&gt;&lt;pre class=&quot;language-html&quot;&gt;&lt;code class=&quot;language-html&quot;&gt;&lt;span class=&quot;token doctype&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;!&lt;/span&gt;&lt;span class=&quot;token name&quot;&gt;doctype&lt;/span&gt; &lt;span class=&quot;token name&quot;&gt;html&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;html&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;lang&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;en&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+  &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;head&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+    &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;meta&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;charset&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;utf-8&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+    &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;title&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;Title&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;title&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+  &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;head&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+  &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;body&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+    &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;p&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;Hello World!&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;p&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+  &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;body&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;html&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;This one is with script and link can have deffer attribute in script:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;html&quot;&gt;&lt;pre class=&quot;language-html&quot;&gt;&lt;code class=&quot;language-html&quot;&gt;&lt;span class=&quot;token doctype&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;!&lt;/span&gt;&lt;span class=&quot;token name&quot;&gt;doctype&lt;/span&gt; &lt;span class=&quot;token name&quot;&gt;html&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+
+&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;html&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;head&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+  &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;meta&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;charset&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;utf-8&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+
+  &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;title&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;The Minimum HTML5&amp;lt;/ title&gt;
+  &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;meta&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;description&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;content&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;The Minimum HTML5&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+  &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;meta&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;author&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;content&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;SitePoint&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+
+  &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;link&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;rel&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;stylesheet&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;href&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;css/styles.css?v=1.0&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;head&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+
+&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;body&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+  &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;script&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;src&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;js/scripts.js&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token script&quot;&gt;&lt;span class=&quot;token language-javascript&quot;&gt; &lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;script&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;body&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;html&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[Git - most frequent commands]]></title><description><![CDATA[A list of git commands is used on a day to day bases during development, some of them are more and others less frequent, but you will likely use them while working in any professional environment.]]></description><link>https://nicewaytodoit.github.io/aleksandar.ristevski.me/posts/2019-02-09---git-most-frequent-commands/</link><guid isPermaLink="false">https://nicewaytodoit.github.io/aleksandar.ristevski.me/posts/2019-02-09---git-most-frequent-commands/</guid><pubDate>Sat, 09 Feb 2019 16:08:21 GMT</pubDate><content:encoded>&lt;p&gt;The following list of git commands is used on a day to day bases by any developer. Some of them are more and others less frequent, but you will likely use them while working in any professional environment.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;&lt;code class=&quot;language-text&quot;&gt;git init&lt;/code&gt;&lt;/strong&gt; - it will initialize a new git environment. &lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;code class=&quot;language-text&quot;&gt;git clone &amp;lt;repo&amp;gt;&lt;/code&gt;&lt;/strong&gt; - it will recreate a project from the existing repository &lt;url&gt; regardless that being Github, Gitlab or BitBucket.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;code class=&quot;language-text&quot;&gt;git add .&lt;/code&gt;&lt;/strong&gt; - will add all changes from &lt;code class=&quot;language-text&quot;&gt;working directory&lt;/code&gt; to the &lt;code class=&quot;language-text&quot;&gt;staging area&lt;/code&gt; preparing all changes for committing.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;code class=&quot;language-text&quot;&gt;git commit -m &amp;quot;Some description&amp;quot;&lt;/code&gt;&lt;/strong&gt; - will move changes from the &lt;code class=&quot;language-text&quot;&gt;staging area&lt;/code&gt; to the local &lt;code class=&quot;language-text&quot;&gt;repository&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;code class=&quot;language-text&quot;&gt;git push&lt;/code&gt;&lt;/strong&gt; - will push changes to remote &lt;code class=&quot;language-text&quot;&gt;repository&lt;/code&gt; but if two users are working on the same branch and repositories (local and remote) are out of the sync. First we need to do &lt;code class=&quot;language-text&quot;&gt;git pull&lt;/code&gt; check changes and then if all issues are resolved continue with &lt;code class=&quot;language-text&quot;&gt;git push&lt;/code&gt;.  &lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;code class=&quot;language-text&quot;&gt;git pull&lt;/code&gt;&lt;/strong&gt; - retrieve recent changes from remote repository.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;code class=&quot;language-text&quot;&gt;git status&lt;/code&gt;&lt;/strong&gt; - will show the status of the current local repository.&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;git remote add &amp;lt;remote&amp;gt; &amp;lt;repo_url&amp;gt;&lt;/code&gt; - if repo already exist but you would like to connect it with the remote repository. During cloning this is done automatically.   &lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;$ &lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; remote &lt;span class=&quot;token function&quot;&gt;add&lt;/span&gt; origin https://github.com/user/repo.git&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;code class=&quot;language-text&quot;&gt;git log --pretty=oneline&lt;/code&gt;&lt;/strong&gt; - will give a list of all commits in one line&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;git log --pretty=&amp;quot;%C(Yellow)%h  %C(reset)%ad (%C(Green)%cr%C(reset))%x09 %C(Cyan)%an: %C(reset)%s&amp;quot; -10 --graph&lt;/code&gt; - pretty version of the previous one, best if you alias it.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;code class=&quot;language-text&quot;&gt;git blame &amp;lt;file&amp;gt;&lt;/code&gt;&lt;/strong&gt; - will give info about all changes related to the specific file. &lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;code class=&quot;language-text&quot;&gt;gitk&lt;/code&gt;&lt;/strong&gt; - will give a visual representation of the repository &lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;code class=&quot;language-text&quot;&gt;git checkout &amp;lt;branch or hash&amp;gt;&lt;/code&gt;&lt;/strong&gt; - switch to the certain branch, or if you use hash you will go to a certain point in the history, if you use &lt;code class=&quot;language-text&quot;&gt;git checkout HEAD&lt;/code&gt; you will go back to the first point in history &lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;code class=&quot;language-text&quot;&gt;git checkout -b &amp;quot;new-branch&amp;quot;&lt;/code&gt;&lt;/strong&gt; - will create a branch and checks it out. It is frequently used to create a local branch from a remote branch made by Jira (Atlassian) in that way developer will maintain connection and status between a task s/he is working on and the code repository. &lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;code class=&quot;language-text&quot;&gt;git checkout --track origin/&amp;lt;branch&amp;gt;&lt;/code&gt;&lt;/strong&gt; - this is the command frequently used to create a newly-created remote branch. Additionally this command will set up-stream in the local &lt;code class=&quot;language-text&quot;&gt;.git/config&lt;/code&gt; file.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;code class=&quot;language-text&quot;&gt;git reset --soft HEAD^&lt;/code&gt;&lt;/strong&gt; - reverse current commit to the staging area (point after &lt;code class=&quot;language-text&quot;&gt;git add .&lt;/code&gt;). &lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;code class=&quot;language-text&quot;&gt;git branch&lt;/code&gt;&lt;/strong&gt; - listing local branches&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;code class=&quot;language-text&quot;&gt;git branch -r&lt;/code&gt;&lt;/strong&gt; - listing remote branches &lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;code class=&quot;language-text&quot;&gt;git branch -a&lt;/code&gt;&lt;/strong&gt; - listing all branches &lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;code class=&quot;language-text&quot;&gt;git branch -d &amp;lt;branch&amp;gt;&lt;/code&gt;&lt;/strong&gt; - delete a local branch&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;code class=&quot;language-text&quot;&gt;git push origin --delete &amp;lt;branch&amp;gt;&lt;/code&gt;&lt;/strong&gt; - delete a remote branch&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;code class=&quot;language-text&quot;&gt;git pull origin &amp;lt;branch&amp;gt;&lt;/code&gt;&lt;/strong&gt; - to pull specific remote branch&lt;/li&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[Non distraction days]]></title><description><![CDATA[If feel you have too many meeting preventing you to do the actual work you should proably read this.]]></description><link>https://nicewaytodoit.github.io/aleksandar.ristevski.me/posts/2019-01-20---non-distraction-days/</link><guid isPermaLink="false">https://nicewaytodoit.github.io/aleksandar.ristevski.me/posts/2019-01-20---non-distraction-days/</guid><pubDate>Thu, 24 Jan 2019 01:59:33 GMT</pubDate><content:encoded>&lt;p&gt;Introduction&lt;/p&gt;
 &lt;p&gt;At some point my calendar look like this:&lt;/p&gt;
 &lt;p&gt;Time estimation …&lt;/p&gt;
 &lt;p&gt;Idea:&lt;/p&gt;
 &lt;p&gt;Solution:&lt;/p&gt;
 &lt;p&gt;Identify overhead and &lt;/p&gt;
 &lt;p&gt;Using tools …&lt;/p&gt;
-&lt;p&gt;What does the Scrum says?&lt;/p&gt;</content:encoded></item><item><title><![CDATA[How to host your web site with 'GitHub Pages'?]]></title><description><![CDATA[Giving simple instructions how to deploy your blog or website to GitHub pages and host your web site for free]]></description><link>https://nicewaytodoit.github.io/aleksandar.ristevski.me//posts/2019-01-20---github-pages/</link><guid isPermaLink="false">https://nicewaytodoit.github.io/aleksandar.ristevski.me//posts/2019-01-20---github-pages/</guid><pubDate>Sun, 20 Jan 2019 01:59:33 GMT</pubDate><content:encoded>&lt;p&gt;So, what do you need to do first?&lt;/p&gt;
+&lt;p&gt;What does the Scrum says?&lt;/p&gt;</content:encoded></item><item><title><![CDATA[How to host your web site with 'GitHub Pages'?]]></title><description><![CDATA[Giving simple instructions how to deploy your blog or website to GitHub pages and host your web site for free]]></description><link>https://nicewaytodoit.github.io/aleksandar.ristevski.me/posts/2019-01-20---github-pages/</link><guid isPermaLink="false">https://nicewaytodoit.github.io/aleksandar.ristevski.me/posts/2019-01-20---github-pages/</guid><pubDate>Sun, 20 Jan 2019 01:59:33 GMT</pubDate><content:encoded>&lt;p&gt;So, what do you need to do first?&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;Go to your repositories:
-&lt;a href=&quot;https://github.com/nicewaytodoit?tab=repositories&quot;&gt;https://github.com/&amp;#x3C;your-username&gt;?tab=repositories&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Choose the repository you want deploy (in my case): aleksandar.ristevski.me &lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Go to &lt;code class=&quot;language-text&quot;&gt;Settings&lt;/code&gt; tab of the project:
-&lt;a
+&lt;li&gt;Go to your repositories:
+&lt;a href=&quot;https://github.com/nicewaytodoit?tab=repositories&quot;&gt;https://github.com/&amp;#x3C;your-username&gt;?tab=repositories&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Choose the repository you want deploy (in my case): aleksandar.ristevski.me &lt;/li&gt;
+&lt;li&gt;Go to &lt;code class=&quot;language-text&quot;&gt;Settings&lt;/code&gt; tab of the project:
+&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 960px; &quot;
+    &gt;
+      &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/aleksandar.ristevski.me/static/916f952b70c790307ad63bc50c73afe3/b247a/1.jpg&quot;
+    href=&quot;/static/916f952b70c790307ad63bc50c73afe3/2655e/1.jpg&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
   &gt;
     &lt;span
-    class=&quot;gatsby-resp-image-wrapper&quot;
-    style=&quot;position: relative; display: block;  max-width: 960px; margin-left: auto; margin-right: auto;&quot;
-  &gt;
-    &lt;span
-      class=&quot;gatsby-resp-image-background-image&quot;
-      style=&quot;padding-bottom: 12.892880051314945%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAADABQDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAIF/8QAFgEBAQEAAAAAAAAAAAAAAAAAAAEC/9oADAMBAAIQAxAAAAHdBAmv/8QAFhAAAwAAAAAAAAAAAAAAAAAAAAEQ/9oACAEBAAEFAoz/xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAEDAQE/AT//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAECAQE/AT//xAAUEAEAAAAAAAAAAAAAAAAAAAAQ/9oACAEBAAY/An//xAAXEAADAQAAAAAAAAAAAAAAAAAAEBEx/9oACAEBAAE/IYtH/9oADAMBAAIAAwAAABBwL//EABURAQEAAAAAAAAAAAAAAAAAAAAB/9oACAEDAQE/EEj/xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAECAQE/ED//xAAYEAADAQEAAAAAAAAAAAAAAAAAAREhUf/aAAgBAQABPxBpwr009P/Z&apos;); background-size: cover; display: block;&quot;
-    &gt;&lt;/span&gt;
-    &lt;img
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 12.916666666666664%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAADABQDASIAAhEBAxEB/8QAFwABAAMAAAAAAAAAAAAAAAAAAAECBf/EABYBAQEBAAAAAAAAAAAAAAAAAAABAv/aAAwDAQACEAMQAAAB3JCgmv/EABQQAQAAAAAAAAAAAAAAAAAAABD/2gAIAQEAAQUCf//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQMBAT8BP//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQIBAT8BP//EABQQAQAAAAAAAAAAAAAAAAAAABD/2gAIAQEABj8Cf//EABgQAAIDAAAAAAAAAAAAAAAAAAABEBEx/9oACAEBAAE/Iah6f//aAAwDAQACAAMAAAAQ8C//xAAVEQEBAAAAAAAAAAAAAAAAAAAAAf/aAAgBAwEBPxBH/8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAgEBPxA//8QAGBAAAwEBAAAAAAAAAAAAAAAAAAERUSH/2gAIAQEAAT8QaYV6dvT/2Q==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
         class=&quot;gatsby-resp-image-image&quot;
-        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;box-shadow:inset 0px 0px 0px 400px white;&quot;
         alt=&quot;Settings Tab&quot;
-        title=&quot;&quot;
-        src=&quot;/aleksandar.ristevski.me/static/916f952b70c790307ad63bc50c73afe3/d564d/1.jpg&quot;
-        srcset=&quot;/aleksandar.ristevski.me/static/916f952b70c790307ad63bc50c73afe3/865fd/1.jpg 240w,
-/aleksandar.ristevski.me/static/916f952b70c790307ad63bc50c73afe3/d40a0/1.jpg 480w,
-/aleksandar.ristevski.me/static/916f952b70c790307ad63bc50c73afe3/d564d/1.jpg 960w,
-/aleksandar.ristevski.me/static/916f952b70c790307ad63bc50c73afe3/c67c1/1.jpg 1440w,
-/aleksandar.ristevski.me/static/916f952b70c790307ad63bc50c73afe3/b247a/1.jpg 1559w&quot;
+        title=&quot;Settings Tab&quot;
+        src=&quot;/static/916f952b70c790307ad63bc50c73afe3/6a068/1.jpg&quot;
+        srcset=&quot;/static/916f952b70c790307ad63bc50c73afe3/09b79/1.jpg 240w,
+/static/916f952b70c790307ad63bc50c73afe3/7cc5e/1.jpg 480w,
+/static/916f952b70c790307ad63bc50c73afe3/6a068/1.jpg 960w,
+/static/916f952b70c790307ad63bc50c73afe3/644c5/1.jpg 1440w,
+/static/916f952b70c790307ad63bc50c73afe3/2655e/1.jpg 1559w&quot;
         sizes=&quot;(max-width: 960px) 100vw, 960px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
       /&gt;
-  &lt;/span&gt;
-  &lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;In Settings you will find block &lt;code class=&quot;language-text&quot;&gt;GitHub Pages&lt;/code&gt; there you can choose what branch is the branch you will use to deploy to you hosting site.&lt;/p&gt;
 &lt;ul&gt;
@@ -63,32 +372,80 @@ Your site is ready to be published at &lt;a href=&quot;https://nicewaytodoit.git
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;How to create &lt;code class=&quot;language-text&quot;&gt;gh-pages&lt;/code&gt; orphan branch?&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;λ git checkout master
-λ git ls-files
-λ git checkout --orphan gh-pages
-λ git rm -rf .
-λ echo &amp;quot;# My orphan ReadMe&amp;quot; &amp;gt; ReadMe.md
-λ git add ReadMe.md
-λ git commit -a -m &amp;quot;Initial commit&amp;quot;
-λ git status
-λ git log --oneline --graph
-λ git checkout master
-λ git log --oneline --graph
-λ git push&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;$ &lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; checkout master
+$ &lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; ls-files
+$ &lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; checkout --orphan gh-pages
+$ &lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;rm&lt;/span&gt; -rf &lt;span class=&quot;token builtin class-name&quot;&gt;.&lt;/span&gt;
+$ &lt;span class=&quot;token builtin class-name&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;# My orphan ReadMe&quot;&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt; ReadMe.md
+$ &lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;add&lt;/span&gt; ReadMe.md
+$ &lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; commit -a -m &lt;span class=&quot;token string&quot;&gt;&quot;Initial commit&quot;&lt;/span&gt;
+$ &lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; status
+$ &lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; log --oneline --graph
+$ &lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; checkout master
+$ &lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; log --oneline --graph
+$ &lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; push&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
+&lt;li&gt;For additional tutorials and documentation go to: &lt;a href=&quot;https://pages.github.com/&quot;&gt;https://pages.github.com/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[Web site with Gatsby]]></title><description><![CDATA[This is just test page, for future references it is best to visit Gatsby official website.]]></description><link>https://nicewaytodoit.github.io/aleksandar.ristevski.me/posts/2019-01-19---buidling-a-web-site-with-gatsby/</link><guid isPermaLink="false">https://nicewaytodoit.github.io/aleksandar.ristevski.me/posts/2019-01-19---buidling-a-web-site-with-gatsby/</guid><pubDate>Sat, 19 Jan 2019 23:26:33 GMT</pubDate><content:encoded>&lt;p&gt;Gatsby should be a modern framework for the fast websites. Project was born in May 2015 as a simple way to build a website with React.&lt;/p&gt;
+&lt;p&gt;But become increasingly popular around mid 2017. &lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 840px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/042dd29755cb80419c34f3498118bd0b/bba1f/1.jpg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 25.83333333333333%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAFABQDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAX/xAAVAQEBAAAAAAAAAAAAAAAAAAAAAf/aAAwDAQACEAMQAAABvBAX/8QAFBABAAAAAAAAAAAAAAAAAAAAEP/aAAgBAQABBQJ//8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAwEBPwE//8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAgEBPwE//8QAFBABAAAAAAAAAAAAAAAAAAAAEP/aAAgBAQAGPwJ//8QAGBAAAwEBAAAAAAAAAAAAAAAAAAERIWH/2gAIAQEAAT8hprJ1n//aAAwDAQACAAMAAAAQj8//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAEDAQE/ED//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAECAQE/ED//xAAYEAADAQEAAAAAAAAAAAAAAAAAARGBUf/aAAgBAQABPxBwVkTmC6Zp/9k=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;GatsbyJS Popularity Growth&quot;
+        title=&quot;GatsbyJS Popularity Growth&quot;
+        src=&quot;/static/042dd29755cb80419c34f3498118bd0b/bba1f/1.jpg&quot;
+        srcset=&quot;/static/042dd29755cb80419c34f3498118bd0b/09b79/1.jpg 240w,
+/static/042dd29755cb80419c34f3498118bd0b/7cc5e/1.jpg 480w,
+/static/042dd29755cb80419c34f3498118bd0b/bba1f/1.jpg 840w&quot;
+        sizes=&quot;(max-width: 840px) 100vw, 840px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;This is just a first test page, and it will not give you much about Gatsby. So, maybe I need a todo list of what I want to achieve?&lt;/p&gt;
+&lt;p&gt;Here it is: &lt;/p&gt;
+&lt;ul&gt;
 &lt;li&gt;
-&lt;p&gt;For additional tutorials and documentation go to: &lt;a href=&quot;https://pages.github.com/&quot;&gt;https://pages.github.com/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Installation - Setup/Templates/Plugins…&lt;/p&gt;
+&lt;p&gt;Everything starts with:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;$ &lt;span class=&quot;token function&quot;&gt;npm&lt;/span&gt; init gatsby&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;/li&gt;
-&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[Building A Web Site with Gatsby]]></title><description><![CDATA[For now it is nothing]]></description><link>https://nicewaytodoit.github.io/aleksandar.ristevski.me//posts/2019-01-19---buidling-a-web-site-with-gatsby/</link><guid isPermaLink="false">https://nicewaytodoit.github.io/aleksandar.ristevski.me//posts/2019-01-19---buidling-a-web-site-with-gatsby/</guid><pubDate>Sat, 19 Jan 2019 23:26:33 GMT</pubDate><content:encoded>&lt;h1&gt;Building A Web Site with Gatsby Ineed&lt;/h1&gt;
-&lt;p&gt;How many words? Many!
-Maybe todo list of what I want to achieve&lt;/p&gt;
-&lt;p&gt;Taking Starters
-Assembling bits
-Installation
-Running
-issues
-protocol
-long paths
-prefix &lt;/p&gt;</content:encoded></item></channel></rss>
+&lt;li&gt;Assembling bits - trying to find the relation between React components, static &lt;code class=&quot;language-text&quot;&gt;.md&lt;/code&gt; files and data.&lt;/li&gt;
+&lt;li&gt;Exploring Gatsby and GraphQL &lt;/li&gt;
+&lt;li&gt;Running - trying different scripts&lt;/li&gt;
+&lt;li&gt;Deployment - Deployment to Github pages / Automated scripts &lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Issues &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;protocols - &lt;/li&gt;
+&lt;li&gt;long paths - it seems that some pre-processor is needed for links, they do not convert correctly &lt;/li&gt;
+&lt;li&gt;prefix - ?
+…&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;br/&gt;
+&lt;br/&gt;
+&lt;p&gt;For future references use the following:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.gatsbyjs.com/&quot;&gt;Gatsby Official Website&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.gatsbyjs.com/docs/quick-start/&quot;&gt;Gatsby Quick Start&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.gatsbyjs.com/starters/?&quot;&gt;Gatsby Templates&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content:encoded></item></channel></rss>
