@@ -7,10 +7,10 @@ import './History.scss';
 const History = ({ className }) => (
   <div className={className}>
     {siteConfig.jobs && siteConfig.jobs.map(job => (
-      <article id={`#{job.hash}`} key={job.begin.month + job.begin.year} className="timeline__item">
+      <article id={`#{job.hash}`} key={job.begin.month + job.begin.year} className="history__item">
           <p>{job.company}</p>
           <p>{job.location}</p>
-          <p className="timeline__stack">
+          <p className="history__stack">
             {(job.stack || []).map((skill) => <span>{skill}</span>) }
           </p>
       </article>

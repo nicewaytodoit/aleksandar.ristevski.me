@@ -1,5 +1,16 @@
 # aleksandar.ristevski.me
 
+Live version:
+http://aleksandar.ristevski.me/
+
+## Deployment
+Run first:
+```bash
+$ npm run deploy:ec2
+```
+And then in 
+
+## Gatsby
 Website created by mixing:  
     - [Gatsby blog starter](https://github.com/gatsbyjs/gatsby-starter-blog)  
     - [Gatsby v2 starter Lumen](https://github.com/GatsbyCentral/gatsby-v2-starter-lumen)  
@@ -14,9 +25,8 @@ To run locally:
 or   
     `npm install`, then `npm start`,   
 
-then open https://localhost:8000.  
+then open https://localhost:8000 to get the app,  
+or http://localhost:8080/__graphql to get GraphQL shape
 
-Demo: https://nicewaytodoit.github.io/aleksandar.ristevski.me/  
- 
 ## Contributors
 * https://github.com/nicewaytodoit
