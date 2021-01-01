@@ -11,6 +11,7 @@ import '../../../components/ProfileScreen/Layout/Layout.css';
 import Sidebar from '../../../components/Sidebar';
 import SEO from '../../../components/ProfileScreen/SEO/Seo';
 import Wrapper from '../../../components/ProfileScreen/Wrapper/Wrapper';
+import History from '../../../components/ProfileScreen/History/History';
 
 const Separator = styled.hr`
   margin-top: 24px;
@@ -23,13 +24,14 @@ class Work extends React.Component {
     return (
       <Layout>
         <div>
-          <Helmet title="Profile" />
+          <Helmet title="Work History" />
           <Sidebar {...this.props} />
           <div className="content">
-            <SEO title="Profile" keywords={['gatsbyjs', 'react', 'curriculum']} />
+            <SEO title="Work History" keywords={['Aleksandar Ristevski', 'work', 'history', 'cv', 'profile', 'UI Developer', 'Frontend Developer', 'Team Lead']} />
             <Wrapper className={props.className}>
               <Container className="page-content" fluid>
                 <h1>Work</h1>
+                <History />
               </Container>
             </Wrapper>
           </div>

@@ -84,6 +84,7 @@ export default styled(Timeline)`
     margin-right: 4px;
     padding: 3px;
     white-space:nowrap;
+    border-radius: 3px;
   }
   .timeline__stack a {
     position: absolute;

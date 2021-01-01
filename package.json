@@ -84,6 +84,7 @@
     "deploy:1": "yarn build && cd public && now alias $(now) aleksandar.ristevski.me",
     "deploy:2": "gatsby build --prefix-paths && gh-pages -d public",
     "deploy:only": "gh-pages -d public",
+    "deploy:ec2": "npm run build && npm run deploy:only",
     "clean:public": "rm -rf public",
     "clean": "npm run clean:public",
     "test": "echo \"Error: no test specified\" && exit 1",

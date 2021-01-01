@@ -89,7 +89,8 @@
             },
             "duration": "2 years 4 months",
             "occupation": "Developer",
-            "description": "multiple projects"
+            "description": "multiple projects",
+            "stack": ["C#", "MVC.NET", "Python", "Node.js", "Postgres"]
         },
         {
             "hash": "kingsnhs",    
@@ -101,7 +102,8 @@
             },
             "duration": "4 years 4 months",
             "occupation": "Developer",
-            "description": "multiple projects"
+            "description": "multiple projects",
+            "stack": ["C#", "MVC.NET", "Python", "SQL Server", "Javascript", "HTML", "CSS"]
         },
         {
             "hash": "youthmedia",    
