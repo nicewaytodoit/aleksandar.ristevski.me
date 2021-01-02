@@ -1,5 +1,4 @@
 const loadTweeterEmbed = (callback) => {
-    console.log('many times');
     const existingScript = document.getElementById('TweeterPlatform');
     if (existingScript) {
         existingScript.parentNode.removeChild(existingScript);

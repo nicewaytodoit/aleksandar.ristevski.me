@@ -1,7 +1,7 @@
 # aleksandar.ristevski.me
 
 Live version:
-http://aleksandar.ristevski.me/
+https://aleksandar.ristevski.me/
 
 ## Deployment
 Run first:
