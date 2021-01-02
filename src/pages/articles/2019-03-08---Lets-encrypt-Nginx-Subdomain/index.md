@@ -13,7 +13,7 @@ tags:
   - "nginx"
   - "errors"
 
-description: "Installing certificate can sometimes get a wrong turn, I hope this article can ."
+description: "Installing certificate can sometimes get a wrong turn, I hope this article can help just a bit."
 ---
 
 
