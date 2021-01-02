@@ -146,8 +146,8 @@
             @include line-height(2.25);
             @include margin-top(2.25);
             @include margin-bottom(1.5);
-            margin-left: auto;
-            margin-right: auto;
+            margin-left: auto !important;
+            margin-right: auto !important;
         }
         &__body {
             font-size: $typographic-base-font-size * 1.125;
