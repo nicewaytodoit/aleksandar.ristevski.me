@@ -32,6 +32,68 @@
             "level": 55
         }
     ],
+    "allSkills": [
+        { 
+            "type": "",
+            "skills": ["React","Redux","JavaScript using ES6","TypeScript","Webpack"],
+            "style": ""
+        },
+        { 
+            "type": "",
+            "skills": ["HTML5","CSS3","AA Accessibility"],
+            "style": ""
+        },
+        { 
+            "type": "",
+            "skills": ["TDD / BDD using Jest","Enzyme","Mocha","Sinon","NUnit"],
+            "style": ""
+        },
+        { 
+            "type": "",
+            "skills": ["SCRUM","Kanban","Agile development","Pomodoro","Jira","Confluence"],
+            "style": ""
+        },
+        { 
+            "type": "",
+            "skills": ["TeamCity","Artifactory"],
+            "style": ""
+        },
+        { 
+            "type": "",
+            "skills": ["AWS","Azure (Basic)","Windows","Linux (Ubuntu","Mint)","bash"],
+            "style": ""
+        },
+        { 
+            "type": "",
+            "skills": ["Modular architecture","object-oriented / functional","Flux","MVC"],
+            "style": ""
+        },
+        { 
+            "type": "",
+            "skills": ["Node JS (ExpressJS","Nunjucks","Jade","NPM)",".NET C#","ASP.MVC","Python (Basic)"],
+            "style": ""
+        },
+        { 
+            "type": "",
+            "skills": ["MongoDB","Firebase","Redis"],
+            "style": ""
+        },
+        { 
+            "type": "",
+            "skills": ["MS SQL Server (2000-2016) +(SSRS","SSIS)","PostgreSQL","MySQL"],
+            "style": ""
+        },
+        { 
+            "type": "",
+            "skills": ["Performance and Scalability"],
+            "style": ""
+        },
+        { 
+            "type": "",
+            "skills": ["Git","GtiHub","Stash (BitBucket)","SVN","TFS Team Foundation"],
+            "style": ""
+        }
+    ],
     "jobs": [
         {
             "hash": "why5",    
