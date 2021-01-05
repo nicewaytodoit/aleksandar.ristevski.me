@@ -29,7 +29,7 @@ class Repositories extends React.Component {
     const { className } = this.props;
     return (
       <div className={className}>
-        <h2>Latest repositories on Github</h2>
+        <h2 className="page__title">Latest repositories on Github</h2>
         {status === 'loading' && <div className="repositories__loader"><Loader /></div>}
         {status === 'ready' && repos && (
         <Fragment>

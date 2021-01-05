@@ -29,25 +29,27 @@ class Home extends React.Component {
           <Helmet title="Profile" />
           <Sidebar {...this.props} />
           <div className="content">
-            <SEO title="Profile" keywords={['gatsbyjs', 'react', 'curriculum']} />
-            <Wrapper className={props.className}>
-              <Container className="page-content" fluid>
-                <Row>
-                  <Col xs={4} sm={4}>
-                    <About title="About" text={siteConfig.authorDescription} />
-                  </Col>
-                  <Col xs={4} sm={4}>
-                    <Skills title="Skills" skills={siteConfig.skills} />
-                  </Col>
-                </Row>
-                <Separator />
-                <Timeline />
-                <Separator />
-                <br/>
-                <br/>
-                <Repositories />
-              </Container>
-            </Wrapper>
+            <div className="content__inner">
+              <SEO title="Profile" keywords={['gatsbyjs', 'react', 'curriculum']} />
+              <Wrapper className={props.className}>
+                <Container className="page-content" fluid>
+                  <Row>
+                    <Col xs={4} sm={4}>
+                      <About title="About" text={siteConfig.authorDescription} />
+                    </Col>
+                    <Col xs={4} sm={4}>
+                      <Skills title="Skills" skills={siteConfig.skills} />
+                    </Col>
+                  </Row>
+                  <Separator />
+                  <Timeline />
+                  <Separator />
+                  <br/>
+                  <br/>
+                  <Repositories />
+                </Container>
+              </Wrapper>
+            </div>
           </div>
         </div>
       </Layout>

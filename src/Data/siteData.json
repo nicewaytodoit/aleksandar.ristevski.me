@@ -5,7 +5,7 @@
     "twitterUsername": "nicewaytodoit",
     "githubUsername": "nicewaytodoit",
     "authorAvatar": "/images/avatar.jpeg",
-    "authorDescription": "Developer <br />\n    Bit of history.\n    yara yara yara ... C # and .NET. <br />\n    <strong>Javascript, NodeJS e React.</strong>",
+    "authorDescription": "Currently, I live in London, and my professional focus is <strong>UI / Front End</strong> development in <strong>React, JavaScript</strong> and <strong>TypeScript</strong>, occasionally spicing a project with functional programming using <strong>Ramda</strong> or <strong>Lodash</strong>.<br />\n In the past, I have done a quite a bit with <strong>C#, ASP.NET, MVC, SQL Server</strong> but nowadays, for the simplicity sake, I am relying on <strong>Node.js, PostgresSQL and Redis</strong>.",
     "skills": [
         {
             "name": "React",
@@ -35,63 +35,69 @@
     "allSkills": [
         { 
             "type": "",
-            "skills": ["React","Redux","JavaScript using ES6","TypeScript","Webpack"],
+            "tech": ["React","Redux","JavaScript using ES6","TypeScript","Webpack"],
+            "style": "light blue",
+            "logoForEachTech": ""
+        },
+        { 
+            "type": "",
+            "tech": ["HTML5","CSS3","AA Accessibility"],
+            "style": "orange"
+        },
+        { 
+            "type": "",
+            "tech": ["TDD / BDD using Jest","Enzyme","Mocha","Sinon","NUnit"],
+            "style": "trula visnja"
+        },
+        { 
+            "type": "",
+            "tech": ["SCRUM","Kanban","Agile development","Pomodoro","Jira","Confluence"],
+            "style": "navy blue"
+        },
+        { 
+            "type": "",
+            "tech": ["TeamCity","Artifactory"],
+            "style": "blue green"
+        },
+        { 
+            "type": "",
+            "tech": ["AWS","Azure (Basic)","Windows","Linux (Ubuntu","Mint)","bash"],
+            "style": "bluish black / amazon orange arrow"
+        },
+        { 
+            "type": "",
+            "tech": ["Modular architecture","object-oriented / functional","Flux","MVC"],
+            "style": "yellow grinish"
+        },
+        { 
+            "type": "",
+            "tech": ["Node JS (ExpressJS","Nunjucks","Jade","NPM)",".NET C#","ASP.MVC","Python (Basic)"],
+            "style": "green light"
+        },
+        { 
+            "type": "",
+            "tech": [".NET C#","ASP.MVC","Python (Basic)"],
+            "style": "green light"
+        },
+        { 
+            "type": "",
+            "tech": ["MongoDB","Firebase","Redis"],
+            "style": "gray red"
+        },
+        { 
+            "type": "",
+            "tech": ["MS SQL Server (2000-2016) +(SSRS","SSIS)","PostgreSQL","MySQL"],
+            "style": "gray bluish"
+        },
+        { 
+            "type": "",
+            "tech": ["Performance and Scalability"],
             "style": ""
         },
         { 
             "type": "",
-            "skills": ["HTML5","CSS3","AA Accessibility"],
-            "style": ""
-        },
-        { 
-            "type": "",
-            "skills": ["TDD / BDD using Jest","Enzyme","Mocha","Sinon","NUnit"],
-            "style": ""
-        },
-        { 
-            "type": "",
-            "skills": ["SCRUM","Kanban","Agile development","Pomodoro","Jira","Confluence"],
-            "style": ""
-        },
-        { 
-            "type": "",
-            "skills": ["TeamCity","Artifactory"],
-            "style": ""
-        },
-        { 
-            "type": "",
-            "skills": ["AWS","Azure (Basic)","Windows","Linux (Ubuntu","Mint)","bash"],
-            "style": ""
-        },
-        { 
-            "type": "",
-            "skills": ["Modular architecture","object-oriented / functional","Flux","MVC"],
-            "style": ""
-        },
-        { 
-            "type": "",
-            "skills": ["Node JS (ExpressJS","Nunjucks","Jade","NPM)",".NET C#","ASP.MVC","Python (Basic)"],
-            "style": ""
-        },
-        { 
-            "type": "",
-            "skills": ["MongoDB","Firebase","Redis"],
-            "style": ""
-        },
-        { 
-            "type": "",
-            "skills": ["MS SQL Server (2000-2016) +(SSRS","SSIS)","PostgreSQL","MySQL"],
-            "style": ""
-        },
-        { 
-            "type": "",
-            "skills": ["Performance and Scalability"],
-            "style": ""
-        },
-        { 
-            "type": "",
-            "skills": ["Git","GtiHub","Stash (BitBucket)","SVN","TFS Team Foundation"],
-            "style": ""
+            "tech": ["Git","GtiHub","Stash (BitBucket)","SVN","TFS Team Foundation"],
+            "style": "red orange / dark blue"
         }
     ],
     "jobs": [
@@ -103,16 +109,37 @@
                 "month": "jan",
                 "year": "2020"
             },
+            "engagement": [ 
+                { "start": "01/2020", "end": null }
+            ],
             "duration": null,
-            "occupation": "Team Leader / Developer",
+            "occupation": "UI Developer, Back End Developer, Team Lead",
             "description": "Development of multiple web projects.",
             "stack": ["React", "JavaScript", "TypeScript", "Node.js", "Postgres", "Nginx", "Linux", "Github"],
             "projects": [
                 {
                     "name": "komentara.com",
-                    "url": "",
+                    "url": "https://www.komentara.com",
+                    "description": "",
+                    "skills": ["Node.js","JavaScript","Express.js","HTML","CSS","SASS","Bootstrap","EC2","AWS Simple Email","Nginx","Let'sEncrypt","GitHub","Bcrypt","Nunjucks"]
+                },
+                {
+                    "name": "aleksandar.ristevski.me",
+                    "url": "https://aleksandar.ristevski.me",
                     "description": "", 
-                    "skills": "" 
+                    "skills": ["Gatsby", "React", "GraphQL", "HTML", "CSS", "gh-pages", "JavaScript"] 
+                },
+                {
+                    "name": "34rest",
+                    "url": "https://34rest.com",
+                    "description": "", 
+                    "skills": ["Hexo", "EJS template", "HTML", "CSS", "JavaScript"] 
+                },
+                {
+                    "name": "Transparentno",
+                    "url": "https://www.transparentno.com/",
+                    "description": "", 
+                    "skills": ["AWS", "Route 53", "S3", "HTML", "CSS", "JavaScript"] 
                 }
             ]
         },
@@ -125,8 +152,8 @@
                 "year": "2018"
             },
             "duration": "1 year 4 months",
-            "occupation": "Frontend developer team lead",
-            "description": "Development and maintenance of the digital journey lending platform.",
+            "occupation": "Front End Lead Developer",
+            "description": "Working on the digital journey lending platform.",
             "stack": ["React", "JavaScript", "TypeScript", "Node.js", "Jira", "TeamCity", "Confluence", "BitBucket"]
         },
         {
@@ -139,7 +166,7 @@
             },
             "duration": "8 months",
             "occupation": null,
-            "description": "Traveling around the world and working on conceptual solutions for global world challenges"
+            "description": "Traveling around the world and working on conceptual solutions applying on different global world challenges"
         },
         {
             "hash": "tinydiff",    
@@ -151,7 +178,7 @@
             },
             "duration": "2 years 4 months",
             "occupation": "Developer",
-            "description": "multiple projects",
+            "description": "Working on multiple theoretical and web solutions.",
             "stack": ["C#", "MVC.NET", "Python", "Node.js", "Postgres"]
         },
         {
@@ -162,9 +189,13 @@
                 "month": "aug",
                 "year": "2012"
             },
+            "engagement": [ 
+                { "start": "", "end": "" },
+                { "start": "", "end": "" } 
+            ],
             "duration": "4 years 4 months",
             "occupation": "Developer",
-            "description": "multiple projects",
+            "description": "Working on ",
             "stack": ["C#", "MVC.NET", "Python", "SQL Server", "Javascript", "HTML", "CSS"]
         },
         {

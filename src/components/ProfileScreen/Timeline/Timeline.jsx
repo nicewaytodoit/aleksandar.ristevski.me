@@ -5,7 +5,7 @@ import siteConfig from '../../../Data/siteData.json';
 
 const Timeline = ({ className }) => (
   <div className={className}>
-    <h1>Experience</h1>
+    <h1 className="page__title">Experience</h1>
     {siteConfig.jobs && siteConfig.jobs.map(job => (
       <article key={job.begin.month + job.begin.year} className="timeline__item">
         <div className="inner">

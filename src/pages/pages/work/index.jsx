@@ -27,13 +27,15 @@ class Work extends React.Component {
           <Helmet title="Work History" />
           <Sidebar {...this.props} />
           <div className="content">
-            <SEO title="Work History" keywords={['Aleksandar Ristevski', 'work', 'history', 'cv', 'profile', 'UI Developer', 'Frontend Developer', 'Team Lead']} />
-            <Wrapper className={props.className}>
-              <Container className="page-content" fluid>
-                <h1>Work</h1>
-                <History />
-              </Container>
-            </Wrapper>
+            <div className="content__inner">
+              <SEO title="Work History" keywords={['Aleksandar Ristevski', 'work', 'history', 'cv', 'profile', 'UI Developer', 'Frontend Developer', 'Front End Developer', 'Team Lead']} />
+              <Wrapper className={props.className}>
+                <Container className="page-content" fluid>
+                  <h1 className="page__title">Work</h1>
+                  <History />
+                </Container>
+              </Wrapper>
+            </div>
           </div>
         </div>
       </Layout>

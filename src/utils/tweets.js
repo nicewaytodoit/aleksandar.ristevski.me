@@ -1,4 +1,4 @@
-const loadTweeterEmbed = (callback) => {
+const loadTwitterEmbed = (callback) => {
     const existingScript = document.getElementById('TweeterPlatform');
     if (existingScript) {
         existingScript.parentNode.removeChild(existingScript);
@@ -6,7 +6,7 @@ const loadTweeterEmbed = (callback) => {
 
     const script = document.createElement('script');
     script.src = 'https://platform.twitter.com/widgets.js';
-    script.id = 'TweeterPlatform';
+    script.id = 'TwitterPlatform';
     script.charSet = 'utf-8';
     document.body.appendChild(script);
     script.onload = () => {
@@ -15,4 +15,4 @@ const loadTweeterEmbed = (callback) => {
 
     if (existingScript && callback) callback();
 };
-export default loadTweeterEmbed;
+export default loadTwitterEmbed;
