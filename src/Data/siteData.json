@@ -5,7 +5,7 @@
     "twitterUsername": "nicewaytodoit",
     "githubUsername": "nicewaytodoit",
     "authorAvatar": "/images/avatar.jpeg",
-    "authorDescription": "Currently, I live in London, and my professional focus is <strong>UI / Front End</strong> development in <strong>React, JavaScript</strong> and <strong>TypeScript</strong>, occasionally spicing a project with functional programming using <strong>Ramda</strong> or <strong>Lodash</strong>.<br />\n In the past, I have done a quite a bit with <strong>C#, ASP.NET, MVC, SQL Server</strong> but nowadays, for the simplicity sake, I am relying on <strong>Node.js, PostgresSQL and Redis</strong>.",
+    "authorDescription": "Currently, my professional focus is <strong>UI / Front End</strong> development in <strong>React, JavaScript</strong> and <strong>TypeScript</strong>, occasionally spicing a project with functional programming using <strong>Ramda</strong> or <strong>Lodash</strong>.<br />\n In the past, I have done a quite a bit with <strong>C#, ASP.NET, MVC, SQL Server</strong> but nowadays, for the simplicity sake, I am relying on <strong>Node.js, PostgresSQL and Redis</strong>.",
     "skills": [
         {
             "name": "React",

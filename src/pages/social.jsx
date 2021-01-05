@@ -5,7 +5,7 @@ import { Container, Row, Col } from 'react-awesome-styled-grid';
 import Sidebar from '../components/Sidebar';
 import Layout from '../components/Layout';
 import SEO from '../components/ProfileScreen/SEO/Seo';
-import Wrapper from '../components/ProfileScreen/Wrapper/Wrapper';
+// import Wrapper from '../components/ProfileScreen/Wrapper/Wrapper';
 import loadTwitterEmbed from '../utils/tweets';
 
 
@@ -19,7 +19,7 @@ const Social = (props) => {
           <div className="content">
             <div className="content__inner">
               <SEO title="Social" keywords={['social', 'network', 'tweeter']} />
-              <Wrapper className={props.className}>
+              {/* <Wrapper> */}
                 <Container className="page-content" fluid>
                   <Row>
                     <Col>
@@ -47,7 +47,7 @@ const Social = (props) => {
                     </Col>
                   </Row>
                 </Container>
-              </Wrapper>
+              {/* </Wrapper> */}
             </div>
           </div>
         </div>

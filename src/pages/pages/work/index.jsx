@@ -28,7 +28,10 @@ class Work extends React.Component {
           <Sidebar {...this.props} />
           <div className="content">
             <div className="content__inner">
-              <SEO title="Work History" keywords={['Aleksandar Ristevski', 'work', 'history', 'cv', 'profile', 'UI Developer', 'Frontend Developer', 'Front End Developer', 'Team Lead']} />
+              <SEO
+                title="Work History"
+                keywords={['Aleksandar Ristevski', 'work', 'history', 'cv', 'profile', 'UI Developer', 'Frontend Developer', 'Front End Developer', 'Team Lead']}
+              />
               <Wrapper className={props.className}>
                 <Container className="page-content" fluid>
                   <h1 className="page__title">Work</h1>
