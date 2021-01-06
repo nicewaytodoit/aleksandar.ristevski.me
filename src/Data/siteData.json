@@ -142,7 +142,8 @@
                     "description": "", 
                     "skills": ["AWS", "Route 53", "S3", "HTML", "CSS", "JavaScript"] 
                 }
-            ]
+            ],
+            "details": "" 
         },
         {
             "hash": "rbs",    
@@ -159,7 +160,7 @@
             "duration": "1 year 4 months",
             "occupation": ["Front End Lead Developer"],
             "description": "Working in fintech on the digital journey lending platform.",
-            "stack": ["React", "JavaScript", "TypeScript", "Node.js", "Jira", "TeamCity", "Confluence", "Stash BitBucket", "SCRUM", "Kanban"],
+            "stack": ["React", "JavaScript", "TypeScript", "Node.js", "Jira", "TeamCity", "Confluence", "Stash BitBucket", "Scrum", "Kanban", "TDD", "BDD", "Jest"],
             "projects": [
                 {
                     "name": "AJ - Assisted Journey",
@@ -171,7 +172,8 @@
                     "description": "",
                     "skills": ["React 16.5","JavaScript","ES6","HTML","CSS","SASS","Bootstrap"]
                 }
-            ]
+            ],
+            "details": ""
         },
         {
             "hash": "sabbatical",    
@@ -186,7 +188,11 @@
             ],
             "duration": "6 months",
             "occupation": ["Traveler", "Wonderer", "Writer"],
-            "description": "Travelling around the world and working on conceptual solutions for global world challenges."
+            "description": "Travelling around the world and working on conceptual solutions for global world challenges.",
+            "details": [
+                "Travelled 6 months around the world - through 10 countries with diverse cultures, looking for new views, ideas and different perspectives.",
+                "While on sabbatical, my solution was selected as one of the <a href='https://globalchallenges.org/library-entries/basic-tax-control/'>Global Challenges Foundation finalists</a> for the New Shape Prize."
+            ]
         },
         {
             "hash": "tinydiff",    
@@ -201,9 +207,15 @@
                 { "start": "08/2015", "end": "12/2017" }
             ],
             "duration": "2 years 4 months",
-            "occupation": ["Developer", "Director", "Entrepreneur"],
+            "occupation": ["Developer", "Entrepreneur", "Writer", "Researcher"],
             "description": "Inventing multiple theoretical and digital solutions in the areas of environment and economy.",
-            "stack": ["C#", "MVC.NET", "Python", "React", "Node.js", "PostgreSQL"]
+            "stack": ["React 15.4", "Node.js", "PostgreSQL", "Git", "Nginx", "C#", "MVC.NET", "Python"],
+            "details": [
+                "Development of the <a target='_blank' href='http://basictaxcontrol.org'>Basic Tax Control</a> platform. Followed by submission for the <a target='_blank' href='https://globalchallenges.org/about/history/new-shape-prize/'>New Shape Prize</a>. Basic Tax Control was selected as one of the 14 finalist projects, competing for the $5 million \"The New Shape Prize\" (a quest to find new models of global cooperation capable of handling global catastrophic risks) out of 2702 entries from 122 countries of the world, in lengthy and rigorous selection process carried out by more than 100 experts. You can find more about this achivement <a target='_blank' href='https://globalchallenges.org/library-entries/basic-tax-control/'>here</a>.",
+                "Developed CMS engine reducing content deployment time for static sites.",
+                "Published a new method for CO2 sequestration.",
+                "Wrote and published a book on how to avoiding global catastrophic risks."
+            ]
         },
         {
             "hash": "kingsnhs",    
@@ -221,7 +233,22 @@
             "duration": "4 years 4 months",
             "occupation": ["Senior .NET Developer"],
             "description": "Working on a dynamic web form engine that is helping medical staff to capture diverse data across various clinical environments.",
-            "stack": ["C#", "MVC.NET", "Python", "SQL Server", "Redis", "Javascript", "JQuery", "HTML", "CSS", "SCRUM"]
+            "stack": ["C#", "MVC.NET", "Python", "SQL Server 2008", "Redis", "Javascript", "JQuery", "HTML", "CSS", "SCRUM"],
+            "projects": [
+                {
+                    "name": "KSSF - Assisted Journey",
+                    "description": "", 
+                    "skills": ["React 16.8","TypeScript","Redux-Saga","Ramda","Node.js","Bootstrap"] 
+                },
+                {
+                    "name": "PRUH Portal - Digital Journey",
+                    "description": "",
+                    "skills": ["React 16.5","JavaScript","ES6","HTML","CSS","SASS","Bootstrap"]
+                }
+            ],
+            "details": [
+                ""
+            ]
         },
         {
             "hash": "youthmedia",    
@@ -238,7 +265,10 @@
             "duration": "5 months",
             "occupation": ["Developer"],
             "description": "Development and maintenance of an education marketing platform.",
-            "stack": ["C#", "Win Forms", "SQL Server", "HTML"]
+            "stack": ["C#", "Win Forms", "SQL Server 2005", "HTML"],
+            "details": [
+                ""
+            ]
         },
         {
             "hash": "siemens",    
@@ -255,7 +285,10 @@
             "duration": "2 years 2 months",
             "occupation": ["Developer"],
             "description": "Working on the application for the Real Estate Cadastre of the Republic of Serbia.",
-            "stack": ["C#", "Win Forms", "Oracle", "HTML", "TortoiseSVN", "Infragistics Conrols"]
+            "stack": ["C#", "Win Forms", "Oracle", "HTML", "TortoiseSVN", "Infragistics Conrols"],
+            "details": [
+                ""
+            ]
         },
         {
             "hash": "tsg",  
@@ -272,11 +305,14 @@
             "duration": "5 months",
             "occupation": ["Developer"],
             "description": "Developing a digital archive for the Republic Geodesic Institute.",
-            "stack": ["C#", "Win Forms", "SQL Server"]
+            "stack": ["C#", "Win Forms", "SQL Server"],
+            "details": [
+                ""
+            ]
         },
         {
             "hash": "ceon",    
-            "company": "CEON/CEES",
+            "company": "CEON",
             "url": "https://www.ceon.rs",
             "location": "Belgrade, Serbia",
             "begin": {
@@ -289,11 +325,14 @@
             "duration": "8 months",
             "occupation": ["Developer"],
             "description": "Working on a project that is covering locally published scientific publications.",
-            "stack": ["C#", "ASP.NET", "JavaScript", "SQL Server", "HTML", "CSS"]
+            "stack": ["C#", "ASP.NET", "JavaScript", "SQL Server 2003", "HTML", "CSS"],
+            "details": [
+                ""
+            ]
         },
         {
             "hash": "gowigroup",    
-            "company": "Gowi Group / 'Božić & Sinovi'",
+            "company": "Gowi Group / Božić & Sinovi",
             "url": ["https://www.gowi.rs", "http://www.bozic.rs"],
             "location": "Pančevo, Serbia",
             "begin": {
@@ -306,7 +345,10 @@
             "duration": "4 years",
             "occupation": ["Full stack developer", "Team Leader", "Analyst"],
             "description": "As an outsourcing digital agency employee, I am working on multiple different projects for a range of UK clients.",
-            "stack": ["C#", "ASP.NET", "VB.NET", "Win Forms", "Adobe Flash", "JavaScript", "SQL Server", "SourceSafe", "Waterfall", "MSF Metodology"]
+            "stack": ["C#", "ASP.NET", "VB.NET", "Win Forms", "Adobe Flash", "JavaScript", "SQL Server 2000", "SourceSafe", "Waterfall", "MSF Metodology"],
+            "details": [
+                ""
+            ]
         }
         
 

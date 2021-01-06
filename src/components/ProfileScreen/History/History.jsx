@@ -42,9 +42,12 @@ const History = ({ className }) => (
           <p className="history__occupation">
             {getChain(job.occupation, occupationFn, ', ')}
           </p>
-          <p className="history__stack">
-            {getChain(job.stack, techFn, ', ')}
-          </p>
+          <ul className="history__details">
+            {(job.details || []).map((txt) => <li dangerouslySetInnerHTML={{ __html: txt }}/>)}
+          </ul> 
+          {job.stack?<p className="history__stack">
+            <b>Tech: </b>{getChain(job.stack, techFn, ', ')}
+          </p>:''}
       </article>
     ))}
   </div>
