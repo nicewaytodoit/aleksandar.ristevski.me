@@ -23,11 +23,29 @@ $sm: 685px;
     border-bottom: 1px solid #25303B;
 
     span {
-      margin-left:5px;
+      margin-left:10px;
       font-size: 16px;
     }
+    i {
+      margin-left:10px;
+    }
   }
-  
+  &__engagement {
+    font-size: 13px;
+    margin-bottom: 0px;
+    line-height: 1.3rem;
+  }
+  &__occupation {
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 0px;
+    line-height: 1.3rem;
+  }
+  &__stack {
+    font-size: 12px;
+  }
+
+
 
   @media (min-width: $sm) {
     &__item div.inner {

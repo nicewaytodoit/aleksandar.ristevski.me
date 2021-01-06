@@ -5,7 +5,7 @@
     "twitterUsername": "nicewaytodoit",
     "githubUsername": "nicewaytodoit",
     "authorAvatar": "/images/avatar.jpeg",
-    "authorDescription": "Currently, my professional focus is <strong>UI / Front End</strong> development in <strong>React, JavaScript</strong> and <strong>TypeScript</strong>, occasionally spicing a project with functional programming using <strong>Ramda</strong> or <strong>Lodash</strong>.<br />\n In the past, I have done a quite a bit with <strong>C#, ASP.NET, MVC, SQL Server</strong> but nowadays, for the simplicity sake, I am relying on <strong>Node.js, PostgreSQL and Redis</strong>.",
+    "authorDescription": "Currently, my professional focus is <strong>UI / Front End</strong> development in <strong>React, JavaScript</strong> and <strong>TypeScript</strong>, occasionally spicing a project with functional programming using <strong>Ramda</strong> or <strong>Lodash</strong>.<br />\n In the past, I have done a quite a bit with C#, ASP.NET, MVC, SQL Server but nowadays, for the simplicity sake, when I need a back end I am relying on <strong>Node.js, PostgreSQL and Redis</strong>.",
     "skills": [
         {
             "name": "React",
@@ -104,7 +104,7 @@
         {
             "hash": "why5",    
             "company": "Why5",
-            "url": "http://why5.uk",
+            "url": "http://www.why5.uk",
             "location": "London, United Kingdom",
             "begin": {
                 "month": "jan",
@@ -113,8 +113,8 @@
             "engagement": [ 
                 { "start": "01/2020", "end": null }
             ],
-            "duration": null,
-            "occupation": "UI Developer, Back End Developer, Team Lead",
+            "duration": "1 year",
+            "occupation": ["UI Developer", "Back End Developer", "Team Lead"],
             "description": "Development of multiple web projects.",
             "stack": ["React", "JavaScript", "TypeScript", "Node.js", "PostgreSQL", "Nginx", "Linux", "Github"],
             "projects": [
@@ -154,11 +154,10 @@
                 "year": "2018"
             },
             "engagement": [ 
-                { "start": "03/2011", "end": "12/2013" },
-                { "start": "03/2014", "end": "08/2015" } 
+                { "start": "09/2018", "end": "01/2020" }
             ],
             "duration": "1 year 4 months",
-            "occupation": "Front End Lead Developer",
+            "occupation": ["Front End Lead Developer"],
             "description": "Working in fintech on the digital journey lending platform.",
             "stack": ["React", "JavaScript", "TypeScript", "Node.js", "Jira", "TeamCity", "Confluence", "Stash BitBucket", "SCRUM", "Kanban"],
             "projects": [
@@ -183,30 +182,34 @@
                 "year": "2018"
             },
             "engagement": [ 
-                { "start": "03/2011", "end": "12/2013" },
-                { "start": "03/2014", "end": "08/2015" } 
+                { "start": "01/2018", "end": "07/2018" }
             ],
-            "duration": "8 months",
-            "occupation": null,
+            "duration": "6 months",
+            "occupation": ["Traveler", "Wonderer", "Writer"],
             "description": "Travelling around the world and working on conceptual solutions for global world challenges."
         },
         {
             "hash": "tinydiff",    
             "company": "Tiny Diff",
-            "location": "London, UK",
+            "url": "http://www.tinydiff.com",
+            "location": "London, United Kingdom",
             "begin": {
                 "month": "aug",
                 "year": "2015"
             },
+            "engagement": [ 
+                { "start": "08/2015", "end": "12/2017" }
+            ],
             "duration": "2 years 4 months",
-            "occupation": "Developer",
+            "occupation": ["Developer", "Director", "Entrepreneur"],
             "description": "Inventing multiple theoretical and digital solutions in the areas of environment and economy.",
             "stack": ["C#", "MVC.NET", "Python", "React", "Node.js", "PostgreSQL"]
         },
         {
             "hash": "kingsnhs",    
-            "company": "King's College Hospital NHS Foundation Trust",
-            "location": "London, UK",
+            "company": "King's College Hospital NHS",
+            "location": "London, United Kingdom",
+            "url": "https://www.kch.nhs.uk",
             "begin": {
                 "month": "aug",
                 "year": "2012"
@@ -216,14 +219,15 @@
                 { "start": "03/2014", "end": "08/2015" } 
             ],
             "duration": "4 years 4 months",
-            "occupation": "Developer",
+            "occupation": ["Senior .NET Developer"],
             "description": "Working on a dynamic web form engine that is helping medical staff to capture diverse data across various clinical environments.",
             "stack": ["C#", "MVC.NET", "Python", "SQL Server", "Redis", "Javascript", "JQuery", "HTML", "CSS", "SCRUM"]
         },
         {
             "hash": "youthmedia",    
             "company": "The Youth Media",
-            "location": "London, UK",
+            "url": "https://www.youthmedia.co.uk",
+            "location": "London, United Kingdom",
             "begin": {
                 "month": "oct",
                 "year": "2010"
@@ -232,60 +236,75 @@
                 { "start": "10/2010", "end": "03/2011" }
             ],
             "duration": "5 months",
-            "occupation": "Developer",
+            "occupation": ["Developer"],
             "description": "Development and maintenance of an education marketing platform.",
             "stack": ["C#", "Win Forms", "SQL Server", "HTML"]
         },
         {
             "hash": "siemens",    
             "company": "SIEMENS",
-            "location": "Belgrade, RS",
-            "url": " www.siemens.rs",
+            "url": "https://www.siemens.rs",
+            "location": "Belgrade, Serbia",
             "begin": {
                 "month": "jul",
                 "year": "2008"
             },
+            "engagement": [ 
+                { "start": "07/2008", "end": "09/2010" }
+            ],
             "duration": "2 years 2 months",
-            "occupation": "Developer",
+            "occupation": ["Developer"],
             "description": "Working on the application for the Real Estate Cadastre of the Republic of Serbia.",
             "stack": ["C#", "Win Forms", "Oracle", "HTML", "TortoiseSVN", "Infragistics Conrols"]
         },
         {
             "hash": "tsg",  
             "company": "TSG Group",
-            "location": "Belgrade, RS",
+            "url": "http://www.valltera-tech.com",
+            "location": "Belgrade, Serbia",
             "begin": {
                 "month": "sep",
                 "year": "2007"
             },
+            "engagement": [ 
+                { "start": "09/2007", "end": "01/2008" }
+            ],
             "duration": "5 months",
-            "occupation": "Developer",
+            "occupation": ["Developer"],
             "description": "Developing a digital archive for the Republic Geodesic Institute.",
             "stack": ["C#", "Win Forms", "SQL Server"]
         },
         {
             "hash": "ceon",    
             "company": "CEON/CEES",
-            "location": "Belgrade, RS",
+            "url": "https://www.ceon.rs",
+            "location": "Belgrade, Serbia",
             "begin": {
                 "month": "dec",
                 "year": "2006"
             },
+            "engagement": [ 
+                { "start": "12/2006", "end": "07/2007" }
+            ],
             "duration": "8 months",
-            "occupation": "Developer",
+            "occupation": ["Developer"],
             "description": "Working on a project that is covering locally published scientific publications.",
             "stack": ["C#", "ASP.NET", "JavaScript", "SQL Server", "HTML", "CSS"]
         },
         {
             "hash": "gowigroup",    
-            "company": "Gowi Group - 'Bozic & Sinovi'",
-            "location": "Pančevo, RS",
+            "company": "Gowi Group / 'Božić & Sinovi'",
+            "url": ["https://www.gowi.rs", "http://www.bozic.rs"],
+            "location": "Pančevo, Serbia",
             "begin": {
                 "month": "sep",
                 "year": "2002"
             },
+            "engagement": [ 
+                { "start": "09/2002", "end": "08/2006" }
+            ],
             "duration": "4 years",
-            "occupation": "Full stack developer, Team Leader, Analyst",
+            "occupation": ["Full stack developer", "Team Leader", "Analyst"],
             "description": "As an outsourcing digital agency employee, I am working on multiple different projects for a range of UK clients.",
             "stack": ["C#", "ASP.NET", "VB.NET", "Win Forms", "Adobe Flash", "JavaScript", "SQL Server", "SourceSafe", "Waterfall", "MSF Metodology"]
         }
