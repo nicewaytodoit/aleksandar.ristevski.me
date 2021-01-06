@@ -5,7 +5,7 @@
     "twitterUsername": "nicewaytodoit",
     "githubUsername": "nicewaytodoit",
     "authorAvatar": "/images/avatar.jpeg",
-    "authorDescription": "Currently, my professional focus is <strong>UI / Front End</strong> development in <strong>React, JavaScript</strong> and <strong>TypeScript</strong>, occasionally spicing a project with functional programming using <strong>Ramda</strong> or <strong>Lodash</strong>.<br />\n In the past, I have done a quite a bit with <strong>C#, ASP.NET, MVC, SQL Server</strong> but nowadays, for the simplicity sake, I am relying on <strong>Node.js, PostgresSQL and Redis</strong>.",
+    "authorDescription": "Currently, my professional focus is <strong>UI / Front End</strong> development in <strong>React, JavaScript</strong> and <strong>TypeScript</strong>, occasionally spicing a project with functional programming using <strong>Ramda</strong> or <strong>Lodash</strong>.<br />\n In the past, I have done a quite a bit with <strong>C#, ASP.NET, MVC, SQL Server</strong> but nowadays, for the simplicity sake, I am relying on <strong>Node.js, PostgreSQL and Redis</strong>.",
     "skills": [
         {
             "name": "React",
@@ -29,7 +29,7 @@
         },
         {
             "name": "Git",
-            "level": 55
+            "level": 57
         }
     ],
     "allSkills": [
@@ -104,7 +104,8 @@
         {
             "hash": "why5",    
             "company": "Why5",
-            "location": "London, UK",
+            "url": "http://why5.uk",
+            "location": "London, United Kingdom",
             "begin": {
                 "month": "jan",
                 "year": "2020"
@@ -115,7 +116,7 @@
             "duration": null,
             "occupation": "UI Developer, Back End Developer, Team Lead",
             "description": "Development of multiple web projects.",
-            "stack": ["React", "JavaScript", "TypeScript", "Node.js", "Postgres", "Nginx", "Linux", "Github"],
+            "stack": ["React", "JavaScript", "TypeScript", "Node.js", "PostgreSQL", "Nginx", "Linux", "Github"],
             "projects": [
                 {
                     "name": "komentara.com",
@@ -146,15 +147,32 @@
         {
             "hash": "rbs",    
             "company": "RBS",
-            "location": "London, UK",
+            "url": "https://www.rbs.co.uk",
+            "location": "London, United Kingdom",
             "begin": {
                 "month": "sep",
                 "year": "2018"
             },
+            "engagement": [ 
+                { "start": "03/2011", "end": "12/2013" },
+                { "start": "03/2014", "end": "08/2015" } 
+            ],
             "duration": "1 year 4 months",
             "occupation": "Front End Lead Developer",
-            "description": "Working on the digital journey lending platform.",
-            "stack": ["React", "JavaScript", "TypeScript", "Node.js", "Jira", "TeamCity", "Confluence", "BitBucket"]
+            "description": "Working in fintech on the digital journey lending platform.",
+            "stack": ["React", "JavaScript", "TypeScript", "Node.js", "Jira", "TeamCity", "Confluence", "Stash BitBucket", "SCRUM", "Kanban"],
+            "projects": [
+                {
+                    "name": "AJ - Assisted Journey",
+                    "description": "", 
+                    "skills": ["React 16.8","TypeScript","Redux-Saga","Ramda","Node.js","Bootstrap"] 
+                },
+                {
+                    "name": "DJ - Digital Journey",
+                    "description": "",
+                    "skills": ["React 16.5","JavaScript","ES6","HTML","CSS","SASS","Bootstrap"]
+                }
+            ]
         },
         {
             "hash": "sabbatical",    
@@ -164,9 +182,13 @@
                 "month": "jan",
                 "year": "2018"
             },
+            "engagement": [ 
+                { "start": "03/2011", "end": "12/2013" },
+                { "start": "03/2014", "end": "08/2015" } 
+            ],
             "duration": "8 months",
             "occupation": null,
-            "description": "Traveling around the world and working on conceptual solutions applying on different global world challenges"
+            "description": "Travelling around the world and working on conceptual solutions for global world challenges."
         },
         {
             "hash": "tinydiff",    
@@ -178,8 +200,8 @@
             },
             "duration": "2 years 4 months",
             "occupation": "Developer",
-            "description": "Working on multiple theoretical and web solutions.",
-            "stack": ["C#", "MVC.NET", "Python", "Node.js", "Postgres"]
+            "description": "Inventing multiple theoretical and digital solutions in the areas of environment and economy.",
+            "stack": ["C#", "MVC.NET", "Python", "React", "Node.js", "PostgreSQL"]
         },
         {
             "hash": "kingsnhs",    
@@ -190,13 +212,13 @@
                 "year": "2012"
             },
             "engagement": [ 
-                { "start": "", "end": "" },
-                { "start": "", "end": "" } 
+                { "start": "03/2011", "end": "12/2013" },
+                { "start": "03/2014", "end": "08/2015" } 
             ],
             "duration": "4 years 4 months",
             "occupation": "Developer",
-            "description": "Working on ",
-            "stack": ["C#", "MVC.NET", "Python", "SQL Server", "Javascript", "HTML", "CSS"]
+            "description": "Working on a dynamic web form engine that is helping medical staff to capture diverse data across various clinical environments.",
+            "stack": ["C#", "MVC.NET", "Python", "SQL Server", "Redis", "Javascript", "JQuery", "HTML", "CSS", "SCRUM"]
         },
         {
             "hash": "youthmedia",    
@@ -206,9 +228,13 @@
                 "month": "oct",
                 "year": "2010"
             },
+            "engagement": [ 
+                { "start": "10/2010", "end": "03/2011" }
+            ],
             "duration": "5 months",
             "occupation": "Developer",
-            "description": "multiple projects"
+            "description": "Development and maintenance of an education marketing platform.",
+            "stack": ["C#", "Win Forms", "SQL Server", "HTML"]
         },
         {
             "hash": "siemens",    
@@ -221,7 +247,8 @@
             },
             "duration": "2 years 2 months",
             "occupation": "Developer",
-            "description": "multiple projects"
+            "description": "Working on the application for the Real Estate Cadastre of the Republic of Serbia.",
+            "stack": ["C#", "Win Forms", "Oracle", "HTML", "TortoiseSVN", "Infragistics Conrols"]
         },
         {
             "hash": "tsg",  
@@ -233,7 +260,8 @@
             },
             "duration": "5 months",
             "occupation": "Developer",
-            "description": "multiple projects"
+            "description": "Developing a digital archive for the Republic Geodesic Institute.",
+            "stack": ["C#", "Win Forms", "SQL Server"]
         },
         {
             "hash": "ceon",    
@@ -245,8 +273,8 @@
             },
             "duration": "8 months",
             "occupation": "Developer",
-            "description": "multiple projects",
-            "detailsUrl": "/work/#gowi"
+            "description": "Working on a project that is covering locally published scientific publications.",
+            "stack": ["C#", "ASP.NET", "JavaScript", "SQL Server", "HTML", "CSS"]
         },
         {
             "hash": "gowigroup",    
@@ -258,8 +286,8 @@
             },
             "duration": "4 years",
             "occupation": "Full stack developer, Team Leader, Analyst",
-            "description": "multiple projects in .net asp.net and sql sderver",
-            "detailsUrl": "/work/#gowi"
+            "description": "As an outsourcing digital agency employee, I am working on multiple different projects for a range of UK clients.",
+            "stack": ["C#", "ASP.NET", "VB.NET", "Win Forms", "Adobe Flash", "JavaScript", "SQL Server", "SourceSafe", "Waterfall", "MSF Metodology"]
         }
         
 

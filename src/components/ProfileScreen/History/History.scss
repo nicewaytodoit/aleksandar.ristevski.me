@@ -13,104 +13,21 @@ $sm: 685px;
       height: calc(100% - 70px);
       background: #25303B;
   }
-  &__item {
-    width: 100%;
-    margin: 0 0 20px 0;
-    position: relative;
-    border: 1px solid #bbb;
-  }
-  &__item:after {
-    content: '';
-    display: block;
-    clear: both;
-  }
-  &__item div.inner {
-    width: 100%;
-    float: left;
-    margin: 85px 0 0 0;
-    border-radius: 6px;
-    border: 1px solid #25303B;
-  }
-  &__date {
-    display: block;
-    width: 60px;
-    padding: 3px 5px;
-    position: absolute;
-    top: 0;
-    left: 50%;
-    margin: 0 0 0 -30px;
-    border-radius: 100%;
-    font-size: 12px;
-    font-weight: 900;
-    text-transform: uppercase;
-    background: #25303B;
-    color: #fff;
-    box-shadow: 0 0 0 7px #fff;
-  }
-  &__date span {
-    display: block;
-    text-align: center;
-  }
-  &__month {
-    font-size: 18px;
-    padding-top: 4px;
-  }
-  &__year {
-    font-size: 10px;
-  }
+
   &__title {
-    padding: 15px;
-    margin: 0;
-    color: #fff;
     font-size: 20px;
-    text-transform: uppercase;
-    border-radius: 3px 3px 0 0;
-    position: relative;
-  }
-  &__title:after {
-    content: '';
-    position: absolute;
-    top: -5px;
-    left: 30%;
-    width: 10px; 
-    height: 10px;
-    transform: rotate(-45deg);
-  }
-  &__item div.inner p {
-    padding: 15px;
+    padding: 15px 0px 0px 0px;
     margin: 0;
-    font-size: 14px;
-    background: #fff;
-    color: #656565;
-    border-radius: 0 0 6px 6px;
-  }
-  &__text {
-    padding-top: 0px !important;
-    padding-bottom: 0px !important;
-  }
-  &__stack {
-    padding-top: 0px !important;
-    padding-bottom: 0px !important;
-    font-size: 0.7em;
-  }
-  &__stack span {
-    border: 1px solid #777;
+    margin-bottom: 5px;
+    position: relative;
+    border-bottom: 1px solid #25303B;
+
+    span {
+      margin-left:5px;
+      font-size: 16px;
+    }
   }
   
-  &__item:nth-child(2n+2) div.inner {
-    /* this is my coMMent */
-    float: right;
-  }
-  &__title {
-    background: #25303B;
-  }
-  &__title:after {
-    background: #25303B;
-  }
-
-  &__title--small {
-    font-size: 10px;
-  }
 
   @media (min-width: $sm) {
     &__item div.inner {
