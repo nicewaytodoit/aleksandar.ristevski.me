@@ -147,7 +147,7 @@
         },
         {
             "hash": "rbs",    
-            "company": "RBS",
+            "company": "Royal Bank of Scotland",
             "url": "https://www.rbs.co.uk",
             "location": "London, United Kingdom",
             "begin": {
@@ -170,7 +170,7 @@
                 {
                     "name": "DJ - Digital Journey",
                     "description": "",
-                    "skills": ["React 16.5","JavaScript","ES6","HTML","CSS","SASS","Bootstrap"]
+                    "skills": ["React 16.3","JavaScript","ES6","HTML","CSS","SASS","Bootstrap"]
                 }
             ],
             "details": ""
@@ -212,7 +212,7 @@
             "stack": ["React 15.4", "Node.js", "PostgreSQL", "Git", "Nginx", "C#", "MVC.NET", "Python"],
             "details": [
                 "Development of the <a target='_blank' href='http://basictaxcontrol.org'>Basic Tax Control</a> platform. Followed by submission for the <a target='_blank' href='https://globalchallenges.org/about/history/new-shape-prize/'>New Shape Prize</a>. Basic Tax Control was selected as one of the 14 finalist projects, competing for the $5 million \"The New Shape Prize\" (a quest to find new models of global cooperation capable of handling global catastrophic risks) out of 2702 entries from 122 countries of the world, in lengthy and rigorous selection process carried out by more than 100 experts. You can find more about this achivement <a target='_blank' href='https://globalchallenges.org/library-entries/basic-tax-control/'>here</a>.",
-                "Developed CMS engine reducing content deployment time for static sites.",
+                "Development of a CMS engine reducing content deployment time for static sites.",
                 "Published a new method for CO2 sequestration.",
                 "Wrote and published a book on how to avoiding global catastrophic risks."
             ]
@@ -231,23 +231,24 @@
                 { "start": "03/2014", "end": "08/2015" } 
             ],
             "duration": "4 years 4 months",
-            "occupation": ["Senior .NET Developer"],
+            "occupation": ["Senior .NET Developer", "Analyst", "Team Lead"],
             "description": "Working on a dynamic web form engine that is helping medical staff to capture diverse data across various clinical environments.",
-            "stack": ["C#", "MVC.NET", "Python", "SQL Server 2008", "Redis", "Javascript", "JQuery", "HTML", "CSS", "SCRUM"],
+            "stack": ["C#", "MVC.NET", "Javascript", "JQuery", "HTML", "CSS", "Python", "SQL Server 2008", "SSRS", "SSIS", "Inter Systems Caché", "Redis", "Mongo DB", "Scrum", "Kanban"],
             "projects": [
                 {
-                    "name": "KSSF - Assisted Journey",
-                    "description": "", 
-                    "skills": ["React 16.8","TypeScript","Redux-Saga","Ramda","Node.js","Bootstrap"] 
+                    "name": "KSSF (Kings Speciality System Framework)",
+                    "description": "Dynamic web form engine with the primary goal of capturing diverse data across various clinical environments. The solution needed to be responsive and to handle massive datasets gracefully, with human life depending accuracy."
                 },
                 {
-                    "name": "PRUH Portal - Digital Journey",
-                    "description": "",
-                    "skills": ["React 16.5","JavaScript","ES6","HTML","CSS","SASS","Bootstrap"]
+                    "name": "PRUH Portal",
+                    "description": "Is an extension of the KSSF integrating multiple clinical systems (iCM, PIMS, KHP Online, TQuest, Teleologic Teleomedic4, Review, Medinet, CubeScribe, Letter Maker ...) in one coherent and easily accessible system. The project's highlight is the \"Patient Discharge Form\" built within the tight budget and time constraints. The production successfully served more than 100 users at any given moment, working with the database of more than 7 000 000 patients, exchanging 10 000 HL7 messages and processing nearly 300 discharge notifications daily."
                 }
             ],
             "details": [
-                ""
+                "Frontend and backend were built with MVC4, HTML, CSS, JQuery, Vanilla JavaScript cross-compatible with Chrome, IE 7,8,9 and Firefox. Alongside, REST-ful API was implemented reducing the amount of data per request.",
+                "Architecture, development and administration of SQL database. (160 tables, more than 10 million rows per table, size 100Gb+)",
+                "SSRS Reports and ETL transfer jobs between different systems SQL, NoSQL databases (MongoDB, Inter Systems Caché) and files.",
+                "Analysis, design and development of application backend (Entity Framework, C#), database (architecture, programming...)"
             ]
         },
         {
@@ -263,12 +264,16 @@
                 { "start": "10/2010", "end": "03/2011" }
             ],
             "duration": "5 months",
-            "occupation": ["Developer"],
+            "occupation": [".Net Developer"],
             "description": "Development and maintenance of an education marketing platform.",
-            "stack": ["C#", "Win Forms", "SQL Server 2005", "HTML"],
-            "details": [
-                ""
-            ]
+            "stack": ["C#", "ASP.NET", "ASP.MVC 2", "SQL Server 2008", "SSRS", "MySql", "JavaScript", "JQuery", "HTML", "XML", "Photoshop", "Adobe Illustrator"],
+            "projects": [
+                {
+                    "name": "YouthWire",
+                    "description": "Digital marketing application connecting university students across the United Kingdom.<br/> <i>Personal responsibilities:</i> development of the front and back end of the web applications, maintenance and bug fixing of the live production system with 250 server deployments and more 150 thousands client PC installations across the United Kingdom, and lastly, management and administration of SQL Server with more than 50 million rows per table (such as indexing, optimization, SQL scripts performance tuning, backup scheduling and writing SSRS reports)."
+                }
+            ],
+            "details": []
         },
         {
             "hash": "siemens",    
@@ -283,7 +288,7 @@
                 { "start": "07/2008", "end": "09/2010" }
             ],
             "duration": "2 years 2 months",
-            "occupation": ["Developer"],
+            "occupation": [".Net Developer"],
             "description": "Working on the application for the Real Estate Cadastre of the Republic of Serbia.",
             "stack": ["C#", "Win Forms", "Oracle", "HTML", "TortoiseSVN", "Infragistics Conrols"],
             "details": [
@@ -302,12 +307,19 @@
             "engagement": [ 
                 { "start": "09/2007", "end": "01/2008" }
             ],
+            "projects": [
+                {
+                    "name": "Internal real estate trade for \"Republic Directorate for properties of Republic of Serbia\""
+                },
+                {
+                    "name": "Web site for \"Republic Directorate for properties of Republic of Serbia\""
+                }
+            ],
             "duration": "5 months",
-            "occupation": ["Developer"],
+            "occupation": [".Net Developer", "Team Lead"],
             "description": "Developing a digital archive for the Republic Geodesic Institute.",
-            "stack": ["C#", "Win Forms", "SQL Server"],
-            "details": [
-                ""
+            "stack": [
+                "C#", "Win Forms", "ASP.NET", "HTML", "Windows Services", "SQL Server 2005", "SQL Report Viewer", ".Net Remoting"
             ]
         },
         {
@@ -322,13 +334,30 @@
             "engagement": [ 
                 { "start": "12/2006", "end": "07/2007" }
             ],
+            "projects": [
+                {
+                    "name": "CRIS-S / DOPISNIca",
+                    "url": "https://www.ceon.rs/index.php?option=com_content&view=article&id=379&Itemid=532&lang=en",
+                    "description": "DOPISNIca is a system under development containing in-depth information on local researchers, research institutions, projects and published results. It is designed according to CERIF, a standard data model for research and technological information used extensively across Europe.", 
+                    "skills": ["C#", "ASP.NET 2.0", "HTML", "CSS", "MS SQL Server", "TOAD", "XML", "XPath"]
+                },
+                {
+                    "name": "SCIndeks",
+                    "url": "https://www.ceon.rs/index.php?option=com_content&view=article&id=484&Itemid=530&lang=en",
+                    "description": "SCIndeks is a full-text citation database. In addition to basic bibliographic information, SCIndeks contains abstracts and references of all papers from most of the quality-oriented Serbian scientific publications and are available as full texts under Open Access.",
+                    "skills": ["C#", "ASP.NET 2.0", "HTML", "CSS", "MS SQL Server", "TOAD"]
+                },
+                {
+                    "name": "Journal records",
+                    "description": "Data extraction project for the purpose of full-text citation.",
+                    "skills": ["C#", "ASP.NET 2.0", "MS SQL Server"]
+                }
+            ],
             "duration": "8 months",
-            "occupation": ["Developer"],
+            "occupation": [".Net Developer", "Team Lead", "Analyst"],
             "description": "Working on a project that is covering locally published scientific publications.",
             "stack": ["C#", "ASP.NET", "JavaScript", "SQL Server 2003", "HTML", "CSS"],
-            "details": [
-                ""
-            ]
+            "details": []
         },
         {
             "hash": "gowigroup",    
@@ -343,15 +372,27 @@
                 { "start": "09/2002", "end": "08/2006" }
             ],
             "duration": "4 years",
-            "occupation": ["Full stack developer", "Team Leader", "Analyst"],
+            "occupation": [".NET Developer", "Team Lead", "Analyst"],
             "description": "As an outsourcing digital agency employee, I am working on multiple different projects for a range of UK clients.",
-            "stack": ["C#", "ASP.NET", "VB.NET", "Win Forms", "Adobe Flash", "JavaScript", "SQL Server 2000", "SourceSafe", "Waterfall", "MSF Metodology"],
+            "projects": [
+                {
+                    "name": "Info4Parents, HIPAG, Leicester Recruit Service, Pendragon Administration for Abacus, Panacea 2"
+                },
+                {
+                    "name": "Webvision Marketplace for Abacus, Tracker, PSM, Time Management, Panacea, Jamaica Quiz..."
+                }
+            ],
+            "stack": ["C#", "VB.NET", "ASP.NET", "MS SQL Server 2000", "Windows Service", "TextML Server", "Windows Forms", "Office programs", "Mail server", "Exchange server", "Infragistics Components", "CMS server", "JavaScript", "HTML", "CSS", "Macromedia Flash", "ASP 3.0, MS Access Database"],
             "details": [
-                ""
+                "Development and team leading in teams of 2-6 people.",
+                "Analyse of requirements and design specification. Creating use cases and relation database model.",
+                "Linking applications with Excel and Word. ",
+                "Core and front application development of Windows and Web ASP.NET applications.",
+                "Working with design patterns.",
+                "Designing database, tuning database, developing store procedures, triggers, index management ...",
+                "Application testing and debugging. "
             ]
         }
-        
-
     ],
     "social": {
         "twitter": "https://twitter.com/nicewaytodoit",

@@ -1,4 +1,5 @@
 $sm: 685px;
+$tech_color: #205488;
 
 .history {
   position: relative;
@@ -53,8 +54,28 @@ $sm: 685px;
       margin-bottom: 1px;
     }
   }
+  &__projects {
+    font-size: 13px;
+    line-height: 1.3rem;
+    padding-bottom: 0px;
+    padding-top: 7px;
+    margin-bottom: 0px;
+    margin-left: 10px;
+    li {
+      margin-bottom: 3px;
+      a {
+        font-weight: 500;;
+      }
+      span:not(.history__projects-desc), b {
+        color: $tech_color;
+        font-size: 12px;
+        margin-left: 3px;
+      }
+    }
+  }
   &__stack {
     font-size: 12px;
+    color: $tech_color;
   }
 
 
