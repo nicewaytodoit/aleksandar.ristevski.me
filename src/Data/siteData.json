@@ -290,9 +290,25 @@
             "duration": "2 years 2 months",
             "occupation": [".Net Developer"],
             "description": "Working on the application for the Real Estate Cadastre of the Republic of Serbia.",
-            "stack": ["C#", "Win Forms", "Oracle", "HTML", "TortoiseSVN", "Infragistics Conrols"],
+            "stack": ["C#", ".Net", "Windows Forms", "Web ASP.NET", "Oracle 10g", "Oracle SQL Developer", "MS SQL Server", "ESRI ARC viewer", "Mantis", "Share Point Portal", ".netTiers Application Framework", "CodeSmith Professional v4.1", "Developer Express .NET (v8.2", "v2009)", "Visual SourceSafe", "SVN", "VM Ware", "SOLoist", "Java (Eclipse, Tomcat, MySql, JDBC ...)"],
+            "projects": [{
+                "name":"Real Estate Cadastre for Republic of Serbia"
+            }],
             "details": [
-                ""
+                "Analysing requirements and design specification.",
+                "Collaborate with analysts, team leader and clients in the refinement of product requirements and all associated documents required to develop solution.",
+                "Helping in adjusting relation database model and application business process according to use case needs.",
+                "Writing DDL and DML scripts in Oracle. Procedures in PL/SQL, triggers, optimizing queries, analyzing and improving indexes, fine tuning, adjusting db model.",
+                "Design and development of core Case Workflow application module (central part of system) in C#.",
+                "Development of business logic and front end for Windows and Web application by using MVP pattern.",
+                "Developing Windows and Web user and custom controls using C# and DevExpress Win, Web controls and components.",
+                "Interface making using Ajax controls and Callback mechanism along with DevExpress controls.",
+                "Adjusting netTiers framework and generating code via CodeSmith Professional tool.",
+                "Supporting of test team, deployment, planning across Mantis.",
+                "Maintaining code release in VSS and SVN for history and deployment.",
+                "Working on ESRI ARC viewer functionalities.",
+                "Developing Oracle2SOLoist core mapping in Java for SOLoist framework.",
+                "Working on front end SOLoist based application."
             ]
         },
         {
@@ -384,13 +400,9 @@
             ],
             "stack": ["C#", "VB.NET", "ASP.NET", "MS SQL Server 2000", "Windows Service", "TextML Server", "Windows Forms", "Office programs", "Mail server", "Exchange server", "Infragistics Components", "CMS server", "JavaScript", "HTML", "CSS", "Macromedia Flash", "ASP 3.0, MS Access Database"],
             "details": [
-                "Development and team leading in teams of 2-6 people.",
-                "Analyse of requirements and design specification. Creating use cases and relation database model.",
-                "Linking applications with Excel and Word. ",
-                "Core and front application development of Windows and Web ASP.NET applications.",
-                "Working with design patterns.",
-                "Designing database, tuning database, developing store procedures, triggers, index management ...",
-                "Application testing and debugging. "
+                "Gowi is a digital agency that creates bespoke solutions according to client needs.",
+                "My professional career has begun here, and over the course of 4 years, I worked on multiple projects, in different roles and teams ranging from 2 to 10 people.",
+                "Core responsibilities were IT requirements clarification, team leading, Windows and Web application development, testing and debugging, creation of the overall architecture, SQL database design, development and performance tuning."
             ]
         }
     ],
