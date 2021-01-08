@@ -25,7 +25,7 @@ const hasS = (arr) => (arr.length===1) ? '' : 's';
 const techFn = (tech) => <span>{tech}</span>;
 const projectFn = (proj) => (
   <li>
-    {proj.url?<a href={proj.url}>{proj.name}</a>:<b>{proj.name}</b>}{proj.description?' - ':''}<span className="history__projects-desc" dangerouslySetInnerHTML={{ __html: proj.description }} /> 
+    {proj.url?<a target="_blank" href={proj.url}>{proj.name}</a>:<b>{proj.name}</b>}{proj.description?' - ':''}<span className="history__projects-desc" dangerouslySetInnerHTML={{ __html: proj.description }} /> 
     <br />
     {proj.skills?<><b>Tech:</b>{getChain(proj.skills, s => <span>{s}</span>, ', ')}</>:""}
   </li>

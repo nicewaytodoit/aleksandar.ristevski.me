@@ -121,25 +121,25 @@
                 {
                     "name": "komentara.com",
                     "url": "https://www.komentara.com",
-                    "description": "",
+                    "description": "a social news website focusing on political news, with content and coments ortented to improving socio-politial conditions in the country",
                     "skills": ["Node.js","JavaScript","Express.js","HTML","CSS","SASS","Bootstrap","EC2","AWS Simple Email","Nginx","Let'sEncrypt","GitHub","Bcrypt","Nunjucks"]
                 },
                 {
                     "name": "aleksandar.ristevski.me",
                     "url": "https://aleksandar.ristevski.me",
-                    "description": "", 
+                    "description": "personal profile and technical blog done with Gatsby, React and GraphQL", 
                     "skills": ["Gatsby", "React", "GraphQL", "HTML", "CSS", "gh-pages", "JavaScript"] 
                 },
                 {
                     "name": "34rest",
-                    "url": "https://34rest.com",
-                    "description": "", 
+                    "url": "https://www.34rest.com/articles/co2/co2-deposit/",
+                    "description": "",
                     "skills": ["Hexo", "EJS template", "HTML", "CSS", "JavaScript"] 
                 },
                 {
                     "name": "Transparentno",
                     "url": "https://www.transparentno.com/",
-                    "description": "", 
+                    "description": "a website, with essay on environment, wealth and the economy", 
                     "skills": ["AWS", "Route 53", "S3", "HTML", "CSS", "JavaScript"] 
                 }
             ],
@@ -160,20 +160,40 @@
             "duration": "1 year 4 months",
             "occupation": ["Front End Lead Developer"],
             "description": "Working in fintech on the digital journey lending platform.",
-            "stack": ["React", "JavaScript", "TypeScript", "Node.js", "Jira", "TeamCity", "Confluence", "Stash BitBucket", "Scrum", "Kanban", "TDD", "BDD", "Jest"],
+            "stack": [
+                "React", "TypeScript", "JavaScript", "Ramda", "Node.js", "Redux-Saga", "Webpack", "CF/PCF (Pivotal Cloud Foundry)", "Svelte", "React-Redux", "Lodash", "TeamCity", "Jira", "Mocha", "Chai", "Scrum", "Kanban", "TDD", "BDD", "Confluence", "Git", "Stash/BitBucket", "Postman", "Artifactory", "JWS", "CWS", "AWS security", "Swagger", "CSS", "SCSS", "HTML"
+            ],
             "projects": [
                 {
                     "name": "AJ - Assisted Journey",
-                    "description": "", 
+                    "description": "is a SPA application for staff-led lending for businesses that can borrow up to £50,000 unsecured (subject to credit approval)",
                     "skills": ["React 16.8","TypeScript","Redux-Saga","Ramda","Node.js","Bootstrap"] 
                 },
                 {
                     "name": "DJ - Digital Journey",
-                    "description": "",
+                    "description": "is a customer-facing lending application for businesses",
                     "skills": ["React 16.3","JavaScript","ES6","HTML","CSS","SASS","Bootstrap"]
                 }
             ],
-            "details": ""
+            "details": [
+                "Imrpove their practices, and get up to date with new technologies, ",
+                "Leading with hands on approach, UI team of collocated mix of UK india and UK team 4 + 4 UI developers and UX team of 3",
+                "Java MS ",
+                "UX team and ",
+                "Working in SCRUM team of 50+ people, 2 weeks sprints / 6 weeks releases.",
+                "Closely working with BA on requirements, working on Test team to deliver ",
+                "Unite tests (functional and component) Jest but also (Mocha, Instambul etc)",
+                
+                "Working in the Digital Lending department on projects for commercial customers and staff.",
+                "Leading by the hands-on approach. Pair programming with team members to increase their overall velocity and improve cross knowledge. ",
+                "Responsible for: ",
+                
+                "Core UI architecture and development, setup of the project, agreeing JSON contracts, design and development of components, performance optimisation, applying TDD practices, writing Unit tests (functional/integration).",
+                "Closely communicating with Product Owners, Business Analysts, User Experience and Micro Services teams in order to get requirements and implement appropriate solution.",
+                "Optimisation of the working practices - reducing the time of the deployments and delivery.",
+                "Working closely with POs, BAs, UX and MS teams.",
+                "Improving and optimising working practices reducing the significant time necessary to roll out deployments."
+            ]
         },
         {
             "hash": "sabbatical",    
@@ -270,7 +290,7 @@
             "projects": [
                 {
                     "name": "YouthWire",
-                    "description": "Digital marketing application connecting university students across the United Kingdom.<br/> <i>Personal responsibilities:</i> development of the front and back end of the web applications, maintenance and bug fixing of the live production system with 250 server deployments and more 150 thousands client PC installations across the United Kingdom, and lastly, management and administration of SQL Server with more than 50 million rows per table (such as indexing, optimization, SQL scripts performance tuning, backup scheduling and writing SSRS reports)."
+                    "description": "Digital marketing application connecting university students across the United Kingdom.<br/> <i>Personal responsibilities:</i> <br/>Development of the front and back end of the web applications, maintenance and bug fixing of the live production system with 250 server deployments and more 150 thousands client PC installations across the United Kingdom, and lastly, management and administration of SQL Server with more than 50 million rows per table (such as indexing, optimization, SQL scripts performance tuning, backup scheduling and writing SSRS reports)."
                 }
             ],
             "details": []
@@ -292,23 +312,11 @@
             "description": "Working on the application for the Real Estate Cadastre of the Republic of Serbia.",
             "stack": ["C#", ".Net", "Windows Forms", "Web ASP.NET", "Oracle 10g", "Oracle SQL Developer", "MS SQL Server", "ESRI ARC viewer", "Mantis", "Share Point Portal", ".netTiers Application Framework", "CodeSmith Professional v4.1", "Developer Express .NET (v8.2", "v2009)", "Visual SourceSafe", "SVN", "VM Ware", "SOLoist", "Java (Eclipse, Tomcat, MySql, JDBC ...)"],
             "projects": [{
-                "name":"Real Estate Cadastre for Republic of Serbia"
+                "name": "Real Estate Cadastre for the Republic of Serbia",
+                "description": "is web and windows application, with a comprehensive land recording of the entire country's real estate or real properties, including textual and graphical data."
             }],
             "details": [
-                "Analysing requirements and design specification.",
-                "Collaborate with analysts, team leader and clients in the refinement of product requirements and all associated documents required to develop solution.",
-                "Helping in adjusting relation database model and application business process according to use case needs.",
-                "Writing DDL and DML scripts in Oracle. Procedures in PL/SQL, triggers, optimizing queries, analyzing and improving indexes, fine tuning, adjusting db model.",
-                "Design and development of core Case Workflow application module (central part of system) in C#.",
-                "Development of business logic and front end for Windows and Web application by using MVP pattern.",
-                "Developing Windows and Web user and custom controls using C# and DevExpress Win, Web controls and components.",
-                "Interface making using Ajax controls and Callback mechanism along with DevExpress controls.",
-                "Adjusting netTiers framework and generating code via CodeSmith Professional tool.",
-                "Supporting of test team, deployment, planning across Mantis.",
-                "Maintaining code release in VSS and SVN for history and deployment.",
-                "Working on ESRI ARC viewer functionalities.",
-                "Developing Oracle2SOLoist core mapping in Java for SOLoist framework.",
-                "Working on front end SOLoist based application."
+                "<i>Personal responsibilities:</i><br/> Analysing requirements and design specification by collaborating with analysts, team leads and clients to refine the product and all associated documents required to develop a solution.<br/> Helping in adjusting relation database model and application business process according to use case needs.<br/> Writing DDL and DML scripts in Oracle (procedures in PL/SQL, triggers, optimising queries, analysing and improving indexes, fine-tuning and adjusting DB model).<br/> Design and development of core \"Case Workflow\" application module and custom Web/Win controls in C# and DevExpress.<br/> Supporting of a test team, and CI pipeline deployment, planning across Mantis. <br/> Maintaining code release in VSS and SVN for history and deployment.<br/> Working on ESRI ARC viewer functionalities.<br/> Developing Oracle2SOLoist core mapping in Java for SOLoist framework and Working on front end SOLoist based application."
             ]
         },
         {
@@ -337,6 +345,8 @@
             "stack": [
                 "C#", "Win Forms", "ASP.NET", "HTML", "Windows Services", "SQL Server 2005", "SQL Report Viewer", ".Net Remoting"
             ]
+
+
         },
         {
             "hash": "ceon",    
@@ -391,18 +401,23 @@
             "occupation": [".NET Developer", "Team Lead", "Analyst"],
             "description": "As an outsourcing digital agency employee, I am working on multiple different projects for a range of UK clients.",
             "projects": [
-                {
-                    "name": "Info4Parents, HIPAG, Leicester Recruit Service, Pendragon Administration for Abacus, Panacea 2"
-                },
-                {
-                    "name": "Webvision Marketplace for Abacus, Tracker, PSM, Time Management, Panacea, Jamaica Quiz..."
-                }
+                { "name": "Info4Parents", "description": "School internal pupil management system with ability to communicate with parents." },
+                { "name": "HIPAG", "description": "Home Information Packs (HIP) managment system for most residential property transactions." },
+                { "name": "Leicester Recruit Service", "description": "Recruitment & HR web application." },
+                { "name": "Pendragon Administration for Abacus", "description": "Legal library with ability to track changes." },
+                { "name": "Panacea 2", "description": "Sells of insurence policies with ability for a customer to pay in installments." },
+                { "name": "Webvision Marketplace for Abacus", "description": "Marketing ads engine" },
+                { "name": "Tracker", "description": "Project, resources, business process management." },
+                { "name": "PSM", "description": "Project management web application." },
+                { "name": "Time Management", "description": "Project and time management." },
+                { "name": "Panacea", "description": "Premium finance for selected insurance brokers." },
+                { "name": "Jamaica Quiz", "description": "Multimedia quiz." }
             ],
             "stack": ["C#", "VB.NET", "ASP.NET", "MS SQL Server 2000", "Windows Service", "TextML Server", "Windows Forms", "Office programs", "Mail server", "Exchange server", "Infragistics Components", "CMS server", "JavaScript", "HTML", "CSS", "Macromedia Flash", "ASP 3.0, MS Access Database"],
             "details": [
                 "Gowi is a digital agency that creates bespoke solutions according to client needs.",
                 "My professional career has begun here, and over the course of 4 years, I worked on multiple projects, in different roles and teams ranging from 2 to 10 people.",
-                "Core responsibilities were IT requirements clarification, team leading, Windows and Web application development, testing and debugging, creation of the overall architecture, SQL database design, development and performance tuning."
+                "Core responsibilities were: requirements clarification, team leading, Windows and Web application development, testing and debugging, creation of the overall architecture, SQL database design, development and performance tuning."
             ]
         }
     ],
