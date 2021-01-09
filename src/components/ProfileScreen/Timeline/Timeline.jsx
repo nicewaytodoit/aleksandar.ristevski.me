@@ -7,7 +7,7 @@ const Timeline = ({ className }) => (
   <div className={className}>
     <h1 className="page__title">Experience</h1>
     {siteConfig.jobs && siteConfig.jobs.map(job => (
-      <article key={job.begin.month + job.begin.year} className="timeline__item">
+      <article key={`timeline_${job.hash}`} className="timeline__item">
         <div className="inner">
           <span className="timeline__date">
             <span className="timeline__month">{job.begin.month}</span>
@@ -23,7 +23,7 @@ const Timeline = ({ className }) => (
           </h2>
           <p className="timeline__text">{job.description}</p>
           <p className="timeline__stack">
-            {[...(job.stack || [])].splice(0,7).map((skill) => <span>{skill}</span>) }
+            {[...(job.stack || [])].splice(0,7).map((skill, i) => <span key={`skill_${job.hash}_${i}`}>{skill}</span>) }
             <a href={`/work/#${job.hash}`}><strong>...</strong></a>
           </p>
         </div>
