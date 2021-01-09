@@ -22,11 +22,13 @@ const getUrls = (urls) => {
 };
 function hasS(someArr) { return (someArr.length===1) ? '' : 's'; };
 function techFn(tech, i) { return <span key={`tech_${i}`}>{tech}</span>; };
-function projectFn(proj, j) { return (
+function projectFn(pp, j) { 
+  const proj = pp;
+  return (
   <li key={`proj_${j}`}>
-    {proj.url?<a target="_blank" href={proj.url}>{proj.name}</a>:<b>{proj.name}</b>}{proj.description?' - ':''}<span className="history__projects-desc" dangerouslySetInnerHTML={{ __html: proj.description }} /> 
+    {proj.url?<a target="_blank" href={proj.url}>{proj.name}</a>:<b>{proj.name}</b>}{proj.description?' - ':''}<span className="history__projects-desc" dangerouslySetInnerHTML={{ __html: proj.description }} ></span> 
     <br />
-    {proj.skills?<><b>Tech:</b>{getChain(proj.skills, (s, i) => <span key={`skill_${j}_${i}`}>{s}</span>, ', ')}</>:""}
+    {proj.skills?<><b>Tech:</b>{getChain([...proj.skills], (s, i) => <span key={`skill_${j}_${i}`}>{s}</span>, ', ')}</>:""}
   </li>
 );};
 function dateFn(date, di) { return <span key={`date_${di}`}>{date.start} - {date.end || "now"}</span>; };
@@ -46,20 +48,20 @@ const History = ({ className }) => (
       <article id={`${job.hash}`} key={`art_${job.hash}_${jj}`} className="history__item">
           <h2 className="history__title">{job.company} <span>{job.location} {getUrls(job.url)}</span></h2>
           <p className="history__engagement">
-            {getChain(job.engagement, dateFn, ' & ')} ({job.duration})
+            {getChain([...job.engagement], dateFn, ' & ')} ({job.duration})
           </p>
           <p className="history__occupation">
-            {getChain(job.occupation, occupationFn, ', ')}
+            {getChain([...job.occupation], occupationFn, ', ')}
           </p>
           {job.projects?<p className="history__projects">
             <b>Project{hasS(job.projects)}:</b><br/>
               <ul>
-                {getChain(job.projects, projectFn, '')}
+                {getChain([...job.projects], projectFn, '')}
               </ul>
           </p>:''}
-          <ul className="history__details">
-            {(job.details || []).map((txt, ddi) => <li key={`details_${ddi}`} dangerouslySetInnerHTML={{ __html: txt }}/>)}
-          </ul> 
+          {job.details?<ul className="history__details">
+            {[...job.details].map((txt, ddi) => <li key={`details_${ddi}`} dangerouslySetInnerHTML={{ __html: txt }}></li>)}
+          </ul>:''} 
           {job.stack?<p className="history__stack">
             <b>Tech: </b>{getChain(job.stack, techFn, ', ')}
           </p>:''}
