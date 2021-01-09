@@ -127,7 +127,7 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
 
 exports.onCreateWebpackConfig = ({ getConfig, actions }) => {
     console.log('=========@@@@@', getConfig().mode);
-    if (getConfig().mode === 'production') {
+    //if (getConfig().mode === 'production') {
         actions.setWebpackConfig({ devtool: false });
-    }
+    //}
 };

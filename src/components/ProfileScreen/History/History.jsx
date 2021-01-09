@@ -10,34 +10,35 @@ const getUrls = (urls) => {
   const stripUrl = (u) => (u || "").replace(/^[https:\/\/|http:\/\/]*/g, '');
   const linkFn = (url) => <a target="_blank" href={url}>{stripUrl(url)}</a>;
   
-  const arr = !Array.isArray(urls) ? [urls] : urls; 
+  const arr1 = !Array.isArray(urls) ? [urls] : urls; 
   
   return (
     <Fragment>
       {"("}
-      {getChain(arr, linkFn, <i></i>)} 
+      {getChain(arr1, linkFn, <i></i>)} 
       {")"}
     </Fragment>
   );
 };
-
-const hasS = (arr) => (arr.length===1) ? '' : 's';
-const techFn = (tech) => <span>{tech}</span>;
-const projectFn = (proj) => (
+function hasS(someArr) { return (someArr.length===1) ? '' : 's'; };
+function techFn(tech) { return <span>{tech}</span>; };
+function projectFn(proj) { return (
   <li>
     {proj.url?<a target="_blank" href={proj.url}>{proj.name}</a>:<b>{proj.name}</b>}{proj.description?' - ':''}<span className="history__projects-desc" dangerouslySetInnerHTML={{ __html: proj.description }} /> 
     <br />
     {proj.skills?<><b>Tech:</b>{getChain(proj.skills, s => <span>{s}</span>, ', ')}</>:""}
   </li>
-);
-const dateFn = (date) => <span>{date.start} - {date.end || "now"}</span>
-const occupationFn = (o) => <span>{o}</span>
+);};
+function dateFn(date) { return <span>{date.start} - {date.end || "now"}</span>; };
+function occupationFn(o) { return <span>{o}</span>; };
 
-const getChain = (arr, fnMap, separator) => (arr || [])
-              .map(fnMap)
-              .reduce((accu, elem) => {
-                return accu === null ? [elem] : [...accu, separator, elem]
-              }, null)
+function getChain(arr, fnMap, separator) { 
+  return (arr || [])
+    .map(fnMap)
+    .reduce((accu, elem) => {
+      return accu === null ? [elem] : [...accu, separator, elem]
+    }, null); 
+};
 
 const History = ({ className }) => (
   <div className={className}>
