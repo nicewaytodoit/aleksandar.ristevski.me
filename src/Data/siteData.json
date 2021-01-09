@@ -121,26 +121,26 @@
                 {
                     "name": "komentara.com",
                     "url": "https://www.komentara.com",
-                    "description": "a social news website focusing on political news, with content and coments ortented to improving socio-politial conditions in the country",
+                    "description": "a social news website focusing on Serbia's political news, with content, ideas and comments oriented to improving socio-political conditions in the country.",
                     "skills": ["Node.js","JavaScript","Express.js","HTML","CSS","SASS","Bootstrap","EC2","AWS Simple Email","Nginx","Let'sEncrypt","GitHub","Bcrypt","Nunjucks"]
                 },
                 {
                     "name": "aleksandar.ristevski.me",
-                    "url": "https://aleksandar.ristevski.me",
-                    "description": "personal profile and technical blog done with Gatsby, React and GraphQL", 
-                    "skills": ["Gatsby", "React", "GraphQL", "HTML", "CSS", "gh-pages", "JavaScript"] 
+                    "url": "https://aleksandar.ristevski.me/profile/",
+                    "description": "personal profile and technical blog.", 
+                    "skills": ["Gatsby", "React", "GraphQL", "HTML", "CSS", "gh-pages", "JavaScript", "AWS EC2", "Nginx"] 
+                },
+                {
+                    "name": "Transparentno",
+                    "url": "https://www.transparentno.com/articles/23-za-10-godina-100-odsto-obnovljive-energije/",
+                    "description": "is a website, with essays focusing on environment, wealth and the economy providing academic level in-depth analysis.", 
+                    "skills": ["AWS", "Route 53", "S3", "HTML", "CSS", "JavaScript"] 
                 },
                 {
                     "name": "34rest",
                     "url": "https://www.34rest.com/articles/co2/co2-deposit/",
-                    "description": "",
+                    "description": "collection of essays on climate change issues and solutions",
                     "skills": ["Hexo", "EJS template", "HTML", "CSS", "JavaScript"] 
-                },
-                {
-                    "name": "Transparentno",
-                    "url": "https://www.transparentno.com/",
-                    "description": "a website, with essay on environment, wealth and the economy", 
-                    "skills": ["AWS", "Route 53", "S3", "HTML", "CSS", "JavaScript"] 
                 }
             ],
             "details": "" 
@@ -166,7 +166,7 @@
             "projects": [
                 {
                     "name": "AJ - Assisted Journey",
-                    "description": "is a SPA application for staff-led lending for businesses that can borrow up to £50,000 unsecured (subject to credit approval)",
+                    "description": "is a SPA application for staff-led lending for businesses that can borrow certain amount unsecured (subject to credit approval)",
                     "skills": ["React 16.8","TypeScript","Redux-Saga","Ramda","Node.js","Bootstrap"] 
                 },
                 {
@@ -176,23 +176,10 @@
                 }
             ],
             "details": [
-                "Imrpove their practices, and get up to date with new technologies, ",
-                "Leading with hands on approach, UI team of collocated mix of UK india and UK team 4 + 4 UI developers and UX team of 3",
-                "Java MS ",
-                "UX team and ",
-                "Working in SCRUM team of 50+ people, 2 weeks sprints / 6 weeks releases.",
-                "Closely working with BA on requirements, working on Test team to deliver ",
-                "Unite tests (functional and component) Jest but also (Mocha, Instambul etc)",
-                
-                "Working in the Digital Lending department on projects for commercial customers and staff.",
-                "Leading by the hands-on approach. Pair programming with team members to increase their overall velocity and improve cross knowledge. ",
-                "Responsible for: ",
-                
-                "Core UI architecture and development, setup of the project, agreeing JSON contracts, design and development of components, performance optimisation, applying TDD practices, writing Unit tests (functional/integration).",
-                "Closely communicating with Product Owners, Business Analysts, User Experience and Micro Services teams in order to get requirements and implement appropriate solution.",
-                "Optimisation of the working practices - reducing the time of the deployments and delivery.",
-                "Working closely with POs, BAs, UX and MS teams.",
-                "Improving and optimising working practices reducing the significant time necessary to roll out deployments."
+                "Contract with RBS/NatWest was in the Digital Lending department, working on projects for commercial customers and staff lending. I led a collocated team of 4 + 4 UI developers in the United Kingdom and India, as a part of a larger 50+ team. Following SCRUM methodology with two weeks sprints and six weeks releases, continually improving internal working practices and keeping up to date with the newest tools and technologies. Often pair programming with team members to increase their overall velocity and improve domain cross knowledge.",
+                "UI team was closely communicating with Product Owners (POs), Business Analysts (BAs), User Experience (UX), Micro Services (MS), Test and DevOps teams on refining requirements and implement appropriate solutions.",
+                "Application front-end was written in React that was relying on a Micro Service layer back-end done in Java.", 
+                "Usual activities were: team leading, core UI architecture, setup of the project, agreeing JSON contracts with MS team, development of components and performance optimization; applying TDD practices, writing Unit tests (functional/integration) using Jest but also Mocha-Chai-Istambul combination, deployment and working with the test team on resolving issues."
             ]
         },
         {
