@@ -142,8 +142,7 @@
                     "description": "collection of essays on climate change issues and solutions",
                     "skills": ["Hexo", "EJS template", "HTML", "CSS", "JavaScript"] 
                 }
-            ],
-            "details": "" 
+            ]
         },
         {
             "hash": "rbs",    
@@ -279,8 +278,7 @@
                     "name": "YouthWire",
                     "description": "Digital marketing application connecting university students across the United Kingdom.<br/> <i>Personal responsibilities:</i> <br/>Development of the front and back end of the web applications, maintenance and bug fixing of the live production system with 250 server deployments and more 150 thousands client PC installations across the United Kingdom, and lastly, management and administration of SQL Server with more than 50 million rows per table (such as indexing, optimization, SQL scripts performance tuning, backup scheduling and writing SSRS reports)."
                 }
-            ],
-            "details": []
+            ]
         },
         {
             "hash": "siemens",    
@@ -369,8 +367,7 @@
             "duration": "8 months",
             "occupation": [".Net Developer", "Team Lead", "Analyst"],
             "description": "Working on a project that is covering locally published scientific publications.",
-            "stack": ["C#", "ASP.NET", "JavaScript", "SQL Server 2003", "HTML", "CSS"],
-            "details": []
+            "stack": ["C#", "ASP.NET", "JavaScript", "SQL Server 2003", "HTML", "CSS"]
         },
         {
             "hash": "gowigroup",    

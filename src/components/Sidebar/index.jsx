@@ -55,7 +55,11 @@ class Sidebar extends React.Component {
             <Links data={author} />
             <Menu data={menu} />
             <br />
-            <p className="sidebar__copyright" dangerouslySetInnerHTML={{ __html: copyright }}  />
+            <p
+              className="sidebar__copyright"
+              /* eslint-disable-next-line react/no-danger */
+              dangerouslySetInnerHTML={{ __html: copyright }}
+            />
           </div>
         </div>
       </div>

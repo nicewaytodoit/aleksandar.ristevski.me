@@ -58,7 +58,12 @@ exports.createPages = ({ graphql, actions }) => {
                 });
             });
 
-            const tags = _.uniq(posts.map((post) => _.get(post, 'node.frontmatter.tags')).flat().filter((a) => !!a));
+            const tags = _.uniq(
+                posts
+                    .map((post) => _.get(post, 'node.frontmatter.tags'))
+                    .flat()
+                    .filter((a) => !!a)
+            );
             tags.forEach((tag) => {
                 const tagPath = `/tags/${_.kebabCase(tag)}/`;
                 createPage({
@@ -68,7 +73,12 @@ exports.createPages = ({ graphql, actions }) => {
                 });
             });
 
-            const categories = _.uniq(posts.map((post) => _.get(post, 'node.frontmatter.category')).flat().filter((a) => !!a));
+            const categories = _.uniq(
+                posts
+                    .map((post) => _.get(post, 'node.frontmatter.category'))
+                    .flat()
+                    .filter((a) => !!a)
+            );
             categories.forEach((category) => {
                 const categoryPath = `/categories/${_.kebabCase(category)}/`;
                 createPage({
@@ -84,7 +94,7 @@ exports.createPages = ({ graphql, actions }) => {
 };
 
 exports.onCreatePage = ({ page, actions: { createPage, deletePage } }) => {
-    // Override Routes with ./Data/route.js file 
+    // Override Routes with ./Data/route.js file
     const { componentChunkName } = page;
     if (componentChunkName) {
         const foundOverride = overrideRoutes.find((r) => r.componentChunkName === componentChunkName);
@@ -93,6 +103,15 @@ exports.onCreatePage = ({ page, actions: { createPage, deletePage } }) => {
             createPage({ ...page, path: foundOverride.overridePath });
         }
     }
+
+    // Error loading a result for the page query in "dev-404-page" / "dev-404-page". Query was not run and no cached result was found. ENOENT: no such file or directory, open
+    // https://github.com/gatsbyjs/gatsby/issues/16112
+    if (process.env.NODE_ENV !== `production` && page.path === `/404/`) {
+        // Make the 404 page match everything client side.
+        // This will be used as fallback if more specific pages are not found
+        page.matchPath = `/*`;
+        createPage(page);
+    }
 };
 
 exports.onCreateNode = ({ node, actions, getNode }) => {
@@ -100,12 +119,11 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
     const nodeType = node.internal.type;
 
     if (nodeType === 'File') {
-        // Specific for /page/date---folders/ with md files 
+        // Specific for /page/date---folders/ with md files
         const parsedFilePath = path.parse(node.absolutePath);
         let slug = `/${parsedFilePath.dir.split('---')[1]}/`;
         createNodeField({ node, name: 'slug', value: slug });
-    }
-    else if (nodeType === 'MarkdownRemark' && typeof node.slug === 'undefined') {
+    } else if (nodeType === 'MarkdownRemark' && typeof node.slug === 'undefined') {
         const fileNode = getNode(node.parent);
         let { slug } = fileNode.fields || {};
         if (typeof node.frontmatter.path !== 'undefined' && !slug) {
@@ -128,6 +146,6 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
 exports.onCreateWebpackConfig = ({ getConfig, actions }) => {
     console.log('=========@@@@@', getConfig().mode);
     //if (getConfig().mode === 'production') {
-        actions.setWebpackConfig({ devtool: false });
+    actions.setWebpackConfig({ devtool: false });
     //}
 };
