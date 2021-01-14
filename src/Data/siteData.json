@@ -120,7 +120,7 @@
             "projects": [
                 {
                     "name": "komentara.com",
-                    "url": "https://www.komentara.com",
+                    "url": "http://www.komentara.com",
                     "description": "a social news website focusing on Serbia's political news, with content, ideas and comments oriented to improving socio-political conditions in the country.",
                     "skills": ["Node.js","JavaScript","Express.js","HTML","CSS","SASS","Bootstrap","EC2","AWS Simple Email","Nginx","Let'sEncrypt","GitHub","Bcrypt","Nunjucks"]
                 },
