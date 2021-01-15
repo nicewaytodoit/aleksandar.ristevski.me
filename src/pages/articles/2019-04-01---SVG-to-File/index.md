@@ -1,6 +1,6 @@
 ---
 title: Converting Inline SVG to File
-date: "2019-02-13T13:27:33.158"
+date: "2019-04-01T09:22:18.141"
 layout: post
 draft: false
 path: "/posts/2019-04-01---svg-to-file/"
