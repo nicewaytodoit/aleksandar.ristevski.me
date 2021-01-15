@@ -18,11 +18,11 @@ This time question is if you have an inline SVG file how would you convert it in
 
 
 Take for instance this arrow: 
-<div style="display:inline;">
+<p>
   <svg 
       fill="currentColor"
-      height="25"
-      width="25"
+      height="50"
+      width="50"
       viewBox="0 0 512 512"
   >
       <path d="M322.2,349.7c-3.1-3.1-3-8,0-11.3l66.4-74.4H104c-4.4,
@@ -31,13 +31,13 @@ Take for instance this arrow:
       8,2.4,5.7s-1.6,4.9-2.4,5.7s-80,88-80,88c-1.5,1.5-3.6,2.3-5.
       7,2.3C325.8,352,323.8,351.2,322.2,349.7z"></path>
   </svg>
-</div>
+</p>
 
 ```xml
 <svg 
     fill="currentColor"
-    height="25"
-    width="25"
+    height="50"
+    width="50"
     viewBox="0 0 512 512"
 >
     <path d="M322.2,349.7c-3.1-3.1-3-8,0-11.3l66.4-74.4H104c-4.4
@@ -56,8 +56,8 @@ In order to make it work you need to add two additional lines:
 <?xml version="1.0" encoding="UTF-8"?>
 <svg 
     fill="currentColor"
-    height="25"
-    width="25"
+    height="50"
+    width="50"
     viewBox="0 0 512 512"
     xmlns="http://www.w3.org/2000/svg"
 >
