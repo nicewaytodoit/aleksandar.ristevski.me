@@ -1,5 +1,5 @@
 ---
-title: Let's Encrypt Nginx Subdomain
+title: Subdomain Certificate with Let's Encrypt and Nginx
 date: "2019-02-13T13:27:33.158"
 layout: post
 draft: false
@@ -164,4 +164,35 @@ $ sudo certbot renew --dry-run
 ```
 
 If the test succeeds then we may create a `cron` job that will run a renewal script in specified times.
+
+
+## Update 1
+
+It is essential to acknowledge that wildcard certificate `*.example.com` is not valid for `example.com`. If you plan even simple redirection from `example.com` browser, it will respond with the error.
+
+To avoid this issue, we need to create a certificate that will cover both `example.com` and `*.example.com`.
+
+We can achieve that with the following command:
+
+```bash
+$ sudo certbot certonly --manual --preferred-challenges DNS -d example.com -d "*.example.com"
+```
+
+Shell will respond with the prompt saying that it is necessary to add "_acme-challenge" TXT record before proceeding. 
+
+After you update your DNS with your domain provider, you will need to use the standard dig command to check whether DNS records have been updated, before proceeding with pressing enter.
+
+```bash
+$ dig -t txt _acme-challenge.example.com
+```
+
+After you confirm DNS records are updated and press enter, there will be anther prompt to update a DNS record  "_acme-challenge" with a new string. In this instance, it is necessary to add new record not delete the old one.
+
+Sometimes it takes time to refresh local DNS, so when using dig command try to use it with the added parameter `+trace`.
+
+```bash
+dig -t txt _acme-challenge.example.com +trace
+```
+
+After you confirm, that both TXT record exists press enter and `certbot` will respond with a Congratulation message.
 
