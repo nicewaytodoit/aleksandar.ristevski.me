@@ -28,6 +28,7 @@ What are our options then, to make it stick to the center ?
 1. Using display 'table-cell'
 With display 'table-' we make elemenst such as ```<div>``` tags to behave like ```<table>``` and ```<td>``` tags.
 So, we can you following 
+
 ```css
 .parent {
     display: table-cell; 
@@ -43,6 +44,7 @@ So, we can you following
     display: inline-block;
 }
 ```
+
 This method will work only for the parent with fixed values. Child can have dimensions in percent (%).
 
 
@@ -74,6 +76,7 @@ Sometimes when using Flexbox parent needs to stay as it is while we need to adju
 
 4. Flexbox and margin
 In this case margines will push so to say object in the middle.
+
 ```css
 .parent {
     display: flex;
@@ -84,11 +87,13 @@ In this case margines will push so to say object in the middle.
 ```
 
 Another useful option if se have need to adjust offset can be:
+
 ```css
 .child {
     margin: calc(50% - 100px) calc(50% - 100px); /* instead of auto */
 }
 ```
+
 How many pixels need to be deducted depends on the width and height of the child object.
 
 
@@ -123,6 +128,7 @@ The Grid Layout offers a grid-based layout system containing rows and columns.
 
 7. Using CSS grid but with child classes
 This is similar case as number 3. but in this case both vertical and horizontal child self-alignement are working.
+
 ```css
 .parent {
     display: grid; 
@@ -132,7 +138,6 @@ This is similar case as number 3. but in this case both vertical and horizontal 
     align-self: center; /*vertical*/
 }
 ```
-
 
 
 That's it, I wish you happy coding and styling...

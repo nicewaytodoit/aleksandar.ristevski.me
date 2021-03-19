@@ -8,8 +8,11 @@ Run first:
 ```bash
 $ npm run deploy:ec2
 ```
-And then in 
-
+And then in EC2 serve folder:
+```bash
+sudo git pull origin gh-pages
+sudo service nginx restart
+```
 ## Gatsby
 Website created by mixing:  
     - [Gatsby blog starter](https://github.com/gatsbyjs/gatsby-starter-blog)  
