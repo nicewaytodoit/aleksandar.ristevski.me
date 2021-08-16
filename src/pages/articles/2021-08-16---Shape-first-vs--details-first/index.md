@@ -1,10 +1,10 @@
 ---
-title: Whole first vs. details first
+title: Shape first vs. details first
 date: "2021-08-16T21:14:00.000Z"
 layout: post
 draft: false
-path: "/whole-first-vs--details-first/"
-slug: "/whole-first-vs--details-first/"
+path: "/shape-first-vs--details-first/"
+slug: "/shape-first-vs--details-first/"
 category: "PROJECT MANAGEMENT"
 tags:
   - "MVP"
@@ -26,7 +26,7 @@ Would you maybe start from the top and try to cut and carve head first, focusing
 Now, the question is: 
 How likely is it that, in the process, you would make a mistake with the body proportions or the way parts are connected?
 
-The second approach would be to make a draft figure and then cut stone roughly along the edges. With each new iterations, you would increase the number of details as a whole. Slowly, cut by cut, and with each sand stroke, the sculpture would start popping up.
+The second approach would be to make a draft figure, a shape and then cut stone roughly along the edges. With each new iterations, you would increase the number of details as a whole. Slowly, cut by cut, and with each sand stroke, the sculpture would start popping up.
 
 Indeed, this would take much longer. You and the audience would see results only at the end - unless you decide that you can have a limited audience of selected critics that will give you feedback along the way and valuable input on what to improve.
 
