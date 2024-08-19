@@ -102,6 +102,38 @@
     ],
     "jobs": [
         {
+            "hash": "BNPP",    
+            "company": "BNP Paribas",
+            "url": "https://www.bnpparibas.co.uk/en/",
+            "location": "London, United Kingdom",
+            "begin": {
+                "month": "nov",
+                "year": "2021"
+            },
+            "engagement": [ 
+                { "start": "11/2021", "end": "06/2023" }
+            ],
+            "duration": "1 year 6 months",
+            "occupation": ["Senior UI Developer", "Team Lead"],
+            "description": "Working in fintech on the digital journey lending platform.",
+            "stack": ["React", "JavaScript", "TypeScript", "HTML", "CSS", "SASS", "Jenkins", "TeamCity", "Bladelogic", "BitBucket", "Jira", "Confluence", "Orion", "RxJS", "Redux", "Learna", "WebSockets"],
+            "projects": [
+                {
+                    "name": "Cortex Rates",
+                    "url": "https://globalmarkets.cib.bnpparibas/cortex-rates/",
+                    "description": "Cortex Rates is an application that offers a comprehensive range of Fixed Income Interest Rates products and services. As a React Developer in the Cortex Rates department, I contributed to the development of multiple applications (tiles) within the Fixed Income Interest Rates domain, covering products such as swaps, bonds, and swaptions (outright, curve, butterfly), as well as repo products. <br/><b>Key Responsibilities:</b> <br/>• Developed, debugged, profiled, and optimized performance for various React•based applications. <br/>• Established and maintained coding and branching best practices. <br/>• Collaborated closely with business analysts, designers, and other stakeholders to conduct technical analysis and refine tasks. <br/>• Documented APIs and worked collaboratively with UI/UX developers, backend developers, and cross•functional teams, including eRates, Blackbird, Nighthawk, Orion, DevOps, FoxDi, Forward Pricer, and FX. <br/>• Participated in application testing, code reviews, and mentoring junior developers to enhance team expertise and productivity.",
+                    "skills": ["React", "JavaScript", "TypeScript", "HTML", "CSS", "SASS", "Jenkins", "TeamCity", "Bladelogic", "BitBucket", "Jira", "Confluence", "Orion", "RxJS", "Redux", "Learna", "WebSockets"]
+                },
+                {
+                    "name": "Rates Environment",
+                    "url": "",
+                    "description": "Converting a manual CI/CD process into a fully automated Jenkins pipeline invoinvolving: <br/> &nbsp;• <b>Assessment and Planning</b>: Identify inefficiencies in the current manual processes and develop a transition plan. <br/> &nbsp;• <b>Pipeline Design</b>: Architect a Jenkins pipeline to automate build, test, and deployment stages. <br/> &nbsp;• <b>Automation and Scripting</b>: Use Jenkins scripts and plugins to automate tasks, ensuring a flexible and scalable pipeline. <br/> &nbsp;• <b>Version Control Integration</b>: Connect Jenkins with Git for automatic builds and deployments triggered by code changes. <br/> &nbsp;• <b>Infrastructure as Code</b>: Implement IaC Ansible tools for consistent environment setup. <br/> &nbsp;• <b>Testing and Monitoring</b>: Integrate automated tests and set up monitoring to ensure pipeline reliability. <br/> &nbsp;• <b>Documentation and Training</b>: Document the process and train team members on pipeline usage. <br/> &nbsp;• <b>Continuous Improvement</b>: Regularly update the pipeline with new tools and best practices. ",
+                    "skills": ["Jenkins", "TeamCity", "Bladelogic", "BitBucket", "Jira", "Confluence", "YAML", "Groovy", "bash"]
+                }
+            ],
+            "details": ["Team size 20+ / Scrum with 3 weeks sprints."]
+        },
+        {
             "hash": "why5",    
             "company": "Why5",
             "url": "http://www.why5.uk",

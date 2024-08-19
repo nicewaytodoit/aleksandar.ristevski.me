@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import ReactDisqusComments from 'react-disqus-comments';
+// import ReactDisqusComments from 'react-disqus-comments';
 
 class Disqus extends Component {
   constructor(props) {
@@ -30,14 +30,15 @@ class Disqus extends Component {
     const post = postNode.frontmatter;
     const url = siteMetadata.siteUrl + postNode.fields.slug;
     return (
-      <ReactDisqusComments
-        shortname={siteMetadata.disqusShortname}
-        identifier={post.title}
-        title={post.title}
-        url={url}
-        category_id={post.category_id}
-        onNewComment={this.notifyAboutComment}
-      />
+      <div></div>
+      // <ReactDisqusComments
+      //   shortname={siteMetadata.disqusShortname}
+      //   identifier={post.title}
+      //   title={post.title}
+      //   url={url}
+      //   category_id={post.category_id}
+      //   onNewComment={this.notifyAboutComment}
+      // />
     );
   }
 }
